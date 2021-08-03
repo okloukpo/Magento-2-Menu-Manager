@@ -1,0 +1,36 @@
+<!-- Delete button -->
+<button
+    id="mm-delete-button"
+    title="<?= __('Delete') ?>"
+    type="button"
+    class="action-secondary ui-button"
+>
+    <span class="ui-button-text">
+        <span><?= __('Delete') ?></span>
+    </span>
+</button>
+
+<div id="mm-delete-confirmation">
+    <div class="messages">
+        <div class="message info">
+            <span class="message-text">            
+                <?= __('Warning') ?>
+            </span>
+        </div>
+    </div>
+    <p>            
+        <?= __('Deleting this menu will also delete all related links.') ?>
+        <?= __('Do you wish to continue?') ?>
+    </p>
+</div>
+
+<script>
+require([
+    'jquery',
+    'Naxero_MenuManager/js/menu/edit/form/buttons',
+    'domReady!'
+], function($, FormButtons) {
+    // Set the form buttons events
+    FormButtons.setEvents();
+});
+</script>

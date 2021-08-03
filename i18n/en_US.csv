@@ -1,0 +1,118 @@
+"Add Row Data","Add Row Data"
+"Generate links","Generate links"
+Categories,Categories
+Products,Products
+"CMS pages","CMS pages"
+General,General
+"General settings","General settings"
+Title,Title
+Active,Active
+Orientation,Orientation
+Override,Override
+z-index,z-index
+Links,Links
+"Menu links","Menu links"
+Permissions,Permissions
+"Permissions settings","Permissions settings"
+"User groups","User groups"
+"All users","All users"
+"Store View","Store View"
+Images,Images
+"Images settings","Images settings"
+"Show category images","Show category images"
+"Show product images","Show product images"
+"File name","File name"
+"File path","File path"
+"File URL","File URL"
+Menus,Menus
+"Include images","Include images"
+Priority,Priority
+Frequency,Frequency
+"Last update","Last update"
+"Generate XML sitemaps","Generate XML sitemaps"
+"<info>Sitemaps successfully generated.</info>","<info>Sitemaps successfully generated.</info>"
+"<error>Command unavailable. Check the module settings.</error>","<error>Command unavailable. Check the module settings.</error>"
+"Optional sitemap ID","Optional sitemap ID"
+"Optional sitemap name","Optional sitemap name"
+"Invalid or expired request. Try refreshing the page.","Invalid or expired request. Try refreshing the page."
+"Server upload error. Please try again or check the logs.","Server upload error. Please try again or check the logs."
+"Invalid or expired request. Try reloading the page.","Invalid or expired request. Try reloading the page."
+"Edit Menu","Edit Menu"
+"Add Menu","Add Menu"
+"Menu successfully deleted.","Menu successfully deleted."
+"The menu could not be deleted.","The menu could not be deleted."
+"Links successfully generated.","Links successfully generated."
+"The link generation failed. Please check the error logs.","The link generation failed. Please check the error logs."
+"Please save the menu before generating links.","Please save the menu before generating links."
+"Menu Manager > Menus","Menu Manager > Menus"
+"Menu successfully saved.","Menu successfully saved."
+"Edit Sitemap","Edit Sitemap"
+"Add Sitemap","Add Sitemap"
+"Sitemap successfully deleted.","Sitemap successfully deleted."
+"The sitemap could not be deleted.","The sitemap could not be deleted."
+"Sitemap successfully generated.","Sitemap successfully generated."
+"The sitemap must be saved before generating links.","The sitemap must be saved before generating links."
+"Sitemap list","Sitemap list"
+"Sitemap successfully saved.","Sitemap successfully saved."
+Horizontal,Horizontal
+Vertical,Vertical
+Always,Always
+Hourly,Hourly
+Daily,Daily
+Weekly,Weekly
+Monthly,Monthly
+Yearly,Yearly
+Never,Never
+Category,Category
+Product,Product
+Page,Page
+Custom,Custom
+External,External
+Store,Store
+None,None
+"Header menu","Header menu"
+"Top menu","Top menu"
+"Footer menu","Footer menu"
+Default,Default
+"Static block","Static block"
+"Same window (default)","Same window (default)"
+"New window","New window"
+"Parent window","Parent window"
+Yes,Yes
+No,No
+Edit,Edit
+Delete,Delete
+Generate,Generate
+Warning,Warning
+"Deleting this menu will also delete all related links.","Deleting this menu will also delete all related links."
+"Do you wish to continue?","Do you wish to continue?"
+Add,Add
+Attributes,Attributes
+Layout,Layout
+Image,Image
+"Link settings","Link settings"
+"Link title","Link title"
+"Link title attribute","Link title attribute"
+"Link target","Link target"
+"Children layout","Children layout"
+"Layout type","Layout type"
+Block,Block
+"Thumbnail image","Thumbnail image"
+"Parent item for generated links:","Parent item for generated links:"
+Root,Root
+"Link type","Link type"
+"Start level","Start level"
+"The sitemap XML file will also be deleted. Are you sure ?","The sitemap XML file will also be deleted. Are you sure ?"
+"Please save the new sitemap first.","Please save the new sitemap first."
+Sitemap,Sitemap
+"Valid values range from 0.0 to 1.0.","Valid values range from 0.0 to 1.0."
+"Source menu","Source menu"
+"Source menus","Source menus"
+"New menu","New menu"
+ID,ID
+Action,Action
+"New sitemap","New sitemap"
+"Entity id","Entity id"
+Name,Name
+Path,Path
+URL,URL

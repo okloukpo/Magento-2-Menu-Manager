@@ -1,0 +1,70 @@
+:root {
+    --base-font-size: 12px;
+    --base-font-color: #777777;
+    --icon-size: 20px;
+    --icon-font-color: #d1d1d1;
+    --icon-font-size: 12px;
+    --border-color: #d9d9d9;
+    --toggler-color: #a0a0a0;
+    --base-spacing: 5px;
+    --field-height: 28px;
+}
+
+/* Global */
+.mm-clr {
+    clear: both;
+    visibility: hidden;
+}
+
+.mm-hidden {
+    display: none !important;
+}
+
+/* Field errors */
+.admin__field-control .error {
+    color: red;
+}
+
+.admin__field-control input.error,
+.admin__field-control select.error 
+.admin__field-control textarea.error  {
+    border: solid 1px red;    
+}
+
+/* Form buttons */
+#mm-delete-confirmation, #mm-generate-info {
+    display: none;
+}
+
+/* Readonly input field */
+input.mm-readonly {
+    background-color: #f1f1f1;
+}
+
+/* Icon upload field */
+.icon-preview {
+    width: 150px;
+    margin-top: 20px;
+    position: relative;
+    display: none;
+}
+
+.icon-preview > div {
+    border: solid 1px #c4c4c4;
+    padding: 10px;
+}
+
+.icon-preview > div > img {
+    display: block;
+    width: 100%;
+}
+
+.icon-preview .mm-icon-delete-image {
+    padding-top: 5px;
+}
+
+.icon-preview .mm-icon-delete-image a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #c4c4c4;
+}

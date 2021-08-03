@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Naxero.com
+ * Professional ecommerce integrations for Magento.
+ *
+ * PHP version 7
+ *
+ * @category  Magento2
+ * @package   Naxero
+ * @author    Platforms Development Team <contact@naxero.com>
+ * @copyright © Naxero.com all rights reserved
+ * @license   https://opensource.org/licenses/mit-license.html MIT License
+ * @link      https://www.naxero.com
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <update handle="editor"/>
+    <head>
+        <css src="Naxero_MenuManager::css/lib/jqtree/jqtree.css" />
+        <css src="Naxero_MenuManager::css/main.css" />
+        <css src="Naxero_MenuManager::css/menu/edit/form.css" />
+    </head>
+    <body>
+        <referenceBlock name="page.actions.toolbar">
+            <block class="Magento\Backend\Block\Template" template="Naxero_MenuManager::menu/edit/form/buttons.phtml" />
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Naxero\MenuManager\Block\Adminhtml\Menu\AddRow" name="add_menu_row" />
+            <block class="Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Buttons\Generate"/>
+            <block class="Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Tabs" template="Naxero_MenuManager::menu/edit/form/tabs.phtml">
+                <arguments>
+                    <argument name="fields_data" xsi:type="object">Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Fields</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

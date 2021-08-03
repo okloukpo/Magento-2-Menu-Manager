@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Naxero.com
+ * Professional ecommerce integrations for Magento.
+ *
+ * PHP version 7
+ *
+ * @category  Magento2
+ * @package   Naxero
+ * @author    Platforms Development Team <contact@naxero.com>
+ * @copyright © Naxero.com all rights reserved
+ * @license   https://opensource.org/licenses/mit-license.html MIT License
+ * @link      https://www.naxero.com
+ */
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <!-- Menu entity API -->
+    <route method="POST" url="/V1/naxero-mm/menus/get">
+        <service class="Naxero\MenuManager\Api\MenuInterface" method="getMenus"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/naxero-mm/menu/get">
+        <service class="Naxero\MenuManager\Api\MenuInterface" method="getMenu"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <!-- Link entity API -->
+    <route method="POST" url="/V1/naxero-mm/links/get">
+        <service class="Naxero\MenuManager\Api\LinkInterface" method="getLinks"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/naxero-mm/link/get">
+        <service class="Naxero\MenuManager\Api\LinkInterface" method="getLink"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

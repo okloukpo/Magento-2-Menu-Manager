@@ -1,0 +1,270 @@
+
+https://www.lightinthebox.com/en/p/men-s-daily-work-business-basic-shirt-solid-colored-patchwork-black_p7948753.html?currency=GBP&litb_from=paid_adwords_shopping&sku=1_29313%7C2_43702&country_code=gb&utm_source=google_shopping&utm_medium=cpc&adword_mt=&adword_ct=435449610478&adword_kw=&adword_pos=&adword_pl=&adword_net=u&adword_tar=&adw_src_id=3516490533_10071731919_104940681527_pla-679199384573&gclid=EAIaIQobChMI_9O4su378AIVQrDtCh2c-wLkEAQYBSABEgJx7fD_BwE
+
+
+bin/magento i18n:collect-phrases app/code/Naxero/MenuManager/ -o app/code/Naxero/MenuManager/i18n/en_US.csv
+bin/magento i18n:collect-phrases app/code/Naxero/MenuManager/ -o app/code/Naxero/MenuManager/i18n/en_GB.csv
+
+
+
+TODO
+- handle the active/inactive states
+- review delete specific links strategy
+- tune form validation field messages
+- check controller redirection when session expired and user logged out when sending ajax request
+- limit level start fields to numbers and min 1 in generator form and menu images form
+- review widget menu
+- fix footer menu html looking dogy: display good but structure invalid
+- link config image shouldn't contain full image url, just file name
+- freeze relevant buttons for new items
+- fix Notice: Array to string conversion in when saving menu with multiple store views/user group selections
+
+FEATURES
+- add error handling/messages for file operations failure (sitemap generation and image upload)
+- calculate top menu offset top parameter dynamically
+- add breadrcumb sync control yes/no in global config
+- add fix product category url hierarchy in global config
+- add direct links manager UI with as single page tabulator + filters + ajax for bulk operations
+- customer account links
+- add new version notificcations checker
+- Build API
+- add image search autocomplete to pick an existing product or cat image as icon
+- implement jqtree load on demand? Wouldn't be useful for big flat product list though
+- add menu links in forms => product edit, category edit, cmspage edit
+- widgets => implement addtional menu displays on top of default + zindex
+- implement ACL
+- multiselect in tree table
+- generate links under a selected row
+- add config to prepend subcategories to product urls (check first how latest M2 version is behaving)
+- Add sitemap config form for each link, widh default data from menu
+- add mass delete feature
+- add import/export feature?
+- improve setup install/update strategy
+- xml sitemap store url link: allow using store logo as sitemap image
+- xml sitemap: add video support
+- global config: update sitemaps automatically on link or menu save: yes/no
+- set global priority/frequency setting
+- review generate links feature killing server beyon 100/150 links
+- enable/disable button a bit slow with children, see add spinner
+- cron tasks to update and generate menus
+- cli commands to update and generate menus
+- improve API error handling (no, fields, invalid fields)
+- implement link flagging
+- generator: tune and add filters: exlude parent, active only (is_active), match core include_in_menu
+- menu rendering: check what to do with the display_mode field visible in category data
+- add controls for short desc and other elements
+- implement a flat list sublayout option for links
+- handle menu positioning
+    - text align left/right
+    - positioning left/right
+
+TESTING
+- check multistore on destino
+- check how many prods max the tree can display
+    =>  all calatlog products failing to load in admin, but up to 200 working so far
+
+RESOURCES
+- Grid column formatting
+https://magento.stackexchange.com/questions/217444/how-to-display-yes-no-values-in-admin-grid-magento2
+
+- FORM elements
+https://devdocs.magento.com/guides/v2.3/pattern-library/getting-user-input/form_elements/form_elements.html#read
+
+- AJAX form field validation
+https://inchoo.net/magento/magento-frontend/magento-form-field-ajax-validation/
+
+- M2 jquery widgets
+https://sherocommerce.com/jquery-widgets/
+
+- file operations
+http://blog.tobiasforkel.de/en/2019/01/11/magento2-working-with-files-and-folders/
+
+- Call images in blocks
+https://hweb87.wordpress.com/2018/02/25/magento-2-call-images-in-phtml-file-static-block-and-cms-pages/
+
+- CUSTOMER ACCOUNT links
+https://magento.stackexchange.com/questions/236872/add-custom-link-in-customer-account-navigation-in-magento-2
+
+- REST API fields filtering for perf
+https://www.psyberware.com/blog/magento-2-api-response-field-filtering
+
+- Admin split button
+https://webkul.com/blog/create-split-button-list-in-admin-panel-magento2/
+
+- multiselect autocomplete admin form field
+https://www.mujahidh.com/how-to-create-multi-select-type-input-in-magento-2-custom-form/
+https://devdocs.magento.com/guides/v2.4/javascript-dev-guide/widgets/widget_quickSearch.html
+https://webkul.com/blog/magento2-create-multi-select-ui-field-frontend-admin/
+
+- M1 form field types
+http://excellencemagentoblog.com/blog/2011/11/02/magento-admin-form-field/
+
+- Add URL to sitemap
+https://magento.stackexchange.com/questions/221321/how-to-add-custom-urls-to-sitemap-in-magento-2
+https://belvg.com/blog/how-to-create-sitemap-in-magento.html
+
+- Admin horizontal tabs
+https://webkul.com/blog/how-to-use-magento-tabs-widget/
+
+- Custom admin form edit field type
+https://webkul.com/blog/create-custom-type-field-admin-form-magento-2/
+
+- media frontend uploader js
+https://devdocs.magento.com/guides/v2.4/javascript-dev-guide/widgets/widget-media-uploader.html
+https://codeblog.experius.nl/magento-2-file-uploader-in-frontend/
+
+- upload image
+https://www.rohanhapani.com/how-to-upload-image-using-ui-component-in-magento-2/
+https://www.rakeshjesadiya.com/how-to-pass-image-data-using-ajax-to-server-side-in-backend-magento-2/
+
+- create eav/crud module
+https://www.rohanhapani.com/create-eav-module-in-magento-2/
+
+- add child block to parent block
+https://magento.stackexchange.com/questions/206871/programmatically-create-and-append-a-block-to-another-block
+
+- navigation html
+https://devdocs.magento.com/guides/v2.4/javascript-dev-guide/widgets/widget_menu.html
+
+
+TABULATOR USEFUL METHODS
+var children = row.getTreeChildren();
+var parent = row.getTreeParent();
+var order = self.table.getRowPosition(row, true);
+//table.getRowFromPosition(5, true)
+
+
+FILE UPLOAD DATA
+file:
+    error: 0
+    name: "icon-cog.png"
+    size: 2000
+    tmp_name: "/tmp/phpxaVzjd"
+    type: "image/png"
+
+GENERATE LINK data
+    // reset increment
+    alter table `naxero_menumanager_links` AUTO_INCREMENT = 1;
+
+    // menu data
+    INSERT INTO `naxero_menumanager_menus` VALUES (null,'Menu 1', 'h', 'top_menu', '', '', '0' ,1, 1, 1);
+    INSERT INTO `naxero_menumanager_menus` VALUES (null,'Menu 2', 'h', 'header_menu', '', '', '0' ,1, 1, 1);
+    INSERT INTO `naxero_menumanager_menus` VALUES (null,'Menu 3', 'h', 'footer_menu', '', '', '0' ,1, 1, 1);
+
+    // SAMPLE LINK DATA
+    update naxero_menumanager_links set link_data = '{"value":9,"text":"oh my"}' where entity_id = 1;
+
+    // tree data 1
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,0,'custom','0','Parent 1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,0,'custom','0','Parent 2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,0,'custom','0','Parent 3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,1,'custom','0','Sub 1-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,1,'custom','0','Sub 1-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,1,'custom','0','Sub 1-3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,2,'custom','0','Sub 2-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,2,'custom','0','Sub 2-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,2,'custom','0','Sub 2-3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,3,'custom','0','Sub 3-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,3,'custom','0','Sub 3-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,3,'custom','0','Sub 3-3','[]','[]',3,1);
+
+    // tree data 2
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,0,'custom','0','Top 1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,0,'custom','0','Top 2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,0,'custom','0','Top 3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,13,'custom','0','Sub 1-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,13,'custom','0','Sub 1-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,13,'custom','0','Sub 1-3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,14,'custom','0','Sub 2-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,14,'custom','0','Sub 2-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,14,'custom','0','Sub 2-3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,15,'custom','0','Sub 3-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,15,'custom','0','Sub 3-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,15,'custom','0','Sub 3-3','[]','[]',3,1);
+
+
+    // tree data 3
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,0,'custom','0','Footer 1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,0,'custom','0','Footer 2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,0,'custom','0','Footer 3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,25,'custom','0','Sub 1-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,25,'custom','0','Sub 1-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,25,'custom','0','Sub 1-3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,26,'custom','0','Sub 2-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,26,'custom','0','Sub 2-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,26,'custom','0','Sub 2-3','[]','[]',3,1);
+
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,27,'custom','0','Sub 3-1','[]','[]',1,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,27,'custom','0','Sub 3-2','[]','[]',2,1);
+    INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,27,'custom','0','Sub 3-3','[]','[]',3,1);
+
+
+// TRUNCATE TABLE
+$connection = $collection->getConnection();
+$tableName = $collection->getMainTable();
+$connection->truncateTable($tableName);
+
+public function execute()
+{
+    if (your config setting is disabled) {
+        return parent::execute();
+    }
+    //your custom logic here
+}
+
+
+// RESET DATA
+
+
+delete from  naxero_menumanager_links where 1;
+delete from  naxero_menumanager_menus where 1;
+alter table naxero_menumanager_links AUTO_INCREMENT=1;
+alter table naxero_menumanager_menus AUTO_INCREMENT=1;
+INSERT INTO `naxero_menumanager_menus` VALUES (null,'Menu 1', 'h', 'top_menu','', '', '0' ,1, 1, 1);
+INSERT INTO `naxero_menumanager_menus` VALUES (null,'Menu 2', 'h', 'header_menu','', '', '0' ,1, 1, 1);
+INSERT INTO `naxero_menumanager_menus` VALUES (null,'Menu 3', 'h', 'footer_menu','', '', '0' ,1, 1, 1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,0,'custom','0','Parent 1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,0,'custom','0','Parent 2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,0,'custom','0','Parent 3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,1,'custom','0','Sub 1-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,1,'custom','0','Sub 1-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,1,'custom','0','Sub 1-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,2,'custom','0','Sub 2-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,2,'custom','0','Sub 2-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,2,'custom','0','Sub 2-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,3,'custom','0','Sub 3-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,3,'custom','0','Sub 3-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,1,3,'custom','0','Sub 3-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,0,'custom','0','Top 1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,0,'custom','0','Top 2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,0,'custom','0','Top 3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,13,'custom','0','Sub 1-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,13,'custom','0','Sub 1-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,13,'custom','0','Sub 1-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,14,'custom','0','Sub 2-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,14,'custom','0','Sub 2-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,14,'custom','0','Sub 2-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,15,'custom','0','Sub 3-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,15,'custom','0','Sub 3-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,2,15,'custom','0','Sub 3-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,0,'custom','0','Footer 1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,0,'custom','0','Footer 2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,0,'custom','0','Footer 3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,25,'custom','0','Sub 1-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,25,'custom','0','Sub 1-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,25,'custom','0','Sub 1-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,26,'custom','0','Sub 2-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,26,'custom','0','Sub 2-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,26,'custom','0','Sub 2-3','[]','[]',3,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,27,'custom','0','Sub 3-1','[]','[]',1,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,27,'custom','0','Sub 3-2','[]','[]',2,1);
+INSERT INTO `naxero_menumanager_links` VALUES (NULL,3,27,'custom','0','Sub 3-3','[]','[]',3,1);
+

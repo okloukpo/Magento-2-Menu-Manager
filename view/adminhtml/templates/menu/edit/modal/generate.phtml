@@ -1,0 +1,63 @@
+<?php
+    // Get the block data
+    $menuId = $block->getData('menu_id');
+?>
+<!-- Generate form message-->
+<div class="messages">
+    <div class="message info">
+        <span class="message-text">            
+            <?= __('Parent item for generated links:') ?>
+        </span>
+        <strong>
+            <?= __('Root') ?>
+        </strong>
+    </div>
+</div>
+
+<!-- Generate form fields -->
+<form
+    id="mm-generate-form"
+    method="GET"
+    action="<?= $block->getUrl('naxero-mm/menu/generate') ?>"
+>
+    <!-- Form key -->
+    <input
+        type="hidden"
+        name="form_key"
+        value="<?= $block->configHelper->getFormKey() ?>"
+    >
+
+    <!-- Menu ID -->
+    <input type="hidden" name="entity_id" value="<?= $menuId ?>">
+
+    <!-- Link type -->
+    <div class="admin__field field">
+        <label class="label admin__field-label">
+            <span><?= __('Link type') ?></span>
+        </label>
+        <div class="admin__field-control control">
+            <select name="link_type" class="select admin__control-select">
+                <?php foreach($block->linkTypeSource->toOptionArray() as $option): ?>
+                    <option value="<?= $option['value'] ?>">
+                        <?= $option['label'] ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+    </div>
+
+    <!-- Start level -->
+    <div class="admin__field field">
+        <label class="label admin__field-label">
+            <span><?= __('Start level') ?></span>
+        </label>
+        <div class="admin__field-control control">
+            <input
+                type="text"
+                value="1"
+                name="start_level"
+                class="input-text admin__control-text"
+            >
+        </div>
+    </div>
+</form>

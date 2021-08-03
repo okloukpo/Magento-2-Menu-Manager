@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Naxero.com
+ * Professional ecommerce integrations for Magento
+ *
+ * PHP version 7
+ *
+ * @category  Magento2
+ * @package   Naxero
+ * @author    Platforms Development Team <contact@naxero.com>
+ * @copyright Naxero.com
+ * @license   https://opensource.org/licenses/mit-license.html MIT License
+ * @link      https://www.naxero.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Header menu plugin -->
+    <type name="Magento\Framework\View\Element\Html\Links">
+        <plugin name="naxero_menu_manager_header_menu_plugin" type="Naxero\MenuManager\Plugin\HeaderMenu"/>
+    </type>
+
+    <!-- Top menu plugin -->
+    <type name="Magento\Theme\Block\Html\Topmenu">
+        <plugin name="naxero_menu_manager_top_menu_plugin" type="Naxero\MenuManager\Plugin\TopMenu"/>
+    </type>
+
+    <!-- Footer menu plugin -->
+    <type name="Magento\Framework\View\Element\Html\Link\Current">
+        <plugin name="naxero_menu_manager_footer_menu_plugin" type="Naxero\MenuManager\Plugin\FooterMenu"/>
+    </type>
+</config>
+

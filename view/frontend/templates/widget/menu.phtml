@@ -1,0 +1,9 @@
+<?php
+    // Get the menu ID
+    $menuId = $block->getData('menu_id');
+
+    // Get the menu items
+    $items = $block->menuHelper->getMenuLinksArray($menuId);
+?>
+
+<?= $block->widgetMenuBlock->renderMenu($items) ?>

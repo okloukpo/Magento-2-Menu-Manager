@@ -1,0 +1,64 @@
+<?php
+    // Get the block data
+    $items = $block->getData('items');
+    $menuData = $block->getMenuData();
+    $orientation = 'mm-menu-' . $menuData['orientation'];
+?>
+
+<!-- Styles -->
+<style>
+    <?php if (!empty($menuData['zindex'])): ?>
+    .mm-top-menu {
+        z-index: <?= $menuData['zindex'] ?> !important;
+    }
+    <?php endif; ?>
+
+    .mm-top-menu ul.submenu {
+        padding: 0px !important;
+    }
+
+    .mm-top-menu ul.submenu a {
+        padding: 10px !important;
+    }
+
+    .mm-top-menu .level-top li .mm-link-label {
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+    }
+
+    .mm-top-menu .mm-link-icon {
+        display: inline-block;
+        border: solid 1px #c4c4c4;
+    }
+
+    .mm-top-menu .mm-link-icon img {
+        width: auto;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .mm-top-menu .level-top li .mm-link-image {
+        display: inline-block;
+        width: 15%;
+        margin-right: 12px;
+        vertical-align: middle;
+        border: solid 1px #f1f1f1;
+        padding: 8px;
+        background-color: white !important;
+    }
+
+    .mm-top-menu.mm-menu-vertical li {
+        display: block !important;
+    }
+</style>
+
+<!-- Top menu HTML -->
+<nav class="navigation" data-action="navigation">
+    <ul  
+        class="ui-menu ui-widget ui-widget-content ui-corner-all mm-top-menu mm-menu <?= $orientation ?>"
+        data-mage-init='{"menu":{"responsive":true, "expanded":true, "delay": 200, "position":{"my":"left top","at":"left+10 top+40"}}}'
+    >
+        <?= $block->renderMenu($items) ?> 
+    </ul>
+</nav> 

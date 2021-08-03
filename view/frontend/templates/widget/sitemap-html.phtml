@@ -1,0 +1,14 @@
+<?php
+    // Get the menus
+    $menus = $block->getmenus();
+?>
+
+<div class="mm-sitemap-html">
+    <?php foreach ($menus as $menu): ?>
+        <?php $items = $block->menuHelper->getMenuLinksArray($menu['entity_id']) ?>
+        <div class="mm-sitemap-html-menu">
+            <h2><?= $menu['title'] ?></h2>
+            <?= $block->widgetMenuBlock->renderMenu($items) ?>
+        </div>
+    <?php endforeach; ?>
+</div>

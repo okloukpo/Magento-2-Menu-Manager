@@ -1,0 +1,54 @@
+<?php
+    // Get the block data
+    $config = $block->getData('config');
+    $menuLinks = $block->getData('menu_links');
+    $menuId = $block->getData('menu_id');
+?>
+
+<!-- Table buttons -->
+<button type="button" id="mm-button-add">
+    <?= __('Add') ?>
+</button>
+
+<button type="button" id="mm-button-del">
+    <?= __('Delete') ?>
+</button>
+
+<button type="button" id="mm-button-generate">
+    <?= __('Generate') ?>
+</button>
+
+<div id="mm-tree-messages" class="messages mm-tree-messages">
+</div>
+
+<!-- Table placeholder -->
+<div id="mm-tree">
+    <form
+        id="link-config-form-<?= $menuId ?>"
+        name="link-config-form"
+        enctype="multipart/form-data"
+    >
+    </form>
+</div>
+
+<!-- Generator form placeholder -->
+<div id="mm-generator-form">
+    <?= $block->renderGeneratorForm() ?>
+</div>
+
+<!-- Table handler script -->
+<script>
+    require([
+        'jquery',
+        'Naxero_MenuManager/js/menu/edit/form/fields/menu-links',
+        'mage/backend/tabs',
+        'domReady!'
+    ], function($, MenuLinks) {
+        // Menu links table
+        MenuLinks.buildTable(
+            <?= json_encode($config) ?>,
+            <?= json_encode($menuLinks) ?>,
+            <?= (int) $menuId ?>
+        );
+    });
+</script>

@@ -1,0 +1,61 @@
+<?php
+    $fieldsData = $block->getData('fields_data')->getFieldsData();
+    $fieldsets = array_keys($fieldsData);
+    $menuId = $block->getMenuId();
+    $overrides = $block->menuHelper->getActiveOverrides();
+?>
+
+<form
+    id="mm-menu-edit-form"
+    enctype="multipart/form-data"
+    method="POST"
+    action="<?= $block->getUrl('naxero-mm/menu/save') ?>"
+>
+    <div id="mm-tabs-links">
+        <ul class="tabs-horiz">
+            <?php foreach ($fieldsets as $f): ?>
+                <li>
+                    <a id="tab_link_<?= $f ?>" href="#<?= $f ?>">
+                        <span>
+                            <?= $fieldsData[$f]['tab']['title'] ?>          
+                        </span>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+
+    <div id="mm-tabs-content">
+        <?php foreach ($fieldsets as $f): ?>
+            <div id="tab_<?= $f ?>">
+                <div></div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</form>
+<script>
+    require([
+        'jquery',
+        'Naxero_MenuManager/js/menu/edit/form/tabs',
+        'domReady!'
+        ], function($, FormTabs) {
+            // Initialize the form tabs JS
+            FormTabs.init(
+                '<?= json_encode($fieldsets) ?>',
+                '<?= json_encode($menuId) ?>'
+            );
+
+            // Show the form container
+            $('#container').show();
+
+            // Update the override menu field options
+            var overrides = '<?= json_encode($overrides) ?>';
+            $('#override option').each(function () {
+                if (overrides.includes($(this).val())) {
+                    $(this).prop('disabled', true);
+                }
+            });
+        }
+    );
+</script>
+

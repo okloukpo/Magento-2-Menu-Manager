@@ -1,0 +1,21 @@
+<img src="<%- data.url %>">
+<span class="mm-icon-delete-image">
+    <a href="javascript:void(0)">
+        &cross;
+    </a>
+</span>
+
+<%
+    require([
+        'jquery',
+    ], function ($) {
+        'use strict';
+
+        // Icon delete
+        $('.mm-icon-delete-image').on('click touch', function() { 
+            $('#icon_preview_' + data.entityId).hide().empty();
+            document.getElementById('icon_' + data.entityId).value = '';
+        });
+    });
+%>
+
