@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Naxero.com
+ * Professional ecommerce integrations for Magento.
+ *
+ * PHP version 7
+ *
+ * @category  Magento2
+ * @package   Naxero
+ * @author    Platforms Development Team <contact@naxero.com>
+ * @copyright © Naxero.com all rights reserved
+ * @license   https://opensource.org/licenses/mit-license.html MIT License
+ * @link      https://www.naxero.com
+ */
+-->
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <!-- Menu widget-->
+    <widget ttl="0" class="Naxero\MenuManager\Block\Widget\Menu" id="mm_menu_widget">
+        <label>Naxero Menu Widget</label>
+        <description>Naxero Menu Widget</description>
+        <parameters>
+            <parameter name="menu_id" xsi:type="select" visible="true" required="true" source_model="Naxero\MenuManager\Model\Config\Backend\Source\MenuList">
+                <label translate="true">Source menu</label>
+            </parameter>
+        </parameters>
+    </widget>
+
+    <!-- HTML sitemap widget-->
+    <widget ttl="0" class="Naxero\MenuManager\Block\Widget\SitemapHtml" id="mm_sitemap_widget">
+        <label>Naxero HTML Sitemap Widget</label>
+        <description>Naxero HTML Sitemap Widget</description>
+        <parameters>
+            <parameter name="sitemap_menus" xsi:type="multiselect" visible="true" required="true" source_model="Naxero\MenuManager\Model\Config\Backend\Source\MenuList">
+                <label translate="true">Source menus</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

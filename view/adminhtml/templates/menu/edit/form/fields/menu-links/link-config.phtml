@@ -1,0 +1,236 @@
+
+<!-- Block data -->
+<?php 
+    // Link data
+    $data = $block->getLinkData(); 
+
+    // Link config
+    $linkConfig = null;
+    if (!empty($data['link_config'])) {
+        $linkConfig = is_array($data['link_config'])
+        ? $data['link_config']
+        : json_decode($data['link_config']);
+    }
+?>
+
+<!-- Form messages -->
+<div
+    id="mm-link-config-messages-<?= $data['entity_id'] ?>"
+    class="messages"
+></div>
+
+<div id="mm-config-tabs-links-<?= $data['entity_id'] ?>">
+    <ul class="tabs-horiz">
+        <li>
+            <a 
+                id="config_tab_link_1_<?= $data['entity_id'] ?>"
+                href="#config_tab_content_1_<?= $data['entity_id'] ?>"
+            >
+                <span>
+                    <?= __('Attributes') ?>          
+                </span>
+            </a>
+        </li>
+        <li>
+            <a 
+                id="config_tab_link_2_<?= $data['entity_id'] ?>"
+                href="#config_tab_content_2_<?= $data['entity_id'] ?>"
+            >
+                <span>
+                    <?= __('Layout') ?>          
+                </span>
+            </a>
+        </li>
+        <li>
+            <a 
+                id="config_tab_link_3_<?= $data['entity_id'] ?>"
+                href="#config_tab_content_3_<?= $data['entity_id'] ?>"
+            >
+                <span>
+                    <?= __('Image') ?>          
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Link config form -->
+<form
+    id="link-config-form-<?= $data['entity_id'] ?>"
+    name="link-config-form"
+    method="POST"
+    enctype="multipart/form-data"
+>
+    <!-- Tabs content -->
+    <div id="mm-config-tabs-content-<?= $data['entity_id'] ?>">
+        <!-- Tab 1 content -->
+        <div id="config_tab_content_1_<?= $data['entity_id'] ?>">
+            <div>
+                <fieldset class="fieldset admin__fieldset fieldset-wide">
+                    <legend class="admin__legend legend">
+                        <span>
+                            <?= __('Link settings') ?>
+                        </span>
+                    </legend>
+
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="link_id" value="<?= $data['entity_id'] ?>">
+                    <input type="hidden" name="menu_id" value="<?= $data['menu_id'] ?>">
+
+                    <!-- Link title -->
+                    <div class="admin__field field">
+                        <label class="label admin__field-label">
+                            <span>
+                                <?= __('Link title') ?>
+                            </span>
+                        </label>
+                        <div class="admin__field-control control">
+                            <input
+                                name="title" 
+                                class="input-text admin__control-text"
+                                type="text"
+                                value=""
+                                placeholder="<?= __('Link title attribute') ?>"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Link target -->
+                    <div class="admin__field field">
+                        <label class="label admin__field-label">
+                            <span>
+                                <?= __('Link target') ?>
+                            </span>
+                        </label>
+                        <div class="admin__field-control control">
+                            <select id="target" name="target" class="select admin__control-select">
+                                <?php foreach ($this->targetSource->toOptionArray() as $o): ?>
+                                    <option value="<?= $o['value'] ?>">
+                                        <?= $o['label'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Tab 2 content -->
+        <div id="config_tab_content_2_<?= $data['entity_id'] ?>">
+            <div>
+                <fieldset class="fieldset admin__fieldset fieldset-wide">
+                    <legend class="admin__legend legend">
+                        <span>
+                            <?= __('Children layout') ?>
+                        </span>
+                    </legend>
+
+                    <!-- Sublayout -->
+                    <div class="admin__field field">
+                        <label class="label admin__field-label">
+                            <span>
+                                <?= __('Layout type') ?>
+                            </span>
+                        </label>
+                        <div class="admin__field-control control">
+                            <select id="sublayout" name="sublayout" class="select admin__control-select">
+                                <?php foreach ($this->sublayoutSource->toOptionArray() as $o): ?>
+                                    <option value="<?= $o['value'] ?>">
+                                        <?= $o['label'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Blocks -->
+                    <div class="admin__field field">
+                        <label class="label admin__field-label">
+                            <span>
+                                <?= __('Block') ?>
+                            </span>
+                        </label>
+                        <div class="admin__field-control control">
+                            <select id="block" name="block" class="select admin__control-select">
+                                <?php foreach ($this->blocksSource->toOptionArray() as $o): ?>
+                                    <option value="<?= $o['value'] ?>">
+                                        <?= $o['label'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Tab 3 content -->
+        <div id="config_tab_content_3_<?= $data['entity_id'] ?>">
+            <div>
+                <fieldset class="fieldset admin__fieldset fieldset-wide">
+                    <legend class="admin__legend legend">
+                        <span>
+                            <?= __('Image') ?>
+                        </span>
+                    </legend>
+
+                    <!-- Link icon -->
+                    <div class="admin__field field">
+                        <label class="label admin__field-label">
+                            <span>
+                                <?= __('Thumbnail image') ?>
+                            </span>
+                        </label>
+                        <div class="admin__field-control control">
+                            <!-- Upload field -->
+                            <input
+                                id="icon_upload_<?= $data['entity_id'] ?>"
+                                name="icon_upload_<?= $data['entity_id'] ?>" 
+                                class="input-text admin__control-text"
+                                type="file"
+                                accept=".jpg, .png, .gif"
+                            >
+            
+                            <!-- Hidden file data field -->
+                            <input
+                                id="icon_<?= $data['entity_id'] ?>"
+                                name="icon_<?= $data['entity_id'] ?>" 
+                                class="input-text admin__control-text"
+                                type="hidden"
+                            >
+
+                            <!-- Icon preview box -->
+                            <div 
+                                id="icon_preview_<?= $data['entity_id'] ?>"
+                                class="icon-preview"
+                            >
+                                <?php if ($linkConfig && isset($linkConfig->icon)): ?>
+                                    <img 
+                                        src="<?= $block->getViewFileUrl($linkConfig->icon); ?>"
+                                    >
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+require([
+    'Naxero_MenuManager/js/menu/edit/form/fields/menu-links/link-config',
+    'domReady!'
+], function (LinkConfigForm) {
+    'use strict';
+
+    // Initialize the link config form handler
+    LinkConfigForm.init(
+        '<?= $data['entity_id'] ?>',
+        '<?= $data['menu_id'] ?>'
+    );
+});
+</script>
+

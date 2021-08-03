@@ -1,0 +1,52 @@
+<!-- Delete button -->
+<button
+    id="mm-delete-button"
+    title="<?= __('Delete') ?>"
+    type="button"
+    class="action-secondary ui-button"
+>
+    <span class="ui-button-text">
+        <span><?= __('Delete') ?></span>
+    </span>
+</button>
+<div id="mm-delete-confirmation">
+    <div class="messages">
+        <div class="message info">
+            <span class="message-text">            
+                <?= __('The sitemap XML file will also be deleted. Are you sure ?') ?>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- Generate button -->
+<button
+    id="mm-generate-button"
+    title="<?= __('Generate') ?>"
+    type="button"
+    class="action-secondary ui-button"
+>
+    <span class="ui-button-text">
+        <span><?= __('Generate') ?></span>
+    </span>
+</button>
+<div id="mm-generate-info">
+    <div class="messages">
+        <div class="message info">
+            <span class="message-text">            
+                <?= __('Please save the new sitemap first.') ?>
+            </span>
+        </div>
+    </div>
+</div>
+
+<script>
+require([
+    'jquery',
+    'Naxero_MenuManager/js/sitemap/edit/form/buttons',
+    'domReady!'
+], function($, FormButtons) {
+    // Set the form buttons events
+    FormButtons.setEvents();
+});
+</script>

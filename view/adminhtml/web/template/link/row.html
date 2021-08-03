@@ -1,0 +1,164 @@
+<div
+    id="mm-tree-row-<%- node.entity_id %>"
+    class="mm-tree-row"
+    data-node-id="<%- node.entity_id %>"
+>
+    <div class="mm-tree-row-name">
+        <div class="mm-icon">
+            <a
+                data-field="handle"
+                href="javascript:void(0)"
+            >
+                &#9776;
+            </a>   
+        </div>
+        <input
+            type="text"
+            value="<%- node.link_text %>"
+            data-field="link_text"
+            class="mm-link-text"
+        >
+    </div>
+    <div class="mm-tree-row-data">
+        <!-- Entity ID -->
+        <input
+            type="hidden"
+            value="<%- node.entity_id %>"
+            data-field="entity_id"
+        >
+
+        <!-- Menu ID -->
+        <input
+            type="hidden"
+            value="<%- menuId %>"
+            data-field="menu_id"
+        >
+
+        <!-- Parent ID -->
+        <input
+            type="hidden"
+            value="<%- node.parent_id %>"
+            data-field="parent_id"
+        >
+
+        <!-- Link order -->
+        <input
+            type="hidden"
+            value="<%- node.link_order %>"
+            data-field="link_order"
+        >
+
+        <!-- Link type -->
+        <select data-field="link_type" class="mm-link-type">
+            <% _.each(config.field.link_type, function(row) { %>
+                <option
+                    value="<%- row.value %>" 
+                    <%- node.link_type == row.value ? 'selected' : '' %>
+                >
+                    <%- row.label %>
+                </option>
+            <% }); %>
+        </select>
+
+        <!-- Link URL results container -->
+        <%
+            node.link_data = (typeof node.link_data === 'string')
+            ? JSON.parse(node.link_data)
+            : node.link_data;
+        %>
+        <div class="mm-link-url-container">
+            <div class="mm-link-url-field">
+                <input
+                    type="text"
+                    value="<%- node.link_data.text %>"
+                    data-field="link_url"
+                    class="mm-link-url"
+                >
+
+                <div class="mm-icon-spinner">
+                    <img src="<%- config.icon.spinner.url %>">                    
+                </div>
+                
+                <div class="mm-link-url-results"></div>
+            </div>
+        </div>
+
+        <!-- Active field -->
+        <input
+            type="hidden"
+            value="<%- node.active %>"
+            data-field="active"
+            class="mm-active"
+        >
+
+        <!-- Active button -->
+        <div class="mm-action mm-action-active">
+            <a
+                href="javascript:void(0)"
+                data-field="active"
+            >
+                <% if (parseInt(node.active) == 1) { %>
+                    &check;
+                <% } else { %>
+                    &cross;
+                <% } %>
+            </a>
+        </div>
+
+        <!-- Link config field -->
+        <input
+            type="hidden"
+            value="<%- JSON.stringify(node.link_config) %>"
+            data-field="link_config"
+            class="mm-active mm-link-config"
+        >
+
+        <!-- Row config button -->
+        <div 
+            class="mm-action mm-action-config"
+            data-node-id="<%- node.entity_id %>"
+        >
+            <a
+                data-field="config"
+                href="javascript:void(0)"
+            >
+                &#9881;
+            </a>
+        </div>
+
+        <!-- Row config placeholder -->
+        <div
+            id="mm-row-config-<%- node.entity_id %>"
+            class="mm-row-config"
+        >         
+        </div>
+
+        <!-- Add row button -->
+        <div class="mm-icon mm-icon-add">
+            <a
+                data-field="add"
+                href="javascript:void(0)"
+            >
+                &plus;
+            </a>
+        </div>
+    </div>
+    <div class="mm-clr"></div>
+</div>
+
+<%
+    require([
+        'jquery',
+        'mage/translate'
+    ], function ($, __) {
+        'use strict';
+
+        // Row UI strings
+        $('[data-field="handle"]').attr('title', __('Handle'));
+        $('input[data-field="link_text"]').attr('placeholder',  __('Link text'));
+        $('input[data-field="link_url"]').attr('placeholder', __('Link URL'));
+        $('[data-field="active"]').attr('title', __('Active'));
+        $('[data-field="config"]').attr('title', __('Settings'));
+        $('[data-field="add"]').attr('title', __('Add row after'));
+    });
+%>

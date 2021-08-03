@@ -1,0 +1,140 @@
+<?php
+    // Get the block data
+    $items = $block->getData('items');
+    $menuData = $block->getData('menu_data');
+    $orientation = 'mm-menu-' . $menuData['orientation'];
+?>
+
+<!-- Extra styles -->
+<style>
+    .mm-header-menu {
+        width: fit-content;
+        float: right;
+    }
+
+    .mm-header-menu ul.switcher-dropdown {
+        min-width: 201px !important;
+    }
+
+    .mm-header-menu .switcher {
+        float: none;
+    }
+
+    .mm-header-menu .switcher-option {
+        position: relative;
+    }
+
+    .mm-header-menu ul.mm-submenu {
+        left: 100% !important;
+        top: 0px !important;
+        margin: 0px !important;
+    }
+
+    .mm-header-menu ul.mm-submenu:before,
+    .mm-header-menu ul.mm-submenu:after {
+        display: none !important;
+    }
+
+    .mm-submenu-hidden {
+        display: none !important;
+    }
+
+    .mm-header-menu .mm-link-icon {
+        display: inline-block;
+        border: solid 1px #c4c4c4;
+    }
+
+    .mm-header-menu .mm-link-icon img {
+        width: auto;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    .mm-header-menu .switcher-option .mm-link-image {
+        display: inline-block;
+        width: 15%;
+        margin-right: 12px;
+        vertical-align: middle;
+        border: solid 1px #f1f1f1;
+        padding: 8px;
+        background-color: white !important;
+        height: 40px;
+    }
+
+    .mm-header-menu .switcher-option .mm-link-label {
+        display: inline-block;
+        width: 62%;
+        vertical-align: middle;
+    }
+
+    .mm-header-menu .action.toggle:after {
+        margin: 0px 0px 0px 3px !important;
+    }
+
+    .mm-header-menu .dropdown strong > span > a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: none;
+    }
+
+    .mm-header-menu .ui-menu-icon:after {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 12px;
+        line-height: 20px;
+        color: inherit;
+        content: '\e608';
+        font-family: 'luma-icons';
+        vertical-align: middle;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        speak: none;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .mm-header-menu.mm-menu-vertical {
+        display: block !important;
+    }
+
+    <?php if (!empty($menuData['zindex'])): ?>
+        .mm-header-menu ul {
+            z-index: <?= $menuData['zindex'] ?> !important;
+        }
+    <?php endif; ?>
+</style>
+
+<!-- Header menu HTML -->
+<div class="mm-header-menu mm-menu <?= $orientation ?>">
+    <?= $block->renderMenu($items) ?> 
+</div>
+
+<script>
+require([
+    'jquery',
+    'domReady!'
+], function($) {
+    // Submenu events
+    $('.mm-header-menu .switcher-option').on('mouseover', function(e) {
+        // Prepare variables
+        var leftPos = $(this).offset().left;
+        var screenW = $(window).width();
+        var w = $(this).width();
+        var submenu = $(this).find('.mm-submenu');
+        
+        // Handle the submenu display
+        if ((leftPos + w) > screenW) {
+            // Todo - Finish display logic
+            console.log('too big!');
+        }
+        
+        // Show the submenu
+        submenu.removeClass('mm-submenu-hidden');
+    });
+
+    $('.mm-header-menu .switcher-option').on('mouseout', function(e) {
+        $(this).find('.mm-submenu').addClass('mm-submenu-hidden');
+    });
+});
+</script>

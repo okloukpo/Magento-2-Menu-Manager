@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Naxero.com
+ * Professional ecommerce integrations for Magento.
+ *
+ * PHP version 7
+ *
+ * @category  Magento2
+ * @package   Naxero
+ * @author    Platforms Development Team <contact@naxero.com>
+ * @copyright © Naxero.com all rights reserved
+ * @license   https://opensource.org/licenses/mit-license.html MIT License
+ * @link      https://www.naxero.com
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <update handle="editor"/>
+    <head>
+        <css src="Naxero_MenuManager::css/main.css" />
+    </head>
+    <body>
+        <referenceBlock name="page.actions.toolbar">
+            <block class="Magento\Backend\Block\Template" template="Naxero_MenuManager::sitemap/edit/form/buttons.phtml" />
+        </referenceBlock>
+        <referenceContainer name="content">
+           <block class="Naxero\MenuManager\Block\Adminhtml\Sitemap\AddRow" name="add_sitemap_row" />
+        </referenceContainer>
+    </body>
+</page>

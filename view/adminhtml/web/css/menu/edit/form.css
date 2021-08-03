@@ -1,0 +1,229 @@
+/* Container */
+#container {
+    display: none;
+}
+
+/* Form elements */
+#mm-tabs-content {
+    border: solid 1px var(--border-color);
+}
+
+#mm-menu-edit-form fieldset {
+    margin-top: 0px !important;
+}
+
+/* Menu generator form */
+#mm-generator-form {
+    display: none;
+}
+
+/* Menu links field */
+.field-menu_links_table .admin__field-control {
+    width: calc((100%) - calc(var(--base-spacing)*6)) !important;
+}
+
+/* Icons */
+.mm-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-repeat: no-repeat;
+    display: inline-block;
+    font-size: var(--icon-font-size);
+    color: var(--icon-font-color);
+    line-height: var(--icon-size);
+    text-align: center;
+}
+
+.mm-icon a, .mm-action a {
+    display: block;
+    width: 100%;
+    color: var(--icon-font-color);
+    text-decoration: none;
+}
+
+.mm-icon a:hover, .mm-action a:hover {
+    color: #333333;
+}
+
+.mm-icon-add {
+    font-weight: bold;
+    display: none !important;
+}
+
+/* Action icons */
+.mm-action {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    font-size: 15px;
+    color: var(--icon-font-color);
+    line-height: 15px;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}
+
+/* Spinner */
+.mm-icon-spinner {
+    width: 100%;
+    text-align: left;
+    padding: var(--base-spacing) var(--base-spacing) 1px var(--base-spacing);
+    vertical-align: middle;
+    border: solid 1px var(--border-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    display: none;
+}
+
+.mm-icon-spinner img {
+    width: 17px;
+}
+
+/* Tree messages */
+.mm-tree-messages {
+    margin-top: 20px;
+}
+
+.mm-tree-messages .message.error {
+    padding: 7px 30px 7px 50px;
+}
+
+/* Tree layout */
+#mm-tree {
+    border: solid 1px var(--border-color);
+    margin-top: calc(var(--base-spacing)*3);
+}
+
+#mm-tree > ul {
+    font-size: var(--base-font-size);
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+
+ul.jqtree-tree ul.jqtree_common li {
+    padding-left: 20px;
+}
+
+/* Tree row */
+.jqtree-toggler {
+    float: left;
+    height: var(--field-height);
+    line-height: var(--field-height);
+    font-size: var(--icon-font-size);
+    color: var(--toggler-color) !important;
+}
+
+.jqtree-element {
+    display: block !important;
+    padding: 5px 0px 5px 5px;
+    border-bottom: solid 1px var(--border-color) !important;
+}
+
+.jqtree-element:hover {
+    background-color: #f5f5f5 !important;
+    background: linear-gradient(#f1f1f1, #f8f8f8) !important;
+}
+
+li.jqtree-selected > .jqtree-element {
+    background-color: #f1f1f1 !important;
+    background: linear-gradient(#f1f1f1, #e1e1e1) !important;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 70%) !important;
+}
+
+.mm-tree-row {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+/* Tree row inner layout */
+.mm-tree-row-name {
+    background-color: transparent;
+}
+
+.mm-tree-row-data {
+    text-align: right;
+}
+
+/* Tree row fields */
+span.jqtree-title {
+    display: none !important;
+}
+
+.mm-tree-row-name input {
+    display: inline-block;
+    width: 75%;
+    margin: 0px;
+}
+
+.mm-tree-row input {
+    padding-left: var(--base-spacing);
+    padding-right: var(--base-spacing);
+    border: none;
+}
+
+.mm-tree-row input, .mm-tree-row select {
+    height: var(--field-height);
+    color: var(--base-font-color);
+    border: solid 1px var(--border-color);
+}
+
+.mm-tree-row select {
+    border: solid 1px var(--border-color);
+}
+
+/* Link URL search field */
+.mm-link-url-container {
+    /*display: none;*/
+    display: inline-block;
+}
+
+.mm-link-url-field {
+    position: relative;
+}
+
+.mm-link-url-field input {
+    position: relative !important;
+    z-index: 0;
+}
+
+.mm-link-url-results {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    border-left: solid 1px var(--border-color);
+    border-right: solid 1px var(--border-color);
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+    display: none;
+}
+
+.mm-list-option {
+    height: var(--field-height);
+    line-height: var(--field-height);
+    padding: 0px var(--base-spacing) 0px var(--base-spacing);
+    text-align: left;
+    overflow-y: scroll;
+}
+
+.mm-list-option:hover {
+    background-color: #999999;
+    color: #f1f1f1;
+}
+
+.mm-list-option:last-child {
+    background-color: #f1f1f1;
+    border-bottom: solid 1px var(--border-color);
+}
+
+/* Row config form */
+#mm-error-message {
+    margin-top: 20px;
+}
+
+.mm-row-config {
+    display: none;
+}
