@@ -35,7 +35,7 @@ Upload the repository files into the folder created, and make sure the file and 
 
 Usually, you will need folders with <strong>chmod 755</strong>, files with <strong>chmod 644</strong>, and the web server user:group as owner of the Magento 2 installation file system.
 
-## Enable Menu Manager for Magento 2
+## Enable the module
 Once the extension installed, run the following command in the terminal, from the Magento 2 root directory:
 
 ```bash
