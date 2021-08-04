@@ -19,7 +19,7 @@ As most menu management tasks can be performed from the user interface, this int
 * Multi store mode support
 * Multi languages support
 
-## Installation with Composer 
+## Composer installation
 The easiest and recommended way to install Menu Manager for Magento 2 is to run the following commands in a terminal, from your Magento 2 root directory:
 
 ```bash
