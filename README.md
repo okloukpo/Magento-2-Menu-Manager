@@ -1,9 +1,9 @@
 ## Menu Manager for Magento 2
-The Menu Manager integration for Magento 2 allows store administrators and site builders to manage menus from the user interface, without need for technical skills.
+This integration for Magento 2 allows store administrators and site builders to manage menus from the user interface.
 
 Menu Manager offers many features that increase productivity and maintenability when working on navigation systems for Magento 2 stores.
 
-As most menu management tasks can be performed from the user interface, this integration removes the need for technical skills, making it easier and faster to build navigation systems.
+Menu Manager does the heavy work in the background and removes the need for technical skills, making it easier and faster to build navigation systems for Magento 2 stores.
 
 ## Features
 * Create custom menus and menu links
