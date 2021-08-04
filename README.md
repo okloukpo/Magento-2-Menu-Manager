@@ -31,7 +31,9 @@ You can also install Menu Manager for Magento manually.
 
 From the root of your Magento 2 installation, create a directory named <strong>app/code/Naxero/MenuManager</strong>
 
-Upload the repository files into the folder created, and make sure the file and folder permissions match your server conofiguration and requirements.
+Upload the repository files into the folder created, and make sure the file and folder permissions match your server configuration and requirements.
+
+Usually, you will need folders with 755 permissions, files with 644 permissions, and the web server user/group as owner of the Magento 2 installation's file system.
 
 ## Enable the integration
 Once the extension installed, run the following command in the terminal, from the Magento 2 root directory:
