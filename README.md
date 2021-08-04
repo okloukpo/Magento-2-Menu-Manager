@@ -42,8 +42,7 @@ Once the extension installed, run the following command in the terminal, from th
 bin/magento module:enable Naxero_MenuManager
 ```
 
-For more information on the Magento 2 module installation process, please have a look at the [Magento 2 official documentation](http://devdocs.magento.com/guides/v2.0/install-gde/install/cli/install-cli-subcommands-enable.html "Magento 2 official documentation")
-
+For more information Magento 2 exetnsions installation and update process, please have a look at the offcicial Magento 2 technical documentation.
 
 ## License
 This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses>.
