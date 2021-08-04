@@ -48,5 +48,5 @@ For more information Magento 2 exetnsions installation and update process, pleas
 This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses>.
 
 ## Copyright
-Copyright (C) 2022 David Fiaty
-https://www.davidfiaty.com 
+Copyright (C) 2022 David Fiaty | 
+[www.davidfiaty.com](https://www.davidfiaty.com "www.davidfiaty.com")
