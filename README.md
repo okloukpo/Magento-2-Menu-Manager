@@ -43,3 +43,11 @@ bin/magento module:enable Naxero_MenuManager
 ```
 
 For more information on the Magento 2 module installation process, please have a look at the [Magento 2 official documentation](http://devdocs.magento.com/guides/v2.0/install-gde/install/cli/install-cli-subcommands-enable.html "Magento 2 official documentation")
+
+
+## License
+This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses/>.
+
+## Copyright
+Copyright (C) 2022 David Fiaty
+https://www.davidfiaty.com 
