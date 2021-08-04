@@ -45,8 +45,6 @@ bin/magento module:enable Naxero_MenuManager
 For more information Magento 2 exetnsions installation and update process, please have a look at the offcicial Magento 2 technical documentation.
 
 ## License
-This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses> for mode information.
-
-Copyright (C) 2021 David Fiaty, all rights reserved.
-
+This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses> for mode information.<br>
+Copyright (C) 2021 David Fiaty, all rights reserved.<br>
 [www.davidfiaty.com](https://www.davidfiaty.com "David Fiaty")
