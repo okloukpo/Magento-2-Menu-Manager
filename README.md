@@ -27,12 +27,10 @@ composer require naxero/menu-manager:*
 ```
 
 ## Manual installation
-You can also install Menu Manager for Magento manually:
+You can also install Menu Manager for Magento manually.
 
-* Step 1
 From the root of your Magento 2 installation, create a directory named <strong>app/code/Naxero/MenuManager</strong>
 
-* Step 2
 Upload the repository files into the folder created, and make sure the file and folder permissions are configured properly.
 
 ## Enable the integration
