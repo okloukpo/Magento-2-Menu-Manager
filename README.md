@@ -1,5 +1,5 @@
 ## Menu Manager for Magento 2
-The Menu Manager extension for Magento 2 allows administrators and site builders to manage menus from the user interface.
+The Menu Manager integration for Magento 2 allows store administrators and site builders to manage menus from the user interface, without need for technical skills.
 
 Menu Manager offers many features that increase productivity and maintenability when working on navigation systems for Magento 2 stores.
 
