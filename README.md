@@ -46,7 +46,7 @@ For more information on the Magento 2 module installation process, please have a
 
 
 ## License
-This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses/>.
+This sofware is released under the GNU GPL3 license. See <http://www.gnu.org/licenses>.
 
 ## Copyright
 Copyright (C) 2022 David Fiaty
