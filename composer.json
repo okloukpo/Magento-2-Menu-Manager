@@ -1,0 +1,14 @@
+{
+    "name": "naxero/menumanager",
+    "description": "Menu Manager extension for Magento 2",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Naxero\\MenuManager\\": ""
+        }
+    }
+}
