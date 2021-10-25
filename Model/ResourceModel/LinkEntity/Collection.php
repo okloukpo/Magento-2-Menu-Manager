@@ -20,6 +20,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_idFieldName = 'entity_id';
 
     /**
@@ -27,6 +28,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(

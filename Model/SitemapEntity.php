@@ -29,6 +29,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_cacheTag = 'sitemap_entity';
 
     /**
@@ -36,6 +37,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @var string
      */
+    // phpcs:ignore
     public $_eventPrefix = 'sitemap_entity';
 
     /**
@@ -43,6 +45,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(

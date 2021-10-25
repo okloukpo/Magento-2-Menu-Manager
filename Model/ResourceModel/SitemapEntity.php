@@ -38,6 +38,7 @@ class SitemapEntity extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init('naxero_menumanager_sitemaps', 'entity_id');

@@ -29,6 +29,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_cacheTag = 'link_entity';
 
     /**
@@ -36,6 +37,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @var string
      */
+    // phpcs:ignore
     public $_eventPrefix = 'link_entity';
 
     /**
@@ -43,6 +45,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(

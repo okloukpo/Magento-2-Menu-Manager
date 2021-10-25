@@ -29,6 +29,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_cacheTag = 'menu_entity';
 
     /**
@@ -36,6 +37,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @var string
      */
+    // phpcs:ignore
     public $_eventPrefix = 'menu_entity';
 
     /**
@@ -43,6 +45,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(

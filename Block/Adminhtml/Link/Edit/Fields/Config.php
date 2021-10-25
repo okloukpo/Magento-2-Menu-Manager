@@ -63,7 +63,6 @@ class Config extends \Magento\Backend\Block\Template
         \Naxero\MenuManager\Model\Config\Backend\Source\Target $targetSource,
         array $data = []
     ) {
-
         parent::__construct($context, $data);
 
         $this->request = $request;

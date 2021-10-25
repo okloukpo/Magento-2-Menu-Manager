@@ -313,7 +313,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get the core media directory.
      */
-    function getMediaPath()
+    public function getMediaPath()
     {
         return $this->filesystem
         ->getDirectoryRead(DirectoryList::MEDIA)
@@ -323,7 +323,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get the URL of a file in the media directory.
      */
-    function getUploadUrl()
+    public function getUploadUrl()
     {
         return $this->storesHelper->getStore()
         ->getBaseUrl(UrlInterface::URL_TYPE_MEDIA)

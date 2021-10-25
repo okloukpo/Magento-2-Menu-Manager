@@ -41,12 +41,14 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
     /**
      * Initialize Imagegallery Images Edit Block.
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_objectId = 'row_id';
         $this->_blockGroup = 'Naxero_MenuManager';
         $this->_controller = 'adminhtml_menu';
 
+        // phpcs:ignore
         parent::_construct();
 
         // Remove the reset button
