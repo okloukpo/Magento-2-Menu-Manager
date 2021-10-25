@@ -32,32 +32,32 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
     public $registry;
 
     /**
-     *  @var StoreManagerInterface
+     * @var StoreManagerInterface
      */
     public $storeManager;
 
     /**
-     *  @var CollectionFactory
+     * @var CollectionFactory
      */
     public $categoryCollectionFactory;
 
     /**
-     *  @var CategoryRepository
+     * @var CategoryRepository
      */
     public $categoryRepository;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
     public $linkEntityFactory;
 
     /**
-     *  @var Links
+     * @var Links
      */
     public $linksHepler;
 
     /**
-     *  @var Stores
+     * @var Stores
      */
     public $storesHepler;
 

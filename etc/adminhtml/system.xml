@@ -32,20 +32,20 @@
                     <comment>Enable the Product Grid module. Enabling will override the core Instant Purchase feature.</comment>
                 </field>    
             </group>
-        	<group id="sitemap" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
-            	<label>Sitemap</label>
-            	<field id="changefreq" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                	<label>Frequency</label>
-                	<source_model>Magento\Sitemap\Model\Config\Source\Frequency</source_model>
-            	</field>
-            	<field id="priority" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                	<label>Priority</label>
-                	<comment>
-                    	Valid values range from 0.0 to 1.0.
-                	</comment>
-                	<backend_model>Magento\Sitemap\Model\Config\Backend\Priority</backend_model>
-            	</field>
-        	</group>
+            <group id="sitemap" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sitemap</label>
+                <field id="changefreq" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Frequency</label>
+                    <source_model>Magento\Sitemap\Model\Config\Source\Frequency</source_model>
+                </field>
+                <field id="priority" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Priority</label>
+                    <comment>
+                        Valid values range from 0.0 to 1.0.
+                    </comment>
+                    <backend_model>Magento\Sitemap\Model\Config\Backend\Priority</backend_model>
+                </field>
+            </group>
          </section>
     </system>
 </config>

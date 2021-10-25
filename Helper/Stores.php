@@ -29,7 +29,7 @@ class Stores extends \Magento\Framework\App\Helper\AbstractHelper
     public $storeManager;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
     public $linkEntityFactory;
 

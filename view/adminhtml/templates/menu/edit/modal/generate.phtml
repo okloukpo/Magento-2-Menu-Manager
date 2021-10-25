@@ -37,7 +37,7 @@
         </label>
         <div class="admin__field-control control">
             <select name="link_type" class="select admin__control-select">
-                <?php foreach($block->linkTypeSource->toOptionArray() as $option): ?>
+                <?php foreach ($block->linkTypeSource->toOptionArray() as $option): ?>
                     <option value="<?= $option['value'] ?>">
                         <?= $option['label'] ?>
                     </option>

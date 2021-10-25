@@ -1,16 +1,16 @@
 
 <!-- Block data -->
-<?php 
+<?php
     // Link data
-    $data = $block->getLinkData(); 
+    $data = $block->getLinkData();
 
     // Link config
     $linkConfig = null;
-    if (!empty($data['link_config'])) {
-        $linkConfig = is_array($data['link_config'])
-        ? $data['link_config']
-        : json_decode($data['link_config']);
-    }
+if (!empty($data['link_config'])) {
+    $linkConfig = is_array($data['link_config'])
+    ? $data['link_config']
+    : json_decode($data['link_config']);
+}
 ?>
 
 <!-- Form messages -->

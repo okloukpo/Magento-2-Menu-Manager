@@ -49,7 +49,7 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
     public $productCollectionFactory;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
     public $linkEntityFactory;
 

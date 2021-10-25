@@ -52,7 +52,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
     public $pageFactory;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
     public $linkEntityFactory;
 

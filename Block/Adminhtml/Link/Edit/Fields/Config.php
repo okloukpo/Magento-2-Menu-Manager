@@ -26,7 +26,7 @@ class Config extends \Magento\Backend\Block\Template
     public $request;
 
     /**
-     *  @var Links
+     * @var Links
      */
     public $linksHelper;
 
