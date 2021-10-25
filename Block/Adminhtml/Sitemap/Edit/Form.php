@@ -78,6 +78,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      *
      * @return $this
      */
+    // phpcs:ignore
     public function _prepareForm()
     {
         // Prepare parameters
@@ -212,6 +213,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
         $form->setUseContainer(true);
         $this->setForm($form);
 
+        // phpcs:ignore
         return parent::_prepareForm();
     }
 

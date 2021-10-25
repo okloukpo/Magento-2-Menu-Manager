@@ -66,6 +66,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      *
      * @return $this
      */
+    // phpcs:ignore
     public function _prepareForm()
     {
         // Prepare parameters
@@ -80,6 +81,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
         // Set the form
         $this->setForm($form);
 
+        // phpcs:ignore
         return parent::_prepareForm();
     }
     /**

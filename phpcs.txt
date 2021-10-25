@@ -1,84 +1,9 @@
 
-FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/MenuEntity.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
----------------------------------------------------------------------------------------------------
- 32 | WARNING | Property name "$_cacheTag" should not be prefixed with an underscore to indicate
-    |         | visibility
- 39 | WARNING | Property name "$_eventPrefix" should not be prefixed with an underscore to
-    |         | indicate visibility
- 46 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/LinkEntity.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
----------------------------------------------------------------------------------------------------
- 32 | WARNING | Property name "$_cacheTag" should not be prefixed with an underscore to indicate
-    |         | visibility
- 39 | WARNING | Property name "$_eventPrefix" should not be prefixed with an underscore to
-    |         | indicate visibility
- 46 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/SitemapEntity.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
----------------------------------------------------------------------------------------------------
- 32 | WARNING | Property name "$_cacheTag" should not be prefixed with an underscore to indicate
-    |         | visibility
- 39 | WARNING | Property name "$_eventPrefix" should not be prefixed with an underscore to
-    |         | indicate visibility
- 46 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
 FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/MenuEntity.php
 ---------------------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ---------------------------------------------------------------------------------------------------
  41 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/LinkEntity.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 41 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/SitemapEntity.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 41 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...nts/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/SitemapEntity/Collection.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 31 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...uments/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/MenuEntity/Collection.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 31 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
     |         | visibility
 ---------------------------------------------------------------------------------------------------
 
@@ -91,48 +16,12 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ---------------------------------------------------------------------------------------------------
 
 
-FILE: ...rs/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Widget/SitemapHtml.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 27 | WARNING | Property name "$_template" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Widget/Menu.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 27 | WARNING | Property name "$_template" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Sitemap/AddRow.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 25 | WARNING | Property name "$_coreRegistry" should not be prefixed with an underscore to
-    |         | indicate visibility
----------------------------------------------------------------------------------------------------
-
-
 FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Sitemap/Edit/Form.php
 ---------------------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ---------------------------------------------------------------------------------------------------
  81 | WARNING | Method name "_prepareForm" should not be prefixed with an underscore to indicate
     |         | visibility
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/AddRow.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 25 | WARNING | Property name "$_coreRegistry" should not be prefixed with an underscore to
-    |         | indicate visibility
 ---------------------------------------------------------------------------------------------------
 
 
@@ -153,5 +42,5 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
     |         | visibility
 ---------------------------------------------------------------------------------------------------
 
-Time: 1.01 secs; Memory: 14MB
+Time: 1.07 secs; Memory: 14MB
 

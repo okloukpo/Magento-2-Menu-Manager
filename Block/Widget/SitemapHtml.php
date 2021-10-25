@@ -24,6 +24,7 @@ class SitemapHtml extends \Magento\Framework\View\Element\Template implements \M
     /**
      * @var String
      */
+    // phpcs:ignore
     public $_template = 'widget/sitemap-html.phtml';
 
     /**

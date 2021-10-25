@@ -24,6 +24,7 @@ class Menu extends \Magento\Framework\View\Element\Template implements \Magento\
     /**
      * @var String
      */
+    // phpcs:ignore
     public $_template = 'widget/menu.phtml';
 
     /**

@@ -22,6 +22,7 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
      *
      * @var \Magento\Framework\Registry
      */
+    // phpcs:ignore
     public $_coreRegistry = null;
 
     /**
@@ -34,6 +35,7 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
         \Magento\Framework\Registry $registry,
         array $data = []
     ) {
+        // phpcs:ignore
         $this->_coreRegistry = $registry;
         parent::__construct($context, $data);
     }
