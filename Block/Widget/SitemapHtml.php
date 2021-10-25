@@ -54,14 +54,15 @@ class SitemapHtml extends \Magento\Framework\View\Element\Template implements \M
     /**
      * Get the HTML sitemap menus.
      */
-    public function getMenus() {
+    public function getMenus()
+    {
         // Get the menu IDs
         $idArray = explode(',', $this->getData('sitemap_menus'));
 
         // Load the menus
         $collection = $this->menuHelper->getMenus([
             'entity_id' => ['in' => $idArray],
-            'active' => ['eq' => 1] 
+            'active' => ['eq' => 1]
         ]);
 
         if ($collection->getSize() > 0) {

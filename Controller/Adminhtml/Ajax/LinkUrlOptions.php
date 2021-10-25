@@ -76,8 +76,7 @@ class LinkUrlOptions extends \Magento\Backend\App\Action
                     'data' => $this->menuHelper->getLinkUrlOptions($params['node'])
                 ];
             }
-        }
-        else {
+        } else {
             $response = $this->getErrorResponse();
         }
 
@@ -88,7 +87,7 @@ class LinkUrlOptions extends \Magento\Backend\App\Action
      * Get the error response.
      */
     public function getErrorResponse()
-    {    
+    {
         return  [
             'success' => false,
             'msg' => $this->blockHelper->getErrorHtml(

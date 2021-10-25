@@ -14,8 +14,8 @@ define([
 
         /**
          * Set the menu edit form buttons actions
-         */ 
-        setEvents: function() {
+         */
+        setEvents: function () {
             // Prepare variables
             var self = this;
             
@@ -25,7 +25,7 @@ define([
                 MMModal.showModal();
             });
 
-            // Save button event 
+            // Save button event
             $('#save').on('click touch', function (e) {
                 // Form validation
                 var form = $(self.f);
@@ -37,15 +37,14 @@ define([
                 $(self.f).submit();
             });
 
-            // Generate button event 
+            // Generate button event
             $('#mm-generate-button').on('click touch', function (e) {
                 var entityId = $('#entity_id').val();
                 if (parseInt(entityId) > 0) {
                     location.href = window.BASE_URL + 'sitemap/generate'
                     + '/?form_key=' + window.FORM_KEY
                     + '&id=' + $('#entity_id').val();
-                }
-                else {
+                } else {
                     MMModal.info('#mm-generate-info');
                     MMModal.showModal();
                 }
@@ -54,7 +53,7 @@ define([
 
         /**
          * Delete button callback event
-         */ 
+         */
         deleteAction: function () {
             // Prepare parameters
             var url = window.BASE_URL + 'sitemap/delete';
@@ -65,15 +64,15 @@ define([
 
             // AJAX request
             $.ajax({
-                url: url,  
+                url: url,
                 type: 'POST',
                 data: params,
                 dataType: 'json',
-                beforeSend: function() {
+                beforeSend: function () {
                     $('body').trigger('processStart');
                 },
-                success: function(res) {
-                    location.href = window.BASE_URL + 'sitemap/index';                    
+                success: function (res) {
+                    location.href = window.BASE_URL + 'sitemap/index';
                 },
                 error: function (request, status, error) {
                     $('body').trigger('processStop');

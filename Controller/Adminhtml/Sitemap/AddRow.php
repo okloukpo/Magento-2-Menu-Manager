@@ -27,7 +27,7 @@ class AddRow extends \Magento\Backend\App\Action
     /**
      * @var SitemapEntityFactory
      */
-	public $sitemapEntityFactory;
+    public $sitemapEntityFactory;
 
     /**
      * @var Config

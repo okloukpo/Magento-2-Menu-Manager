@@ -49,17 +49,17 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      *  @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      *  @var Links
      */
-	public $linksHepler;
+    public $linksHepler;
 
     /**
      *  @var Stores
      */
-	public $storesHepler;
+    public $storesHepler;
 
     /**
      * Class Category helper constructor.
@@ -201,10 +201,10 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
             ]));
             $entity->setLinkConfig('[]');
             $entity->setActive(1);
-            $entity->setLinkOrder(0); 
+            $entity->setLinkOrder(0);
 
             // Save the entity
-            $entity->save();     
+            $entity->save();
             
             // Handle Children
             if ((int) $item['children_count'] > 0) {
@@ -214,7 +214,7 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
                     $item['entity_id'],
                     $entity->getId()
                 );
-            } 
+            }
         }
     }
 }

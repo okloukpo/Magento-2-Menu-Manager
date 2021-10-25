@@ -25,7 +25,7 @@ class Html extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * Sitemap HTML helper class constructor.
@@ -33,6 +33,6 @@ class Html extends \Magento\Framework\App\Helper\AbstractHelper
     public function __construct(
         \Naxero\MenuManager\Helper\Links $linksHelper
     ) {
-        $this->linksHelper = $linksHelper;              
+        $this->linksHelper = $linksHelper;
     }
 }

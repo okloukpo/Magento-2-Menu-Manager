@@ -16,8 +16,8 @@ define([
 
         /**
          * Set the menu edit form buttons actions
-         */ 
-        setEvents: function() {
+         */
+        setEvents: function () {
             // Prepare variables
             var self = this;
             
@@ -27,7 +27,7 @@ define([
                 MMModal.showModal();
             });
 
-            // Save button event 
+            // Save button event
             $('#save').on('click touch', function (e) {
                 // Prevent the default action
                 e.preventDefault();
@@ -49,19 +49,18 @@ define([
                 
                 // AJAX request
                 $.ajax({
-                    url: url,  
+                    url: url,
                     type: 'POST',
                     data: params,
                     dataType: 'json',
-                    beforeSend: function() {
+                    beforeSend: function () {
                         $('body').trigger('processStart');
                     },
-                    success: function(res) {
+                    success: function (res) {
                         if (parseInt(res.entity_id) > 0) {
                             window.location.href = window.BASE_URL + 'menu/addrow/id/'
                             + res.entity_id;
-                        }
-                        else {
+                        } else {
                             window.location.href = window.BASE_URL + 'menu/index';
                         }
                     },
@@ -75,7 +74,7 @@ define([
 
         /**
          * Delete button callback event
-         */ 
+         */
         deleteAction: function () {
             // Prepare parameters
             var url = window.BASE_URL + 'menu/delete';
@@ -86,15 +85,15 @@ define([
 
             // AJAX request
             $.ajax({
-                url: url,  
+                url: url,
                 type: 'POST',
                 data: params,
                 dataType: 'json',
-                beforeSend: function() {
+                beforeSend: function () {
                     $('body').trigger('processStart');
                 },
-                success: function(res) {
-                    location.href = window.BASE_URL + 'menu/index';                    
+                success: function (res) {
+                    location.href = window.BASE_URL + 'menu/index';
                 },
                 error: function (request, status, error) {
                     $('body').trigger('processStop');

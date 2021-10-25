@@ -1,7 +1,7 @@
 require([
     'jquery', 'domReady!'
-], function($) {
-    $(document).ready(function() {
+], function ($) {
+    $(document).ready(function () {
         // Adjust menu link images
         // Todo - Remove test
         var newHeight = '50px';

@@ -53,7 +53,7 @@ class Blocks implements \Magento\Framework\Option\ArrayInterface
             if ($item->isActive()) {
                 $options[] = [
                     'value' => $item->getIdentifier(),
-                    'label' => $item->getTitle()        
+                    'label' => $item->getTitle()
                 ];
             }
         }

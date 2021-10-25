@@ -20,7 +20,8 @@ namespace Naxero\MenuManager\Model\Api;
  * Class LinkEntity API model
  */
 class LinkEntity implements \Naxero\MenuManager\Api\LinkInterface
-{ 
+{
+
     /**
      * @var Links
      */
@@ -42,7 +43,7 @@ class LinkEntity implements \Naxero\MenuManager\Api\LinkInterface
     {
         try {
             $response = $this->linksHelper->getLinks()->getData();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $response = ['error' => $e->getMessage()];
         }
  
@@ -56,7 +57,7 @@ class LinkEntity implements \Naxero\MenuManager\Api\LinkInterface
     {
         try {
             $response = $this->linksHelper->getLink($linkId)->getData();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $response = ['error' => $e->getMessage()];
         }
  

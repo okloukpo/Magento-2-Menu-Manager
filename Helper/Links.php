@@ -46,7 +46,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Block helper class constructor.
@@ -81,7 +81,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
             }
         }
 
-        return $collection;  
+        return $collection;
     }
 
     /**
@@ -95,7 +95,8 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get a link configuration data.
      */
-    public function getLinkConfig($item) {
+    public function getLinkConfig($item)
+    {
         if (isset($item['link_config']) && !empty($item['link_config'])) {
             $config = json_decode($item['link_config']);
             foreach ($config as $row) {
@@ -126,7 +127,6 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
         // Return the entity data
         if ($collection->getSize() > 0) {
-
             return $collection->getData()[0]['entity_id'];
         }
             
@@ -136,7 +136,8 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Check if a link needs a block sublayout display.
      */
-    public function needsBlockSublayout($item) {
+    public function needsBlockSublayout($item)
+    {
         // Get the config
         $linkConfig = $this->getLinkConfig($item);
 
@@ -185,7 +186,8 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Update file paths for a link entity.
      */
-    public function updateFilePath($item, $tmpId) {
+    public function updateFilePath($item, $tmpId)
+    {
         if ($tmpId && !empty($tmpId)) {
             // Prepare variables
             $data = $item->getData();

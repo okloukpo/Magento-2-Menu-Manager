@@ -28,7 +28,7 @@ class Config extends \Magento\Backend\Block\Template
     /**
      *  @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * @var LinkType
@@ -77,7 +77,8 @@ class Config extends \Magento\Backend\Block\Template
     /**
      * Get a link data.
      */
-    public function getLinkData() {
+    public function getLinkData()
+    {
         // Prepare variables
         $data = $this->getData('link_data');
         if ((int) $data['entity_id'] > 0) {

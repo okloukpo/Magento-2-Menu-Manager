@@ -25,7 +25,7 @@ class Delete extends \Magento\Backend\App\Action
     /**
      * @var Menu
      */
-	public $menuHelper;
+    public $menuHelper;
 
     /**
      * Menu save class constructor.

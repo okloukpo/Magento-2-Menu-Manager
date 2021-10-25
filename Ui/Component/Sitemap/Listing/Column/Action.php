@@ -48,8 +48,7 @@ class Action extends Column
         array $components = [],
         array $data = [],
         $editUrl = self::ROW_EDIT_URL
-    ) 
-    {
+    ) {
         $this->_urlBuilder = $urlBuilder;
         $this->_editUrl = $editUrl;
         parent::__construct($context, $uiComponentFactory, $components, $data);
@@ -71,7 +70,7 @@ class Action extends Column
                     // Edit action link
                     $item[$name]['edit'] = [
                         'href' => $this->_urlBuilder->getUrl(
-                            $this->_editUrl, 
+                            $this->_editUrl,
                             ['id' => $item['entity_id']]
                         ),
                         'label' => __('Edit'),
@@ -80,7 +79,7 @@ class Action extends Column
                     // Generate action link
                     $item[$name]['generate'] = [
                         'href' => $this->_urlBuilder->getUrl(
-                            'naxero-mm/sitemap/generate', 
+                            'naxero-mm/sitemap/generate',
                             ['id' => $item['entity_id']]
                         ),
                         'label' => __('Generate'),
@@ -89,7 +88,7 @@ class Action extends Column
                     // Delete action link
                     $item[$name]['delete'] = [
                         'href' => $this->_urlBuilder->getUrl(
-                            'naxero-mm/sitemap/delete', 
+                            'naxero-mm/sitemap/delete',
                             ['entity_id' => $item['entity_id']]
                         ),
                         'label' => __('Delete'),

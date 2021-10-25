@@ -19,7 +19,8 @@ namespace Naxero\MenuManager\Api;
 /**
  * Link API interface class
  */
-interface LinkInterface {
+interface LinkInterface
+{
     /**
      * Get a menu links
      * @return mixed

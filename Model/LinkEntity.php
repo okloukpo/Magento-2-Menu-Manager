@@ -75,7 +75,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return int|null
      */
-    public function getMenuId() {
+    public function getMenuId()
+    {
         return $this->getData(self::MENU_ID);
     }
 
@@ -84,7 +85,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return int|null
      */
-    public function getParentId() {
+    public function getParentId()
+    {
         return $this->getData(self::PARENT_ID);
     }
 
@@ -93,7 +95,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkType() {
+    public function getLinkType()
+    {
         return $this->getData(self::LINK_TYPE);
     }
 
@@ -102,7 +105,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkUrl() {
+    public function getLinkUrl()
+    {
         return $this->getData(self::LINK_URL);
     }
 
@@ -111,7 +115,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkText() {
+    public function getLinkText()
+    {
         return $this->getData(self::LINK_TEXT);
     }
 
@@ -120,25 +125,28 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkData() {
+    public function getLinkData()
+    {
         return $this->getData(self::LINK_DATA);
-    } 
+    }
 
     /**
      * Get link config
      *
      * @return string
      */
-    public function getLinkConfig() {
+    public function getLinkConfig()
+    {
         return $this->getData(self::LINK_CONFIG);
-    } 
+    }
 
     /**
      * Get order
      *
      * @return int|null
      */
-    public function getLinkOrder() {
+    public function getLinkOrder()
+    {
         return $this->getData(self::LINK_ORDER);
     }
 
@@ -147,7 +155,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return int
      */
-    public function getActive() {
+    public function getActive()
+    {
         return $this->getData(self::ACTIVE);
     }
 
@@ -157,7 +166,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      * @param int $id
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setId($id) {
+    public function setId($id)
+    {
         return $this->setData(self::ENTITY_ID, $id);
     }
 
@@ -166,7 +176,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setMenuId($id) {
+    public function setMenuId($id)
+    {
         return $this->setData(self::MENU_ID, $id);
     }
 
@@ -175,7 +186,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setParentId($id) {
+    public function setParentId($id)
+    {
         return $this->setData(self::PARENT_ID, $id);
     }
 
@@ -184,7 +196,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkType($type) {
+    public function setLinkType($type)
+    {
         return $this->setData(self::LINK_TYPE, $type);
     }
 
@@ -193,7 +206,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkUrl($url) {
+    public function setLinkUrl($url)
+    {
         return $this->setData(self::LINK_URL, $url);
     }
 
@@ -202,7 +216,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkText($text) {
+    public function setLinkText($text)
+    {
         return $this->setData(self::LINK_TEXT, $text);
     }
 
@@ -211,7 +226,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkData($data) {
+    public function setLinkData($data)
+    {
         return $this->setData(self::LINK_DATA, $data);
     }
 
@@ -220,7 +236,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkConfig($config) {
+    public function setLinkConfig($config)
+    {
         return $this->setData(self::LINK_CONFIG, $config);
     }
 
@@ -229,7 +246,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkOrder($order) {
+    public function setLinkOrder($order)
+    {
         return $this->setData(self::LINK_ORDER, $order);
     }
 
@@ -238,7 +256,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setActive($active) {
+    public function setActive($active)
+    {
         return $this->setData(self::ACTIVE, $active);
     }
 }

@@ -18,6 +18,7 @@ namespace Naxero\MenuManager\Helper;
 use Magento\Framework\Module\Dir;
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\UrlInterface;
+
 /**
  * Class Config helper.
  */
@@ -66,17 +67,17 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var String
      */
-    const MENU_ENTITY_TABLE = 'naxero_menumanager_menus';   
+    const MENU_ENTITY_TABLE = 'naxero_menumanager_menus';
 
     /**
      * @var String
      */
-    const SITEMAP_ENTITY_TABLE = 'naxero_menumanager_sitemaps';   
+    const SITEMAP_ENTITY_TABLE = 'naxero_menumanager_sitemaps';
 
     /**
      * @var Session
      */
-	public $backendAuthSession;
+    public $backendAuthSession;
 
     /**
      * @var Filesystem
@@ -121,7 +122,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var Stores
      */
-	public $storesHelper;
+    public $storesHelper;
 
     /**
      * Class Config constructor.
@@ -180,7 +181,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function isValidAdminRequest($request)
     {
-        return $this->isValidRequest($request) 
+        return $this->isValidRequest($request)
         && $this->isAdminRequest();
     }
 
@@ -207,8 +208,8 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     public function value($field, $core = false)
     {
         // Get the path
-        $path = !$core 
-        ? self::MODULE_TAG . DIRECTORY_SEPARATOR . $field 
+        $path = !$core
+        ? self::MODULE_TAG . DIRECTORY_SEPARATOR . $field
         : $field;
 
         return $this->scopeConfig->getValue(
@@ -223,8 +224,8 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     public function arrayValue($field, $core = false)
     {
         // Get the path
-        $path = !$core 
-        ? self::MODULE_TAG . DIRECTORY_SEPARATOR . $field 
+        $path = !$core
+        ? self::MODULE_TAG . DIRECTORY_SEPARATOR . $field
         : $field;
 
         $value = $this->scopeConfig->getValue(
@@ -282,7 +283,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     public function getIconUrl($fileName)
     {
         // Prepare the file path
-        $url = self::MODULE_NAME . '::images' 
+        $url = self::MODULE_NAME . '::images'
         . DIRECTORY_SEPARATOR . $fileName;
     
         // Return the URL
@@ -306,13 +307,14 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     public function getUploadPath()
     {
         return $this->getMediaPath() . 'naxero'
-        . DIRECTORY_SEPARATOR . 'menu-manager';   
+        . DIRECTORY_SEPARATOR . 'menu-manager';
     }
 
     /**
      * Get the core media directory.
      */
-    function getMediaPath() {
+    function getMediaPath()
+    {
         return $this->filesystem
         ->getDirectoryRead(DirectoryList::MEDIA)
         ->getAbsolutePath();
@@ -321,7 +323,8 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get the URL of a file in the media directory.
      */
-    function getUploadUrl() {
+    function getUploadUrl()
+    {
         return $this->storesHelper->getStore()
         ->getBaseUrl(UrlInterface::URL_TYPE_MEDIA)
         . DIRECTORY_SEPARATOR . 'naxero'

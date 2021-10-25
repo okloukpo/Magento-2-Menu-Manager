@@ -77,7 +77,7 @@ define([
                     var linkConfigButton = $li.find('.jqtree-element ' + rowId + ' .mm-action-config');
 
                     // Config form button
-                    linkConfigButton.on('click touch', function(e) {    
+                    linkConfigButton.on('click touch', function (e) {
                         // Prepare parameters
                         var url = window.BASE_URL + 'ajax/linkconfig';
                         var params = {
@@ -88,14 +88,14 @@ define([
     
                         // AJAX request
                         $.ajax({
-                            url: url,  
+                            url: url,
                             type: 'POST',
                             data: params,
                             dataType: 'json',
-                            beforeSend: function() {
+                            beforeSend: function () {
                                 $('body').trigger('processStart');
                             },
-                            success: function(html) {
+                            success: function (html) {
                                 $('body').trigger('processStop');
                                 var rowConfigId = '#mm-row-config-' + node.id;
                                 MMModal.linkConfigForm(rowConfigId, node.id);
@@ -109,14 +109,14 @@ define([
                     });
 
                     // Active button
-                    activeButton.on('click touch', function(e) {
+                    activeButton.on('click touch', function (e) {
                         var field = $(e.target).data('field');
                         var newState = (parseInt(node.active) == 1 ? 0 : 1);
                         self.updateNodeBranch(node, newState, field);
                     });
 
                     // Add row button
-                    addRowButton.on('click touch', function(e) {
+                    addRowButton.on('click touch', function (e) {
                         var newNode = self.getEmptyRow(node);
                         $(self.t).tree('addNodeAfter', newNode, node);
                     });
@@ -143,7 +143,7 @@ define([
                         node['link_type'] = $(this).val();
 
                         // Clear the link URL field
-                        linkUrlField.val(''); 
+                        linkUrlField.val('');
 
                         // Handle search suggestions
                         if (self.canTriggerSearch(node)) {
@@ -169,8 +169,8 @@ define([
                             self.loadListOptions(node);
 
                             // Show the results
-                            linkUrlOptionsContainer.css('display', 'block');   
-                        }                     
+                            linkUrlOptionsContainer.css('display', 'block');
+                        }
                     });
 
                     // Link URL field on change event
@@ -181,7 +181,7 @@ define([
                         // Update the node
                         self.updateNode(node, [
                             { field: 'link_url', value: $(this).val() },
-                            { 
+                            {
                                 field: 'link_data',
                                 value: { text: $(this).val(), value: $(this).val() }
                             }
@@ -189,7 +189,7 @@ define([
                     });
 
                     // Link URL field on input event
-                    $(document).on('input', '.mm-link-url', function(e) { 
+                    $(document).on('input', '.mm-link-url', function (e) {
                         var targetNodeId = $(e.target).parents('.mm-tree-row').data('node-id');
                         if (targetNodeId == node.id) {
                             var searchValue = $(this).val().toLowerCase();
@@ -197,12 +197,11 @@ define([
                             if (options.length > 0) {
                                 // Get the search suggestions
                                 var searchResults = 0;
-                                options.each(function() {
+                                options.each(function () {
                                     var optionText = $(this).text().toLowerCase();
                                     if (optionText.indexOf(searchValue) == -1) {
                                         $(this).hide();
-                                    }
-                                    else {
+                                    } else {
                                         $(this).show();
                                         searchResults++;
                                     }
@@ -210,7 +209,7 @@ define([
     
                                 // Handle no suggestions (show all)
                                 if (searchResults == 0) {
-                                    options.each(function() {
+                                    options.each(function () {
                                         $(this).show();
                                     });
                                 }
@@ -219,7 +218,7 @@ define([
                     });
 
                     // Link URL list option click
-                    $(document).on('click touch', '.mm-list-option', function(e) { 
+                    $(document).on('click touch', '.mm-list-option', function (e) {
                         var targetNodeId = $(e.target).parents('.mm-tree-row').data('node-id');
                         if (targetNodeId == node.id) {
                             // Hide the results
@@ -231,7 +230,7 @@ define([
                             // Update the node
                             self.updateNode(node, [
                                 { field: 'link_url', value: $(this).data('value') },
-                                { 
+                                {
                                     field: 'link_data',
                                     value: { text: $(this).data('text'), value: $(this).data('value') }
                                 }
@@ -268,8 +267,7 @@ define([
                             data: { msg: __('Please select a row to delete.') }
                         })
                     ).show().delay(2500).fadeOut();
-                }
-                else {
+                } else {
                     // Delete the row
                     $(self.t).tree('moveDown');
                     $(self.t).tree('removeNode', node);
@@ -286,7 +284,7 @@ define([
             });
 
             // Global Link URL click out event
-            $('body').on('click touch', function(e) {
+            $('body').on('click touch', function (e) {
                 if (!$(e.target).hasClass('mm-link-url')) {
                     $('.mm-link-url-results').css('display', 'none');
                 }
@@ -317,7 +315,7 @@ define([
                     this.updateNodeBranch(child, newState, field);
                 }
             }
-        },      
+        },
 
         /**
          * Generate links action
@@ -326,7 +324,7 @@ define([
             // Prepare parameters
             var targetForm = window.parent.document.getElementById('mm-generate-form');
             $(targetForm).submit();
-        },      
+        },
 
         /**
          * Check if a node field an trigger AJAX search.
@@ -348,15 +346,14 @@ define([
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].field == 'link_data') {
                         node[data[i].field] = JSON.stringify(data[i].value);
-                    }
-                    else {
+                    } else {
                         node[data[i].field] = data[i].value;
                     }
                 }
             }
 
             // Hidden name field
-            node['name'] = node['link_text']; 
+            node['name'] = node['link_text'];
 
             // Update the node
             $(this.t).tree('updateNode', node);
@@ -373,8 +370,7 @@ define([
             // Load the list options
             if (options && options.length > 0) {
                 this.buildListOptions(node, options);
-            }
-            else {
+            } else {
                 // Request parameters
                 var params = {
                     node: MMTools.getNodeData(node, this.config),
@@ -418,7 +414,7 @@ define([
                     ? 'selected' : '';
 
                     // Prepare the template parameters
-                    var option = { 
+                    var option = {
                         value: data[i].value,
                         text: data[i].text,
                         selected: selected
@@ -436,11 +432,10 @@ define([
 
                 // Render the result
                 $(rowId).find('.mm-link-url-results').empty().html(html);
-            }
-            else {
+            } else {
                 // Render the error
                 $('#mm-tree-messages').empty().html(res.msg);
-            }            
+            }
         },
 
         /**
@@ -455,8 +450,7 @@ define([
             // Add the new node
             if (selectedNode) {
                 $(self.t).tree('addNodeAfter', data, selectedNode);
-            }
-            else {
+            } else {
                 $(self.t).tree('appendNode', data);
             }
         },

@@ -28,14 +28,15 @@ class MenuLinks extends \Magento\Backend\Block\Template
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         array $data = []
-    ) {        
+    ) {
         parent::__construct($context, $data);
     }
 
     /**
      * Render the generator modal form
      */
-    public function renderGeneratorForm() {      
+    public function renderGeneratorForm()
+    {
         // Get the menu ID
         $menuId = $this->getRequest()->getParam('id');
 

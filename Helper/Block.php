@@ -106,5 +106,4 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
         ->setData('msg', $msg)
         ->toHtml();
     }
-
 }

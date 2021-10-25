@@ -25,12 +25,12 @@ class Save extends \Magento\Backend\App\Action
     /**
      * @var Menu
      */
-	public $menuHelper;
+    public $menuHelper;
 
     /**
      * @var Config
      */
-	public $configHelper;
+    public $configHelper;
 
     /**
      * Menu save class constructor.

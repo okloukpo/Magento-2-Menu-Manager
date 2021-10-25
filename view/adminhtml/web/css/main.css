@@ -26,9 +26,9 @@
 }
 
 .admin__field-control input.error,
-.admin__field-control select.error 
+.admin__field-control select.error
 .admin__field-control textarea.error  {
-    border: solid 1px red;    
+    border: solid 1px red;
 }
 
 /* Form buttons */

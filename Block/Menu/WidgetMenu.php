@@ -48,14 +48,16 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     /**
      * Get a menu data
      */
-    public function getMenuData() {
+    public function getMenuData()
+    {
         return $this->getData('menu_data');
     }
     
     /**
      * Render a list menu.
      */
-    public function renderMenu($items) {
+    public function renderMenu($items)
+    {
         $html = '';
         foreach ($items as $item) {
             if ((int) $item['parent_id'] == 0) {
@@ -69,7 +71,8 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     /**
      * Render a submenu link.
      */
-    public function renderMenuLink($item, $hasChildren = false) {
+    public function renderMenuLink($item, $hasChildren = false)
+    {
         // Link config
         $linkConfig = $this->linksHelper->getLinkConfig($item);
 
@@ -81,8 +84,7 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
         if ($this->linksHelper->needsBlockSublayout($item)) {
             $hasChildren = true;
             $html .= $this->renderBlockSublayout($item, $hasChildren);
-        } 
-        else if (!empty($children)) {
+        } elseif (!empty($children)) {
             $html .= $this->getChildrenHtml($item, $children);
         }
 
@@ -94,7 +96,8 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     /**
      * Get a menu item HTML.
      */
-    public function getItemHtml($item) {
+    public function getItemHtml($item)
+    {
         $html  = '';
         $html .= '<div class="switcher">';
         $html .= '<div class="actions dropdown options switcher-options">';
@@ -113,7 +116,8 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     /**
      * Get a menu item children HTML.
      */
-    public function getChildrenHtml($item, $children) {
+    public function getChildrenHtml($item, $children)
+    {
         $hasChildren = true;
         $html = '';
         $html .= '<ul class="dropdown switcher-dropdown" data-target="dropdown">';
@@ -123,7 +127,7 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
             $html .= $child['label'];
             $html .= '</a>';
             $html .= '</li>';
-        } 
+        }
 
         $html .= '</ul>';
 
@@ -133,7 +137,8 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     /**
      * Render a parent link block sublayout.
      */
-    public function renderBlockSublayout($item, $level, $hasChildren = false) {
+    public function renderBlockSublayout($item, $level, $hasChildren = false)
+    {
         // Prepare variables
         $ulClasses = $this->getUlClasses($item, $level);
         $liClasses = $this->getLiClasses($item, $level, $hasChildren);
@@ -148,7 +153,7 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
         $html .= '<span>&nbsp;</span>';
         $html .= $this->getLayout()
             ->createBlock(\Magento\Cms\Block\Block::class)
-            ->setBlockId($linkConfig['block']) 
+            ->setBlockId($linkConfig['block'])
             ->toHtml();
         $html .= '</li>';
         $html .= '</ul>';

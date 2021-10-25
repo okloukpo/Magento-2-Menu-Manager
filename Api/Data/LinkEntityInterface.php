@@ -30,37 +30,37 @@ interface LinkEntityInterface
     /**
      * @var String
      */
-    const PARENT_ID = 'parent_id'; 
+    const PARENT_ID = 'parent_id';
 
     /**
      * @var String
      */
-    const LINK_TYPE = 'link_type'; 
+    const LINK_TYPE = 'link_type';
 
     /**
      * @var String
      */
-    const LINK_URL = 'link_url'; 
+    const LINK_URL = 'link_url';
 
     /**
      * @var String
      */
-    const LINK_TEXT = 'link_text'; 
+    const LINK_TEXT = 'link_text';
 
     /**
      * @var String
      */
-    const LINK_DATA = 'link_data'; 
+    const LINK_DATA = 'link_data';
 
     /**
      * @var String
      */
-    const LINK_CONFIG = 'link_config'; 
+    const LINK_CONFIG = 'link_config';
 
     /**
      * @var String
      */
-    const LINK_ORDER = 'link_order'; 
+    const LINK_ORDER = 'link_order';
 
     /**
      * @var int

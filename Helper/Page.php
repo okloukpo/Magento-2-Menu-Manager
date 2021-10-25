@@ -54,7 +54,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      *  @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Class Page helper constructor.
@@ -63,17 +63,17 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Cms\Api\PageRepositoryInterface $pageRepositoryInterface,
         \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory,
-        \Magento\Cms\Model\Page $cmsPageModel, 
-        \Magento\Cms\Helper\Page $cmsPageHelper, 
+        \Magento\Cms\Model\Page $cmsPageModel,
+        \Magento\Cms\Helper\Page $cmsPageHelper,
         \Magento\Cms\Model\PageFactory $pageFactory,
         \Naxero\MenuManager\Model\LinkEntityFactory $linkEntityFactory
     ) {
         $this->storeManager = $storeManager;
         $this->pageRepositoryInterface = $pageRepositoryInterface;
-        $this->searchCriteriaBuilderFactory = $searchCriteriaBuilderFactory;        
-        $this->cmsPageModel = $cmsPageModel;   
-        $this->cmsPageHelper = $cmsPageHelper;   
-        $this->pageFactory = $pageFactory;             
+        $this->searchCriteriaBuilderFactory = $searchCriteriaBuilderFactory;
+        $this->cmsPageModel = $cmsPageModel;
+        $this->cmsPageHelper = $cmsPageHelper;
+        $this->pageFactory = $pageFactory;
         $this->linkEntityFactory = $linkEntityFactory;
     }
 
@@ -170,7 +170,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
             $entity->setLinkOrder($i);
 
             // Save the entity
-            $entity->save();         
+            $entity->save();
 
             // Increment
             $i++;

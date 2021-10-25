@@ -21,7 +21,8 @@ use Magento\Catalog\Model\Product\Attribute\Source\Status;
  * Class Product helper.
  */
 class Product extends \Magento\Framework\App\Helper\AbstractHelper
-{   
+{
+
     /**
      * @var Registry
      */
@@ -50,7 +51,7 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      *  @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Class Product helper constructor.
@@ -227,7 +228,7 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
             $entity->setLinkConfig('[]');
 
             // Save the entity
-            $entity->save();       
+            $entity->save();
 
             // Increment
             $i++;

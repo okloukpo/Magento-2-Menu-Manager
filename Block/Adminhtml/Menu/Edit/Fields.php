@@ -109,7 +109,8 @@ class Fields implements \Magento\Framework\View\Element\Block\ArgumentInterface
     /**
      * Get the fields data
      */
-    public function getFieldsData() {
+    public function getFieldsData()
+    {
         return [
             // Fieldset 1
             'fieldset1' => [
@@ -324,7 +325,8 @@ class Fields implements \Magento\Framework\View\Element\Block\ArgumentInterface
     /**
      * Render the menu links form field
      */
-    public function renderMenuLinks() {
+    public function renderMenuLinks()
+    {
         // Prepare variables
         $config = $this->getConfig();
         $entityId = (int) $this->request->getParam('id');
@@ -343,7 +345,8 @@ class Fields implements \Magento\Framework\View\Element\Block\ArgumentInterface
     /**
      * Get the form config
      */
-    public function getConfig() {
+    public function getConfig()
+    {
         // Get the link entity fields
         $linkEntityFields = $this->configHelper->getEntityFields(
             $this->configHelper::LINK_ENTITY_TABLE

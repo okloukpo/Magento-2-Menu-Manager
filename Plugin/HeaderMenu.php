@@ -75,7 +75,7 @@ class HeaderMenu
     public function aroundToHtml($subject, callable $proceed)
     {
         if ($this->canDisplay()) {
-            // Set the processed flag 
+            // Set the processed flag
             $this->registry->register('mm_header_menu_processed', true);
 
             // Get the menu items
@@ -96,7 +96,7 @@ class HeaderMenu
     /**
      * Check if a custom menu can be displayed
      */
-    public function canDisplay() 
+    public function canDisplay()
     {
         // Get the override menu
         $overrideMenu = $this->menuHelper->getMenus([
@@ -122,7 +122,7 @@ class HeaderMenu
     /**
      * Check if a user is allowed to view the menu.
      */
-    public function userIsAllowed() 
+    public function userIsAllowed()
     {
         return $this->userHelper->userHasGroup(
             $this->overrideMenu['user_groups']

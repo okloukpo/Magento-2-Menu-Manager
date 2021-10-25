@@ -21,7 +21,8 @@ use Naxero\MenuManager\Helper\Config;
  * Class Menu helper.
  */
 class Menu extends \Magento\Framework\App\Helper\AbstractHelper
-{   
+{
+
     /**
      * @var UrlInterface
      */
@@ -30,47 +31,47 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var MenuEntityFactory
      */
-	public $menuEntityFactory;
+    public $menuEntityFactory;
 
     /**
      * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * @var Config
      */
-	public $configHelper;
+    public $configHelper;
 
     /**
      * @var Product
      */
-	public $productHelper;
+    public $productHelper;
 
     /**
      * @var Category
      */
-	public $categoryHelper;
+    public $categoryHelper;
 
     /**
      * @var Page
      */
-	public $pageHelper;
+    public $pageHelper;
 
     /**
      * @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * @var Stores
      */
-	public $storesHelper;
+    public $storesHelper;
 
     /**
      * @var Tools
      */
-	public $toolsHelper;
+    public $toolsHelper;
     
     /**
      * Class Product helper constructor.
@@ -86,7 +87,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
         \Naxero\MenuManager\Helper\Links $linksHelper,
         \Naxero\MenuManager\Helper\Stores $storesHelper,
         \Naxero\MenuManager\Helper\Tools $toolsHelper
-   ) {
+    ) {
         $this->urlInterface = $urlInterface;
         $this->menuEntityFactory = $menuEntityFactory;
         $this->linkEntityFactory = $linkEntityFactory;
@@ -115,11 +116,11 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
             }
         }
 
-        return $collection;  
+        return $collection;
     }
 
     /**
-     * Get a menu 
+     * Get a menu
      */
     public function getMenu($id)
     {
@@ -145,7 +146,8 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Generate a menu links
      */
-    public function generateMenuLinks($data) {
+    public function generateMenuLinks($data)
+    {
         switch ($data['link_type']) {
             case 'category':
                 $this->categoryHelper->generateCategoryLinks($data);
@@ -162,7 +164,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
             case 'store':
                 $this->storesHelper->generateStoreLinks($data);
                 break;
-        }   
+        }
 
         return true;
     }
@@ -182,7 +184,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
                 // Build the row array recursively
                 if ((int) $data['parent_id'] == 0) {
                     $output[] = $this->buildMenuLinkArray($data, $items);
-                } 
+                }
             }
         }
 
@@ -221,20 +223,20 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
         // Get child rows
         $childKeys = array_keys(
-            array_column($items, 'parent_id'), 
+            array_column($items, 'parent_id'),
             $data['entity_id']
         );
 
         // Process children if any
         foreach ($childKeys as $key) {
             $data['children'][] = $this->buildMenuLinkArray($items[$key], $items);
-        } 
+        }
 
         return $data;
     }
 
     /**
-     * Save a menu data 
+     * Save a menu data
      */
     public function saveMenu($data)
     {
@@ -293,7 +295,8 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Check if a menu link needs an image.
      */
-    public function linkNeedsImage($item, $menuData) {
+    public function linkNeedsImage($item, $menuData)
+    {
         $linkTypes = ['category', 'product'];
         $condition1 = in_array($item['link_type'], $linkTypes);
         $condition2 = (int) $item['parent_id'] > 0;
@@ -306,7 +309,8 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get the active menu ovrride positions
      */
-    public function getActiveOverrides() {
+    public function getActiveOverrides()
+    {
         $output = [];
         $collection = $this->getMenus(['active' => 1]);
         if ($collection->getSize() > 0) {
@@ -321,13 +325,13 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get a menu link image.
      */
-    public function getMenuLinkImage($item) {
+    public function getMenuLinkImage($item)
+    {
         if ($item['link_type'] == 'category') {
             return $this->categoryHelper->getCategoryImage(
                 $item['entity_id']
             );
-        }
-        else if ($item['link_type'] == 'product') {
+        } elseif ($item['link_type'] == 'product') {
             return $this->productHelper->getProductImage(
                 $item['entity_id']
             );
@@ -353,7 +357,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     }
 
     /**
-     * Save a menu link data 
+     * Save a menu link data
      */
     public function saveMenuLink($row, $i = 0)
     {
@@ -368,8 +372,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
         // Load the row if exists
         if ((int) $row->entity_id > 0) {
             $item->load($row->entity_id);
-        }
-        else {
+        } else {
             $tmpId = $row->entity_id;
         }
 
@@ -377,8 +380,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
         foreach ($linkEntityFields as $field) {
             if ($field == 'link_data') {
                 $item->setData($field, json_encode($row->$field));
-            } 
-            else {
+            } else {
                 $item->setData($field, $row->$field);
             }
         }
@@ -389,7 +391,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
         // Save the item
         $item->save();
 
-        // Uptate uploaded files path 
+        // Uptate uploaded files path
         $item = $this->linksHelper->updateFilePath($item, $tmpId);
     }
 
@@ -416,7 +418,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
             case 'external':
                 return $id;
-        }   
+        }
 
         return $id;
     }
@@ -483,11 +485,9 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
         // Handle the logic
         if ($linkType == 'category') {
             $id = $this->categoryHelper->getViewCategoryId();
-        }
-        else if ($linkType == 'product') {
+        } elseif ($linkType == 'product') {
             $id = $this->productHelper->getViewProductId();
-        }
-        else if ($linkType == 'page') {
+        } elseif ($linkType == 'page') {
             $id = $this->pageHelper->getViewPageId();
         }
 

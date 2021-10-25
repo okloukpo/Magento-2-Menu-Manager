@@ -45,7 +45,7 @@ class FileUpload extends \Magento\Backend\App\Action
     /**
      * @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * @var Array
@@ -85,8 +85,7 @@ class FileUpload extends \Magento\Backend\App\Action
         // Process the request
         if ($this->configHelper->isValidAdminAjaxRequest($request)) {
             $response = $this->uploadFile($request);
-        }
-        else {
+        } else {
             return $this->getErrorResponse(
                 __('Invalid or expired request. Try refreshing the page.')
             );
@@ -99,7 +98,7 @@ class FileUpload extends \Magento\Backend\App\Action
      * Upload a file.
      */
     public function uploadFile($request)
-    {   
+    {
         // Prepare variables
         $fileData = $request->getFiles($this->params['file_id']);
 
@@ -118,8 +117,7 @@ class FileUpload extends \Magento\Backend\App\Action
             );
 
             return $this->getUploadResponse($uploader);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return $this->getErrorResponse(
                 __($e->getMessage())
             );
@@ -156,7 +154,7 @@ class FileUpload extends \Magento\Backend\App\Action
     public function getErrorResponse($msg = null)
     {
         // Ddefault error message
-        $msg = $msg ? $msg 
+        $msg = $msg ? $msg
         : __('Server upload error. Please try again or check the logs.');
     
         // Error response array

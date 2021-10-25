@@ -102,8 +102,8 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
             foreach ($fieldset['fields'] as $field) {
                 $item->addField($field['key'], $field['type'], $field['data']);
             }
-        }        
+        }
 
         return $form;
-    } 
+    }
 }

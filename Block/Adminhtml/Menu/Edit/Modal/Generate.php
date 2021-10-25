@@ -44,7 +44,7 @@ class Generate extends \Magento\Backend\Block\Template
         \Naxero\MenuManager\Model\Config\Backend\Source\LinkType $linkTypeSource,
         \Naxero\MenuManager\Model\Config\Backend\Source\YesNo $yesNoSource,
         array $data = []
-    ) {        
+    ) {
         parent::__construct($context, $data);
 
         $this->configHelper = $configHelper;

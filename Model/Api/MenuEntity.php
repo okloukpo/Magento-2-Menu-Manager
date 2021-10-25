@@ -20,7 +20,8 @@ namespace Naxero\MenuManager\Model\Api;
  * Class Menu API model
  */
 class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
-{ 
+{
+
     /**
      * @var Menu
      */
@@ -42,7 +43,7 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
     {
         try {
             $response = $this->menuHelper->getMenus()->getData();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $response = ['error' => $e->getMessage()];
         }
  
@@ -56,7 +57,7 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
     {
         try {
             $response = $this->menuHelper->getMenu($menuId)->getData();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $response = ['error' => $e->getMessage()];
         }
  

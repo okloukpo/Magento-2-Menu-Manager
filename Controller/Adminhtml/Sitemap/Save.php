@@ -28,12 +28,12 @@ class Save extends \Magento\Backend\App\Action
     /**
      * @var Xml
      */
-	public $sitemapXmlHelper;
+    public $sitemapXmlHelper;
 
     /**
      * @var Config
      */
-	public $configHelper;
+    public $configHelper;
     /**
      * Sitemap save class controller constructor
      */
@@ -42,7 +42,6 @@ class Save extends \Magento\Backend\App\Action
         \Magento\Framework\Controller\Result\JsonFactory $jsonFactory,
         \Naxero\MenuManager\Helper\Sitemap\Xml $sitemapXmlHelper,
         \Naxero\MenuManager\Helper\Config $configHelper
-
     ) {
         parent::__construct($context);
 
@@ -69,12 +68,10 @@ class Save extends \Magento\Backend\App\Action
 
                 // Redirect
                 return $this->_redirect('naxero-mm/sitemap/addrow/id/' . $entityId);
-
             } catch (\Exception $e) {
                 $this->messageManager->addError(__($e->getMessage()));
             }
-        }
-        else {
+        } else {
             $this->messageManager->addError(
                 __('Invalid or expired request. Try refreshing the page.')
             );

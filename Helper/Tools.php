@@ -19,7 +19,8 @@ namespace Naxero\MenuManager\Helper;
  * Class Tools helper.
  */
 class Tools extends \Magento\Framework\App\Helper\AbstractHelper
-{   
+{
+
     /**
      * Convert an array to CSV format
      */

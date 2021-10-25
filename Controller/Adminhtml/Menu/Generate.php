@@ -75,14 +75,12 @@ class Generate extends \Magento\Backend\App\Action
 
                 // Redirect
                 return $this->_redirect('naxero-mm/menu/addrow/id/' . $entityId);
-            }
-            else {
+            } else {
                 $this->messageManager->addError(
                     __('Please save the menu before generating links.')
-                );                
+                );
             }
-        }
-        else {
+        } else {
             $this->messageManager->addError(
                 __('Invalid or expired request. Try refreshing the page.')
             );
