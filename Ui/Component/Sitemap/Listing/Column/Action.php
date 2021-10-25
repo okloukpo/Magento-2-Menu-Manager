@@ -26,12 +26,12 @@ class Action extends Column
     const ROW_EDIT_URL = 'naxero-mm/sitemap/addrow';
     
     /** @var UrlInterface */
-    public $_urlBuilder;
+    public $urlBuilder;
 
     /**
      * @var string
      */
-    public $_editUrl;
+    public $editUrl;
 
     /**
      * @param ContextInterface   $context
@@ -49,8 +49,8 @@ class Action extends Column
         array $data = [],
         $editUrl = self::ROW_EDIT_URL
     ) {
-        $this->_urlBuilder = $urlBuilder;
-        $this->_editUrl = $editUrl;
+        $this->urlBuilder = $urlBuilder;
+        $this->editUrl = $editUrl;
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }
 
@@ -69,8 +69,8 @@ class Action extends Column
                 if (isset($item['entity_id'])) {
                     // Edit action link
                     $item[$name]['edit'] = [
-                        'href' => $this->_urlBuilder->getUrl(
-                            $this->_editUrl,
+                        'href' => $this->urlBuilder->getUrl(
+                            $this->editUrl,
                             ['id' => $item['entity_id']]
                         ),
                         'label' => __('Edit'),
@@ -78,7 +78,7 @@ class Action extends Column
 
                     // Generate action link
                     $item[$name]['generate'] = [
-                        'href' => $this->_urlBuilder->getUrl(
+                        'href' => $this->urlBuilder->getUrl(
                             'naxero-mm/sitemap/generate',
                             ['id' => $item['entity_id']]
                         ),
@@ -87,7 +87,7 @@ class Action extends Column
 
                     // Delete action link
                     $item[$name]['delete'] = [
-                        'href' => $this->_urlBuilder->getUrl(
+                        'href' => $this->urlBuilder->getUrl(
                             'naxero-mm/sitemap/delete',
                             ['entity_id' => $item['entity_id']]
                         ),
