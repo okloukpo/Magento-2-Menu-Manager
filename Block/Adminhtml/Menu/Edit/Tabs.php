@@ -32,6 +32,11 @@ class Tabs extends \Magento\Backend\Block\Template
 
     /**
      * Form class constructor
+     * 
+     * @param Context $context
+     * @param Http $request
+     * @param Menu $menuHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,

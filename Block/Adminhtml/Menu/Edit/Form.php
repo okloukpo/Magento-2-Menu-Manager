@@ -44,6 +44,12 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
 
     /**
      * Form class constructor
+     * 
+     * @param Context $context
+     * @param Registry $registry
+     * @param FormFactory $formFactory
+     * @param Config $wysiwygConfig
+     * @param Fields $fieldsDataProvider
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
