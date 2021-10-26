@@ -54,7 +54,7 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * FileUpload field class constructor
-     * 
+     *
      * @param Context $context
      * @param UploaderFactory $uploaderFactory
      * @param JsonFactory $jsonFactory

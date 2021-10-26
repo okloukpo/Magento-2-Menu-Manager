@@ -50,6 +50,9 @@ class Generate extends Command
 
     /**
      * UpdateKeywords command class constructor.
+     * 
+     * @param Config $configHelper
+     * @param Xml $sitemapXmlHelper
      */
     public function __construct(
         \Naxero\MenuManager\Helper\Config $configHelper,
@@ -76,6 +79,7 @@ class Generate extends Command
 
     /**
      * Run the CLI command.
+     * 
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int|void|null

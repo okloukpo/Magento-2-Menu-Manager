@@ -52,7 +52,7 @@ class TopMenu
 
     /**
      * TopMenu class constructor
-     * 
+     *
      * @param Registry $registry
      * @param Menu $menuHelper
      * @param Config $configHelper

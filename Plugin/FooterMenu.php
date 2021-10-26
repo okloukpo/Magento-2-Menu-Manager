@@ -54,7 +54,7 @@ class FooterMenu
     
     /**
      * HeaderMenu class constructor
-     * 
+     *
      * @param Registry $registry
      * @param Menu $menuHelper
      * @param Config $configHelper
