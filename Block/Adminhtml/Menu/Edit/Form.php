@@ -50,6 +50,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      * @param FormFactory $formFactory
      * @param Config $wysiwygConfig
      * @param Fields $fieldsDataProvider
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,

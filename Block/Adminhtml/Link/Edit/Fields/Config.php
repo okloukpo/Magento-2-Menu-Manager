@@ -52,6 +52,15 @@ class Config extends \Magento\Backend\Block\Template
 
     /**
      * Form class constructor
+     * 
+     * @param Context $context
+     * @param Http $request
+     * @param Links $linksHelper
+     * @param LinkType $linkTypeSource
+     * @param Sublayout $sublayoutSource
+     * @param Blocks $blocksSource
+     * @param Target $targetSource
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,

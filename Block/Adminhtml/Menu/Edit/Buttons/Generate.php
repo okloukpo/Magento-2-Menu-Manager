@@ -66,6 +66,7 @@ class Generate extends \Magento\Backend\Block\Widget\Container
     /**
      * Get a split button action URL
      *
+     * @param string $type
      * @return array
      */
     public function getActionUrl($type)
