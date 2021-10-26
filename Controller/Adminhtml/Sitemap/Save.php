@@ -36,6 +36,11 @@ class Save extends \Magento\Backend\App\Action
     public $configHelper;
     /**
      * Sitemap save class controller constructor
+     * 
+     * @param Context $context
+     * @param JsonFactory $jsonFactory
+     * @param Xml $sitemapXmlHelper
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

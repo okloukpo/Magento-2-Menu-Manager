@@ -31,6 +31,10 @@ class Generate extends \Magento\Backend\App\Action
 
     /**
      * LinkUrlOptions class constructor
+     * 
+     * @param Context $context
+     * @param Config $configHelper
+     * @param Menu $menuHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

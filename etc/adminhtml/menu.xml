@@ -15,11 +15,33 @@
  */
 -->
 
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd"
+>
     <menu>
-        <add id="Naxero_MenuManager::manage" title="Menu Manager" module="Naxero_MenuManager" parent="Magento_Backend::content" resource="Naxero_MenuManager::manage" />
-        <add id="Naxero_MenuManager::menu_index" title="Menus" module="Naxero_MenuManager" dependsOnModule="Naxero_MenuManager" action="naxero_mm/menu/index" parent="Naxero_MenuManager::manage" resource="Naxero_MenuManager::menu_index"/>
-        <add id="Naxero_MenuManager::sitemap_index" title="Sitemaps" module="Naxero_MenuManager" dependsOnModule="Naxero_MenuManager" action="naxero_mm/sitemap/index" parent="Naxero_MenuManager::manage" resource="Naxero_MenuManager::sitemap_index"/>
+        <add
+            id="Naxero_MenuManager::manage"
+            title="Menu Manager"
+            module="Naxero_MenuManager"
+            parent="Magento_Backend::content"
+            resource="Naxero_MenuManager::manage" />
+        <add 
+            id="Naxero_MenuManager::menu_index"
+            title="Menus"
+            module="Naxero_MenuManager"
+            dependsOnModule="Naxero_MenuManager"
+            action="naxero_mm/menu/index"
+            parent="Naxero_MenuManager::manage"
+            resource="Naxero_MenuManager::menu_index"/>
+        <add
+            id="Naxero_MenuManager::sitemap_index"
+            title="Sitemaps"
+            module="Naxero_MenuManager"
+            dependsOnModule="Naxero_MenuManager"
+            action="naxero_mm/sitemap/index"
+            parent="Naxero_MenuManager::manage"
+            resource="Naxero_MenuManager::sitemap_index"/>
     </menu>
 </config>
 

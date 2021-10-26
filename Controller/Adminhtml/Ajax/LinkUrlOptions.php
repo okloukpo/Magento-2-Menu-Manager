@@ -42,6 +42,12 @@ class LinkUrlOptions extends \Magento\Backend\App\Action
 
     /**
      * LinkUrlOptions class constructor
+     * 
+     * @param Context $context
+     * @param JsonFactory $jsonFactory
+     * @param Menu $menuHelper
+     * @param Config $configHelper
+     * @param Block $blockHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

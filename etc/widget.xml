@@ -15,13 +15,22 @@
  */
 -->
 
-<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+<widgets
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd"
+>
     <!-- Menu widget-->
     <widget ttl="0" class="Naxero\MenuManager\Block\Widget\Menu" id="mm_menu_widget">
         <label>Naxero Menu Widget</label>
         <description>Naxero Menu Widget</description>
         <parameters>
-            <parameter name="menu_id" xsi:type="select" visible="true" required="true" source_model="Naxero\MenuManager\Model\Config\Backend\Source\MenuList">
+            <parameter
+                name="menu_id"
+                xsi:type="select"
+                visible="true"
+                required="true"
+                source_model="Naxero\MenuManager\Model\Config\Backend\Source\MenuList"
+            >
                 <label translate="true">Source menu</label>
             </parameter>
         </parameters>
@@ -32,7 +41,13 @@
         <label>Naxero HTML Sitemap Widget</label>
         <description>Naxero HTML Sitemap Widget</description>
         <parameters>
-            <parameter name="sitemap_menus" xsi:type="multiselect" visible="true" required="true" source_model="Naxero\MenuManager\Model\Config\Backend\Source\MenuList">
+            <parameter
+                name="sitemap_menus"
+                xsi:type="multiselect"
+                visible="true"
+                required="true"
+                source_model="Naxero\MenuManager\Model\Config\Backend\Source\MenuList"
+            >
                 <label translate="true">Source menus</label>
             </parameter>
         </parameters>

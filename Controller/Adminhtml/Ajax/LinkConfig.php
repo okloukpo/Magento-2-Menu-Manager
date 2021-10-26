@@ -37,6 +37,11 @@ class LinkConfig extends \Magento\Backend\App\Action
 
     /**
      * LinkConfig field class constructor
+     *
+     * @param Context $context
+     * @param JsonFactory $jsonFactory
+     * @param Block $blockHelper
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

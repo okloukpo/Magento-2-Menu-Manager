@@ -15,7 +15,10 @@
  */
 -->
 
-<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+<routes 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd"
+>
     <!-- Menu entity API -->
     <route method="POST" url="/V1/naxero-mm/menus/get">
         <service class="Naxero\MenuManager\Api\MenuInterface" method="getMenus"/>

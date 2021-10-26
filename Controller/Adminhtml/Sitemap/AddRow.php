@@ -36,6 +36,11 @@ class AddRow extends \Magento\Backend\App\Action
 
     /**
      * Class AddRow constructor
+     * 
+     * @param Context $context
+     * @param Registry $coreRegistry
+     * @param SitemapEntityFactory $sitemapEntityFactory
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

@@ -27,6 +27,9 @@ class Generate extends \Magento\Backend\App\Action
 
     /**
      * Sitemap save class controller constructor
+     * 
+     * @param Context $context
+     * @param Xml $sitemapXmlHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
