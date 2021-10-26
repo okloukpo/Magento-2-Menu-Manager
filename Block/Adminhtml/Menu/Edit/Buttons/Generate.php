@@ -18,7 +18,8 @@ namespace Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Buttons;
 use Magento\Backend\Block\Widget\Button\SplitButton;
 
 class Generate extends \Magento\Backend\Block\Widget\Container
-{ 
+{
+
     /**
      * Prepare layout.
      */

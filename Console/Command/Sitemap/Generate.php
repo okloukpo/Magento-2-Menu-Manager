@@ -50,7 +50,7 @@ class Generate extends Command
 
     /**
      * UpdateKeywords command class constructor.
-     * 
+     *
      * @param Config $configHelper
      * @param Xml $sitemapXmlHelper
      */
@@ -79,7 +79,7 @@ class Generate extends Command
 
     /**
      * Run the CLI command.
-     * 
+     *
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int|void|null

@@ -79,7 +79,7 @@ class Fields implements \Magento\Framework\View\Element\Block\ArgumentInterface
 
     /**
      * Form class constructor
-     * 
+     *
      * @param Collection $customerGroupCollection
      * @param PageFactory $pageFactory
      * @param Http $request

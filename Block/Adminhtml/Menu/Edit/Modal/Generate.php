@@ -37,7 +37,7 @@ class Generate extends \Magento\Backend\Block\Template
 
     /**
      * Generate class constructor
-     * 
+     *
      * @param Context $context
      * @param Config $configHelper
      * @param LinkType $linkTypeSource
