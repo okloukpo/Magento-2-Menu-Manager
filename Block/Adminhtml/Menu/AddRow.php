@@ -35,7 +35,6 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
         \Magento\Framework\Registry $registry,
         array $data = []
     ) {
-        // phpcs:ignore
         $this->_coreRegistry = $registry;
         parent::__construct($context, $data);
     }
@@ -50,7 +49,6 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
         $this->_blockGroup = 'Naxero_MenuManager';
         $this->_controller = 'adminhtml_menu';
 
-        // phpcs:ignore
         parent::_construct();
 
         // Remove the reset button

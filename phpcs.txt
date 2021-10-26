@@ -1,27 +1,9 @@
 
-FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/MenuEntity.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 41 | WARNING | Method name "_construct" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-
 FILE: ...ents/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/web/js/lib/jqtree/tree.jquery.js
 ---------------------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ---------------------------------------------------------------------------------------------------
  1 | WARNING | File appears to be minified and cannot be processed
----------------------------------------------------------------------------------------------------
-
-
-FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Sitemap/Edit/Form.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 81 | WARNING | Method name "_prepareForm" should not be prefixed with an underscore to indicate
-    |         | visibility
 ---------------------------------------------------------------------------------------------------
 
 
@@ -33,14 +15,5 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
     |         | visibility
 ---------------------------------------------------------------------------------------------------
 
-
-FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Form.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 69 | WARNING | Method name "_prepareForm" should not be prefixed with an underscore to indicate
-    |         | visibility
----------------------------------------------------------------------------------------------------
-
-Time: 1.07 secs; Memory: 14MB
+Time: 1.33 secs; Memory: 14MB
 

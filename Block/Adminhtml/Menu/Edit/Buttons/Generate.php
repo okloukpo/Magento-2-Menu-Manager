@@ -33,6 +33,7 @@ class Generate extends \Magento\Backend\Block\Widget\Container
     /**
      * Prepare layout.
      */
+    // phpcs:ignore
     public function _prepareLayout()
     {
         $addButtonProps = [

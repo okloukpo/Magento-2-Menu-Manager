@@ -81,7 +81,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
         // Set the form
         $this->setForm($form);
 
-        // phpcs:ignore
         return parent::_prepareForm();
     }
     /**

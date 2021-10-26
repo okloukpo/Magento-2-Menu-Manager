@@ -1,3 +1,4 @@
+// phpcs:ignoreFile
 /*
 JqTree 1.6.0
 
