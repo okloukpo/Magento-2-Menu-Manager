@@ -177,6 +177,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set menu title
      *
+     * @param string $title
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setTitle($title)
@@ -187,6 +188,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set menu override
      *
+     * @param string $menu
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setOverride($menu)
@@ -197,6 +199,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set menu orientation
      *
+     * @param string $orientation
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setOrientation($orientation)
@@ -207,6 +210,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set menu z-index
      *
+     * @param int $zindex
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setZindex($zindex)
@@ -217,6 +221,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set user groups
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setUserGroups($data)
@@ -227,6 +232,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set store views
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setStoreViews($storeViews)
@@ -237,6 +243,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set category images
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setCategoryImages($data)
@@ -247,6 +254,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set product images
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setProductImages($data)
@@ -257,6 +265,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set active
      *
+     * @param int $active
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setActive($active)

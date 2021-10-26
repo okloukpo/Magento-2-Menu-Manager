@@ -167,6 +167,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set sitemap menus
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setSitemapMenus($data)
@@ -177,6 +178,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set file name
      *
+     * @param string $fileName
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setFileName($fileName)
@@ -187,6 +189,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set file path
      *
+     * @param string $filePath
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setFilePath($filePath)
@@ -197,6 +200,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set file URL
      *
+     * @param string $fileUrl
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setFileUrl($fileUrl)
@@ -207,6 +211,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set priority
      *
+     * @param float $priority
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setPriority($priority)
@@ -217,6 +222,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set frequency
      *
+     * @param string $frequency
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setFrequency($frequency)
@@ -227,6 +233,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set include image
      *
+     * @param int $data
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setIncludeImage($data)
@@ -237,6 +244,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * Set last update
      *
+     * @param string $lastUpdate
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setLastUpdate($lastUpdate)

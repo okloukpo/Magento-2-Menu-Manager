@@ -177,6 +177,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set menu id
      *
+     * @param int $id
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setMenuId($id)
@@ -187,6 +188,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set parent id
      *
+     * @param int $id
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setParentId($id)
@@ -197,6 +199,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set link type
      *
+     * @param string $type
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setLinkType($type)
@@ -207,6 +210,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set link URL
      *
+     * @param string $url
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setLinkUrl($url)
@@ -217,6 +221,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set link text
      *
+     * @param string $text
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setLinkText($text)
@@ -227,6 +232,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set link data
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setLinkData($data)
@@ -237,6 +243,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set link config
      *
+     * @param string $config
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setLinkConfig($config)
@@ -247,6 +254,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set order
      *
+     * @param int $order
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setLinkOrder($order)
@@ -257,6 +265,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * Set active
      *
+     * @param int $active
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
     public function setActive($active)
