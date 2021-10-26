@@ -1,19 +1,1023 @@
 
-FILE: ...ents/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/web/js/lib/jqtree/tree.jquery.js
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Setup/UpgradeSchema.php
+---------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 1 | ERROR | UpgradeSchema scripts are obsolete. Please use declarative schema approach in
+   |       | module's etc/db_schema.xml file
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Setup/InstallSchema.php
+---------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 1 | ERROR | InstallSchema scripts are obsolete. Please use declarative schema approach in
+   |       | module's etc/db_schema.xml file
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Plugin/TopMenu.php
+---------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------
+ 56 | WARNING | Missing @param for argument in method annotation
+ 73 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Plugin/HeaderMenu.php
+------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------------
+ 58 | WARNING | Missing @param for argument in method annotation
+ 75 | WARNING | Missing @param for argument in method annotation
+------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Plugin/FooterMenu.php
+------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------------
+ 58 | WARNING | Missing @param for argument in method annotation
+ 75 | WARNING | Missing @param for argument in method annotation
+------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/frontend/di.xml
+----------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------------------------------
+ 17 | WARNING | Line exceeds 120 characters; contains 137 characters
+----------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/di.xml
+-------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 11 WARNINGS AFFECTING 11 LINES
+-------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 169 characters
+ 28 | WARNING | Line exceeds 120 characters; contains 129 characters
+ 34 | WARNING | Line exceeds 120 characters; contains 161 characters
+ 37 | WARNING | Line exceeds 120 characters; contains 121 characters
+ 43 | WARNING | Line exceeds 120 characters; contains 156 characters
+ 49 | WARNING | Line exceeds 120 characters; contains 161 characters
+ 52 | WARNING | Line exceeds 120 characters; contains 121 characters
+ 58 | WARNING | Line exceeds 120 characters; contains 156 characters
+ 64 | WARNING | Line exceeds 120 characters; contains 164 characters
+ 67 | WARNING | Line exceeds 120 characters; contains 124 characters
+ 73 | WARNING | Line exceeds 120 characters; contains 162 characters
+-------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/config.xml
+-----------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 142 characters
+-----------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/webapi.xml
+-----------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 148 characters
+-----------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/module.xml
+-----------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 138 characters
+-----------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/widget.xml
+-----------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
+-----------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 144 characters
+ 24 | WARNING | Line exceeds 120 characters; contains 158 characters
+ 35 | WARNING | Line exceeds 120 characters; contains 169 characters
+-----------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/adminhtml/system.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 5 LINES
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 148 characters
+ 32 | WARNING | Line exceeds 120 characters; contains 128 characters
+ 35 | WARNING | Line exceeds 120 characters; contains 128 characters
+ 37 | WARNING | Line exceeds 120 characters; contains 152 characters
+ 41 | WARNING | Line exceeds 120 characters; contains 156 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/adminhtml/menu.xml
+-------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+-------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 142 characters
+ 20 | WARNING | Line exceeds 120 characters; contains 168 characters
+ 21 | WARNING | Line exceeds 120 characters; contains 237 characters
+ 22 | WARNING | Line exceeds 120 characters; contains 249 characters
+-------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/adminhtml/routes.xml
 ---------------------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ---------------------------------------------------------------------------------------------------
- 1 | WARNING | File appears to be minified and cannot be processed
+ 18 | WARNING | Line exceeds 120 characters; contains 135 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Sitemap/AddRow.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 40 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: .../Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Sitemap/Generate.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 31 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Sitemap/Delete.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 33 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Sitemap/Save.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 40 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...fiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Menu/AddRow.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 35 | WARNING | $MenuEntityFactory parameter is missing in method arguments signature
+ 37 | WARNING | $menuEntityFactory parameter is missing in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...aty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Menu/Generate.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 35 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...fiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Menu/Delete.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 33 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Menu/Save.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 38 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...cuments/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Ajax/LinkUrlOptions.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 46 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...y/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Ajax/LinkConfig.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 41 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...y/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Controller/Adminhtml/Ajax/FileUpload.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+---------------------------------------------------------------------------------------------------
+  58 | WARNING | Missing @param for argument in method annotation
+ 100 | WARNING | Missing @param for argument in method annotation
+ 132 | WARNING | Missing @param for argument in method annotation
+ 154 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/MenuEntity.php
+-----------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 9 WARNINGS AFFECTING 9 LINES
+-----------------------------------------------------------------------------------------------
+ 182 | WARNING | Missing @param for argument in method annotation
+ 192 | WARNING | Missing @param for argument in method annotation
+ 202 | WARNING | Missing @param for argument in method annotation
+ 212 | WARNING | Missing @param for argument in method annotation
+ 222 | WARNING | Missing @param for argument in method annotation
+ 232 | WARNING | Missing @param for argument in method annotation
+ 242 | WARNING | Missing @param for argument in method annotation
+ 252 | WARNING | Missing @param for argument in method annotation
+ 262 | WARNING | Missing @param for argument in method annotation
+-----------------------------------------------------------------------------------------------
+
+
+FILE: ...aty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Blocks.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+ 32 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...y/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Override.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...y/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/MenuList.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+ 32 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: .../Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Sublayout.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...aty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Target.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/YesNo.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Display.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ocuments/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Orientation.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...y/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/LinkType.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 21 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/Sitemap.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 31 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/LinkEntity.php
+-----------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 9 WARNINGS AFFECTING 9 LINES
+-----------------------------------------------------------------------------------------------
+ 182 | WARNING | Missing @param for argument in method annotation
+ 192 | WARNING | Missing @param for argument in method annotation
+ 202 | WARNING | Missing @param for argument in method annotation
+ 212 | WARNING | Missing @param for argument in method annotation
+ 222 | WARNING | Missing @param for argument in method annotation
+ 232 | WARNING | Missing @param for argument in method annotation
+ 242 | WARNING | Missing @param for argument in method annotation
+ 252 | WARNING | Missing @param for argument in method annotation
+ 262 | WARNING | Missing @param for argument in method annotation
+-----------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/SitemapEntity.php
+--------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 8 WARNINGS AFFECTING 8 LINES
+--------------------------------------------------------------------------------------------------
+ 172 | WARNING | Missing @param for argument in method annotation
+ 182 | WARNING | Missing @param for argument in method annotation
+ 192 | WARNING | Missing @param for argument in method annotation
+ 202 | WARNING | Missing @param for argument in method annotation
+ 212 | WARNING | Missing @param for argument in method annotation
+ 222 | WARNING | Missing @param for argument in method annotation
+ 232 | WARNING | Missing @param for argument in method annotation
+ 242 | WARNING | Missing @param for argument in method annotation
+--------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Api/MenuEntity.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 33 | WARNING | Missing @param for argument in method annotation
+ 56 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/Api/LinkEntity.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 33 | WARNING | Missing @param for argument in method annotation
+ 56 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/MenuEntity.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 29 | WARNING | Possible useless method overriding detected
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/LinkEntity.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 29 | WARNING | Possible useless method overriding detected
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Model/ResourceModel/SitemapEntity.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 29 | WARNING | Possible useless method overriding detected
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...cuments/GitHub/naxero.com/Magento-2-Menu-Manager/view/frontend/layout/default_head_blocks.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 17 | WARNING | Line exceeds 120 characters; contains 153 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ts/GitHub/naxero.com/Magento-2-Menu-Manager/view/frontend/templates/widget/sitemap-html.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 10 | WARNING | Unescaped output detected.
+ 11 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: .../Documents/GitHub/naxero.com/Magento-2-Menu-Manager/view/frontend/templates/widget/menu.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 9 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ments/GitHub/naxero.com/Magento-2-Menu-Manager/view/frontend/templates/menu/header-menu.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------
+ 103 | WARNING | Unescaped output detected.
+ 109 | WARNING | Unescaped output detected.
+ 110 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ocuments/GitHub/naxero.com/Magento-2-Menu-Manager/view/frontend/templates/menu/top-menu.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+---------------------------------------------------------------------------------------------------
+ 12 | WARNING | Unescaped output detected.
+ 59 | WARNING | Unescaped output detected.
+ 60 | WARNING | Line exceeds 120 characters; contains 136 characters
+ 62 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ments/GitHub/naxero.com/Magento-2-Menu-Manager/view/frontend/templates/menu/footer-menu.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------
+ 102 | WARNING | Unescaped output detected.
+ 108 | WARNING | Unescaped output detected.
+ 109 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ents/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/layout/naxero_mm_menu_addrow.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 183 characters
+ 33 | WARNING | Line exceeds 120 characters; contains 134 characters
+ 35 | WARNING | Line exceeds 120 characters; contains 129 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ments/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/layout/naxero_mm_menu_index.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 183 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...s/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/layout/naxero_mm_sitemap_addrow.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 183 characters
+ 26 | WARNING | Line exceeds 120 characters; contains 123 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ts/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/layout/naxero_mm_sitemap_index.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 183 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...nts/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/ui_component/mm_sitemap_index.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 150 characters
+ 36 | WARNING | Line exceeds 120 characters; contains 132 characters
+ 63 | WARNING | Line exceeds 120 characters; contains 154 characters
+ 66 | WARNING | Line exceeds 120 characters; contains 159 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...uments/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/ui_component/mm_menu_index.xml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+---------------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 120 characters; contains 150 characters
+ 36 | WARNING | Line exceeds 120 characters; contains 132 characters
+ 63 | WARNING | Line exceeds 120 characters; contains 148 characters
+ 66 | WARNING | Line exceeds 120 characters; contains 153 characters
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/templates/sitemap/edit/form/buttons.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
+---------------------------------------------------------------------------------------------------
+  4 | WARNING | Unescaped output detected.
+  9 | WARNING | Unescaped output detected.
+ 16 | WARNING | Unescaped output detected.
+ 25 | WARNING | Unescaped output detected.
+ 30 | WARNING | Unescaped output detected.
+ 37 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...cuments/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/templates/message/error.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 3 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...s/GitHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/templates/menu/edit/form/tabs.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 8 WARNINGS AFFECTING 7 LINES
+---------------------------------------------------------------------------------------------------
+ 12 | WARNING | Unescaped output detected.
+ 18 | WARNING | Unescaped output detected.
+ 18 | WARNING | Unescaped output detected.
+ 20 | WARNING | Unescaped output detected.
+ 30 | WARNING | Unescaped output detected.
+ 44 | WARNING | Unescaped output detected.
+ 45 | WARNING | Unescaped output detected.
+ 52 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...itHub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/templates/menu/edit/form/buttons.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 5 LINES
+---------------------------------------------------------------------------------------------------
+  4 | WARNING | Unescaped output detected.
+  9 | WARNING | Unescaped output detected.
+ 17 | WARNING | Unescaped output detected.
+ 22 | WARNING | Unescaped output detected.
+ 23 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...to-2-Menu-Manager/view/adminhtml/templates/menu/edit/form/fields/menu-links/link-config.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 44 WARNINGS AFFECTING 44 LINES
+---------------------------------------------------------------------------------------------------
+  18 | WARNING | Unescaped output detected.
+  22 | WARNING | Unescaped output detected.
+  26 | WARNING | Unescaped output detected.
+  27 | WARNING | Unescaped output detected.
+  30 | WARNING | Unescaped output detected.
+  36 | WARNING | Unescaped output detected.
+  37 | WARNING | Unescaped output detected.
+  40 | WARNING | Unescaped output detected.
+  46 | WARNING | Unescaped output detected.
+  47 | WARNING | Unescaped output detected.
+  50 | WARNING | Unescaped output detected.
+  59 | WARNING | Unescaped output detected.
+  65 | WARNING | Unescaped output detected.
+  67 | WARNING | Unescaped output detected.
+  72 | WARNING | Unescaped output detected.
+  77 | WARNING | Unescaped output detected.
+  78 | WARNING | Unescaped output detected.
+  84 | WARNING | Unescaped output detected.
+  93 | WARNING | Unescaped output detected.
+ 102 | WARNING | Unescaped output detected.
+ 107 | WARNING | The use of $this in templates is deprecated. Use $block instead.
+ 108 | WARNING | Unescaped output detected.
+ 109 | WARNING | Unescaped output detected.
+ 120 | WARNING | Unescaped output detected.
+ 125 | WARNING | Unescaped output detected.
+ 133 | WARNING | Unescaped output detected.
+ 138 | WARNING | The use of $this in templates is deprecated. Use $block instead.
+ 139 | WARNING | Unescaped output detected.
+ 140 | WARNING | Unescaped output detected.
+ 151 | WARNING | Unescaped output detected.
+ 156 | WARNING | The use of $this in templates is deprecated. Use $block instead.
+ 157 | WARNING | Unescaped output detected.
+ 158 | WARNING | Unescaped output detected.
+ 169 | WARNING | Unescaped output detected.
+ 174 | WARNING | Unescaped output detected.
+ 182 | WARNING | Unescaped output detected.
+ 188 | WARNING | Unescaped output detected.
+ 189 | WARNING | Unescaped output detected.
+ 197 | WARNING | Unescaped output detected.
+ 198 | WARNING | Unescaped output detected.
+ 205 | WARNING | Unescaped output detected.
+ 210 | WARNING | Unescaped output detected.
+ 231 | WARNING | Unescaped output detected.
+ 232 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ro.com/Magento-2-Menu-Manager/view/adminhtml/templates/menu/edit/form/fields/menu-links.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 7 WARNINGS AFFECTING 7 LINES
+---------------------------------------------------------------------------------------------------
+ 10 | WARNING | Unescaped output detected.
+ 14 | WARNING | Unescaped output detected.
+ 18 | WARNING | Unescaped output detected.
+ 27 | WARNING | Unescaped output detected.
+ 36 | WARNING | Unescaped output detected.
+ 49 | WARNING | Unescaped output detected.
+ 50 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...Hub/naxero.com/Magento-2-Menu-Manager/view/adminhtml/templates/menu/edit/modal/generate.phtml
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 9 WARNINGS AFFECTING 9 LINES
+---------------------------------------------------------------------------------------------------
+  9 | WARNING | Unescaped output detected.
+ 12 | WARNING | Unescaped output detected.
+ 21 | WARNING | Unescaped output detected.
+ 27 | WARNING | Unescaped output detected.
+ 31 | WARNING | Unescaped output detected.
+ 36 | WARNING | Unescaped output detected.
+ 41 | WARNING | Unescaped output detected.
+ 42 | WARNING | Unescaped output detected.
+ 52 | WARNING | Unescaped output detected.
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Api/LinkInterface.php
+------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------------
+ 26 | WARNING | There must be exactly one blank line before tags
+ 26 | WARNING | Short description should not be in multi lines
+ 32 | WARNING | There must be exactly one blank line before tags
+------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Api/MenuInterface.php
+------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------------
+ 26 | WARNING | There must be exactly one blank line before tags
+ 26 | WARNING | Short description should not be in multi lines
+ 32 | WARNING | There must be exactly one blank line before tags
+------------------------------------------------------------------------------------------------
+
+
+FILE: ...dfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Api/Data/SitemapEntityInterface.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 147 | WARNING | $fileName parameter is missing in method arguments signature
+ 150 | WARNING | $title parameter is missing in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Category.php
+----------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 7 WARNINGS AFFECTING 7 LINES
+----------------------------------------------------------------------------------------------
+  67 | WARNING | Missing @param for argument in method annotation
+  90 | WARNING | Missing @param for argument in method annotation
+ 109 | WARNING | Missing @param for argument in method annotation
+ 134 | WARNING | Missing @param for argument in method annotation
+ 144 | WARNING | Missing @param for argument in method annotation
+ 154 | WARNING | The use of function basename() is discouraged
+ 173 | WARNING | Missing @param for argument in method annotation
+----------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Stores.php
+--------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 5 LINES
+--------------------------------------------------------------------------------------------
+  39 | WARNING | Missing @param for argument in method annotation
+  58 | WARNING | Missing @param for argument in method annotation
+  66 | WARNING | Missing @param for argument in method annotation
+  76 | WARNING | Missing @param for argument in method annotation
+ 110 | WARNING | Missing @param for argument in method annotation
+--------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Product.php
+---------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 12 WARNINGS AFFECTING 12 LINES
+---------------------------------------------------------------------------------------------
+  59 | WARNING | Missing @param for argument in method annotation
+  78 | WARNING | Missing @param for argument in method annotation
+  86 | WARNING | Missing @param for argument in method annotation
+  90 | WARNING | Code must not contain multiple empty lines in a row; found 2 empty lines.
+  95 | WARNING | Missing @param for argument in method annotation
+ 103 | WARNING | Missing @param for argument in method annotation
+ 111 | WARNING | Missing @param for argument in method annotation
+ 130 | WARNING | Missing @param for argument in method annotation
+ 154 | WARNING | Missing @param for argument in method annotation
+ 162 | WARNING | Missing @param for argument in method annotation
+ 172 | WARNING | Missing @param for argument in method annotation
+ 202 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/User.php
+------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------
+ 49 | WARNING | Missing @param for argument in method annotation
+ 80 | WARNING | Missing @param for argument in method annotation
+------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Sitemap/Xml.php
+-------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 15 WARNINGS AFFECTING 15 LINES
+-------------------------------------------------------------------------------------------------
+  83 | WARNING | Missing @param for argument in method annotation
+ 110 | WARNING | Missing @param for argument in method annotation
+ 129 | WARNING | Missing @param for argument in method annotation
+ 138 | WARNING | Missing @param for argument in method annotation
+ 150 | WARNING | Missing @param for argument in method annotation
+ 163 | WARNING | Missing @param for argument in method annotation
+ 186 | WARNING | Missing @param for argument in method annotation
+ 200 | WARNING | Missing @param for argument in method annotation
+ 244 | WARNING | Missing @param for argument in method annotation
+ 273 | WARNING | Missing @param for argument in method annotation
+ 296 | WARNING | Missing @param for argument in method annotation
+ 333 | WARNING | Missing @param for argument in method annotation
+ 375 | WARNING | Missing @param for argument in method annotation
+ 390 | WARNING | Missing @param for argument in method annotation
+ 406 | WARNING | Missing @param for argument in method annotation
+-------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Sitemap/Html.php
+--------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------------------------
+ 33 | WARNING | Missing @param for argument in method annotation
+--------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Tools.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 4 LINES
+---------------------------------------------------------------------------------------------------
+ 27 | WARNING | Missing @param for argument in method annotation
+ 29 | WARNING | The use of function fopen() is discouraged; use
+    |         | Magento\Framework\Filesystem\DriverInterface::fileOpen()() instead
+ 35 | WARNING | The code must be wrapped with a try block if the method uses system resources.
+ 35 | WARNING | The use of function stream_get_contents() is discouraged
+ 41 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Config.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 17 WARNINGS AFFECTING 17 LINES
+---------------------------------------------------------------------------------------------------
+  30 | WARNING | Constants must have short description if they add information beyond what the
+     |         | constant name supplies.
+  35 | WARNING | Constants must have short description if they add information beyond what the
+     |         | constant name supplies.
+  40 | WARNING | Constants must have short description if they add information beyond what the
+     |         | constant name supplies.
+  45 | WARNING | Constants must have short description if they add information beyond what the
+     |         | constant name supplies.
+  50 | WARNING | Constants must have short description if they add information beyond what the
+     |         | constant name supplies.
+  55 | WARNING | Constants must have short description if they add information beyond what the
+     |         | constant name supplies.
+ 130 | WARNING | Missing @param for argument in method annotation
+ 165 | WARNING | Missing @param for argument in method annotation
+ 173 | WARNING | Missing @param for argument in method annotation
+ 182 | WARNING | Missing @param for argument in method annotation
+ 191 | WARNING | Missing @param for argument in method annotation
+ 208 | WARNING | Missing @param for argument in method annotation
+ 224 | WARNING | Missing @param for argument in method annotation
+ 273 | WARNING | Missing @param for argument in method annotation
+ 283 | WARNING | Missing @param for argument in method annotation
+ 299 | WARNING | @param is not found for one or more params in method annotation
+ 364 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Block.php
+-------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
+-------------------------------------------------------------------------------------------
+  39 | WARNING | Missing @param for argument in method annotation
+  50 | WARNING | Missing @param for argument in method annotation
+  63 | WARNING | Missing @param for argument in method annotation
+  76 | WARNING | Missing @param for argument in method annotation
+  89 | WARNING | Missing @param for argument in method annotation
+ 101 | WARNING | Missing @param for argument in method annotation
+-------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Menu.php
+------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 19 WARNINGS AFFECTING 19 LINES
+------------------------------------------------------------------------------------------
+  79 | WARNING | Missing @param for argument in method annotation
+ 106 | WARNING | Missing @param for argument in method annotation
+ 125 | WARNING | Missing @param for argument in method annotation
+ 133 | WARNING | Missing @param for argument in method annotation
+ 149 | WARNING | Missing @param for argument in method annotation
+ 175 | WARNING | Missing @param for argument in method annotation
+ 197 | WARNING | Missing @param for argument in method annotation
+ 241 | WARNING | Missing @param for argument in method annotation
+ 276 | WARNING | Missing @param for argument in method annotation
+ 298 | WARNING | Missing @param for argument in method annotation
+ 328 | WARNING | Missing @param for argument in method annotation
+ 346 | WARNING | Missing @param for argument in method annotation
+ 362 | WARNING | Missing @param for argument in method annotation
+ 401 | WARNING | Missing @param for argument in method annotation
+ 429 | WARNING | Missing @param for argument in method annotation
+ 463 | WARNING | Missing @param for argument in method annotation
+ 478 | WARNING | Missing @param for argument in method annotation
+ 501 | WARNING | Missing @param for argument in method annotation
+ 510 | WARNING | Missing @param for argument in method annotation
+------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Page.php
+------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
+------------------------------------------------------------------------------------------
+  62 | WARNING | Missing @param for argument in method annotation
+  83 | WARNING | Missing @param for argument in method annotation
+ 107 | WARNING | Missing @param for argument in method annotation
+ 115 | WARNING | Missing @param for argument in method annotation
+ 132 | WARNING | Missing @param for argument in method annotation
+ 148 | WARNING | Missing @param for argument in method annotation
+------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Links.php
+-------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 10 WARNINGS AFFECTING 10 LINES
+-------------------------------------------------------------------------------------------
+  54 | WARNING | Missing @param for argument in method annotation
+  71 | WARNING | Missing @param for argument in method annotation
+  90 | WARNING | Missing @param for argument in method annotation
+  98 | WARNING | Missing @param for argument in method annotation
+ 115 | WARNING | Missing @param for argument in method annotation
+ 139 | WARNING | Missing @param for argument in method annotation
+ 154 | WARNING | Missing @param for argument in method annotation
+ 178 | WARNING | Missing @param for argument in method annotation
+ 189 | WARNING | Missing @param for argument in method annotation
+ 204 | WARNING | The use of function basename() is discouraged
+-------------------------------------------------------------------------------------------
+
+
+FILE: ...rs/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Widget/SitemapHtml.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 43 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Widget/Menu.php
+------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------
+ 43 | WARNING | Missing @param for argument in method annotation
+------------------------------------------------------------------------------------------------
+
+
+FILE: ...Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Menu/WidgetMenu.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
+---------------------------------------------------------------------------------------------------
+  36 | WARNING | Missing @param for argument in method annotation
+  59 | WARNING | Missing @param for argument in method annotation
+  74 | WARNING | Missing @param for argument in method annotation
+  99 | WARNING | Missing @param for argument in method annotation
+ 119 | WARNING | Missing @param for argument in method annotation
+ 140 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ers/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Menu/SwitcherMenu.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 8 WARNINGS AFFECTING 8 LINES
+---------------------------------------------------------------------------------------------------
+  36 | WARNING | Missing @param for argument in method annotation
+  59 | WARNING | Missing @param for argument in method annotation
+  74 | WARNING | Missing @param for argument in method annotation
+ 123 | WARNING | Missing @param for argument in method annotation
+ 172 | WARNING | Missing @param for argument in method annotation
+ 193 | WARNING | Missing @param for argument in method annotation
+ 209 | WARNING | Missing @param for argument in method annotation
+ 228 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Menu/NavMenu.php
+-------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 9 WARNINGS AFFECTING 9 LINES
+-------------------------------------------------------------------------------------------------
+  36 | WARNING | Missing @param for argument in method annotation
+  59 | WARNING | Missing @param for argument in method annotation
+  77 | WARNING | Missing @param for argument in method annotation
+ 109 | WARNING | Missing @param for argument in method annotation
+ 159 | WARNING | Missing @param for argument in method annotation
+ 177 | WARNING | Missing @param for argument in method annotation
+ 204 | WARNING | Missing @param for argument in method annotation
+ 228 | WARNING | Missing @param for argument in method annotation
+ 259 | WARNING | Missing @param for argument in method annotation
+-------------------------------------------------------------------------------------------------
+
+
+FILE: ...cuments/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Widget/Form/MenuSelector.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
+---------------------------------------------------------------------------------------------------
+ 23 | WARNING | Class description must contain meaningful information beyond what its name
+    |         | provides or be removed.
+ 33 | WARNING | Missing @param for argument in method annotation
+ 46 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...iaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Sitemap/Edit/Form.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 56 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...ocuments/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Link/Edit/Fields/Config.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 56 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Tabs.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 36 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...fiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Fields.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 83 | WARNING | Missing @param for argument in method annotation
 ---------------------------------------------------------------------------------------------------
 
 
 FILE: ...ments/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Buttons/Generate.php
 ---------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
 ---------------------------------------------------------------------------------------------------
- 36 | WARNING | Method name "_prepareLayout" should not be prefixed with an underscore to indicate
-    |         | visibility
+ 26 | WARNING | Possible useless method overriding detected
+ 81 | WARNING | Missing @param for argument in method annotation
 ---------------------------------------------------------------------------------------------------
 
-Time: 1.33 secs; Memory: 14MB
+
+FILE: ...ments/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Fields/MenuLinks.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 28 | WARNING | Missing @param for argument in method annotation
+ 28 | WARNING | Possible useless method overriding detected
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Form.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 48 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...cuments/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Adminhtml/Menu/Edit/Modal/Generate.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+---------------------------------------------------------------------------------------------------
+ 41 | WARNING | Missing @param for argument in method annotation
+---------------------------------------------------------------------------------------------------
+
+
+FILE: ...fiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Console/Command/Sitemap/Generate.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 54 | WARNING | Missing @param for argument in method annotation
+ 79 | WARNING | There must be exactly one blank line before tags
+---------------------------------------------------------------------------------------------------
+
+Time: 8.12 secs; Memory: 14MB
 

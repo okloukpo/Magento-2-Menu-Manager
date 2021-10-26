@@ -54,6 +54,12 @@ class FooterMenu
     
     /**
      * HeaderMenu class constructor
+     * 
+     * @param Registry $registry
+     * @param Menu $menuHelper
+     * @param Config $configHelper
+     * @param Block $blockHelper
+     * @param User $userHelper
      */
     public function __construct(
         \Magento\Framework\Registry $registry,
