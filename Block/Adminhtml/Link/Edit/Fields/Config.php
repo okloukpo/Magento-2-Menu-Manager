@@ -52,7 +52,7 @@ class Config extends \Magento\Backend\Block\Template
 
     /**
      * Form class constructor
-     * 
+     *
      * @param Context $context
      * @param Http $request
      * @param Links $linksHelper

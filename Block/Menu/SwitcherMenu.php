@@ -32,6 +32,11 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * SwitcherMenu block class constructor.
+     * 
+     * @param Context $context
+     * @param Menu $menuHelper
+     * @param Links $linksHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
@@ -55,6 +60,9 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
     
     /**
      * Render a list menu.
+     * 
+     * @param array $items
+     * @return string
      */
     public function renderMenu($items)
     {
@@ -70,6 +78,9 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a menu link.
+     * 
+     * @param array $item
+     * @return string
      */
     public function renderMenuLink($item)
     {
@@ -119,6 +130,11 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item children HTML.
+     * 
+     * @param array $items
+     * @param int $level
+     * @param bool $hasChildren
+     * @return string
      */
     public function getChildrenHtml($items, $level, $hasChildren = false)
     {
@@ -168,6 +184,10 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a parent link block sublayout.
+     * 
+     * @param array $item
+     * @param int $level
+     * @return string
      */
     public function renderBlockSublayout($item, $level = 1)
     {
@@ -189,6 +209,10 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the UL element attributes
+     * 
+     * @param int $level
+     * @param bool $hasChildren
+     * @return string
      */
     public function getUlAttributes($level, $hasChildren)
     {
@@ -205,6 +229,10 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the UL element CSS classes.
+     * 
+     * @param int $level
+     * @param bool $hasChildren
+     * @return string
      */
     public function getUlClasses($level, $hasChildren = false)
     {
@@ -224,6 +252,10 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the LI element CSS classes.
+     * 
+     * @param int $level
+     * @param bool $hasChildren
+     * @return string
      */
     public function getLiClasses($level, $hasChildren = false)
     {

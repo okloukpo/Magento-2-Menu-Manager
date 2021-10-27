@@ -32,7 +32,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * NavMenu block class constructor.
-     * 
+     *
      * @param Context $context
      * @param Menu $menuHelper
      * @param Links $linksHelper
@@ -60,7 +60,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a list menu.
-     * 
+     *
      * @param array $items
      * @return array
      */
@@ -81,7 +81,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a submenu link.
-     * 
+     *
      * @param array $item
      * @param int $i
      * @param int $j
@@ -120,7 +120,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item HTML.
-     * 
+     *
      * @param array $classes
      * @param array $item
      * @param array $config
@@ -176,7 +176,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item children HTML.
-     * 
+     *
      * @param array $classes
      * @param int $level
      * @param int $i
@@ -200,7 +200,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a parent link block sublayout.
-     * 
+     *
      * @param array $item
      * @return string
      */
@@ -230,7 +230,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the UL element CSS classes.
-     * 
+     *
      * @param array $item
      * @param int $level
      * @param bool $hasChildren
@@ -261,7 +261,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the LI element CSS classes.
-     * 
+     *
      * @param array $item
      * @param int $level
      * @param bool $hasChildren
@@ -299,7 +299,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the A element CSS classes.
-     * 
+     *
      * @param array $item
      * @return string
      */

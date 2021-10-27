@@ -29,7 +29,7 @@ class MenuSelector extends \Magento\Backend\Block\Template
 
     /**
      * MenuSelector class constructor
-     * 
+     *
      * @param Context $context
      * @param Menu $menuHelper
      * @param array $data
@@ -46,6 +46,9 @@ class MenuSelector extends \Magento\Backend\Block\Template
     
     /**
      * Render the widget form field.
+     * 
+     * @param AbstractElement $element
+     * @return AbstractElement
      */
     public function prepareElementHtml(AbstractElement $element)
     {

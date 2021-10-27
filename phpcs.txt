@@ -725,4 +725,3 @@ FOUND 0 ERRORS AND 8 WARNINGS AFFECTING 8 LINES
  228 | WARNING | Missing @param for argument in method annotation
 ---------------------------------------------------------------------------------------------------
 
-

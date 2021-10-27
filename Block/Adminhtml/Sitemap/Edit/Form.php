@@ -52,7 +52,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
 
     /**
      * Form class constructor
-     * 
+     *
      * @param Context $context
      * @param Registry $registry
      * @param FormFactory $formFactory
