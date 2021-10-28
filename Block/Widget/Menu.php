@@ -39,6 +39,11 @@ class Menu extends \Magento\Framework\View\Element\Template implements \Magento\
 
     /**
      * WidgetButton class constructor.
+     *
+     * @param Context $context
+     * @param WidgetMenu $widgetMenuBlock
+     * @param Menu $menuHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,

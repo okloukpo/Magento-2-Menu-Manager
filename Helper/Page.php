@@ -58,6 +58,14 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Class Page helper constructor.
+     *
+     * @param StoreManagerInterface $storeManager
+     * @param PageRepositoryInterface $pageRepositoryInterface
+     * @param SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
+     * @param Page $cmsPageModel
+     * @param Page $cmsPageHelper
+     * @param PageFactory $pageFactory
+     * @param LinkEntityFactory $linkEntityFactory
      */
     public function __construct(
         \Magento\Store\Model\StoreManagerInterface $storeManager,
@@ -79,6 +87,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a CMS pages collection.
+     * 
+     * @param int $entityId
+     * @return Collection
      */
     public function getPages($entityId = 0)
     {
@@ -103,6 +114,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a CMS page.
+     * 
+     * @param int $id
+     * @return PageFactory
      */
     public function getPage($id)
     {
@@ -111,6 +125,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a pages URL array.
+     * 
+     * @param int $entityId
+     * @return array
      */
     public function getPageOptions($entityId = 0)
     {
@@ -128,6 +145,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a page URL.
+     * 
+     * @param int $id
+     * @return string
      */
     public function getPageUrl($id)
     {
@@ -144,6 +164,10 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate page links.
+     * 
+     * @param array $data
+     * @param int $parentId
+     * @param int $parentLinkId
      */
     public function generatePageLinks($data, $parentId = 0, $parentLinkId = 0)
     {

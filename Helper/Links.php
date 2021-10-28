@@ -50,6 +50,12 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Block helper class constructor.
+     *
+     * @param File $fileIo
+     * @param File $fileDriver
+     * @param PageFactory $pageFactory
+     * @param Config $configHelper
+     * @param LinkEntityFactory $linkEntityFactory
      */
     public function __construct(
         \Magento\Framework\Filesystem\Io\File $fileIo,
@@ -67,6 +73,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a links collection
+     * 
+     * @param array $filters
+     * @return Collection
      */
     public function getLinks($filters = [])
     {
@@ -86,6 +95,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a single link
+     * 
+     * @param int $id
+     * @return LinkEntityFactory
      */
     public function getLink($id)
     {
@@ -94,6 +106,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a link configuration data.
+     * 
+     * @param array $item
+     * @return array
      */
     public function getLinkConfig($item)
     {
@@ -111,6 +126,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a single link by field
+     * 
+     * @param Collection $fields
+     * @return int
      */
     public function getLinkIdByFields($fields)
     {
@@ -135,6 +153,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a link needs a block sublayout display.
+     * 
+     * @param array $item
+     * @return bool
      */
     public function needsBlockSublayout($item)
     {
@@ -150,6 +171,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the upload file path.
+     * 
+     * @param array $params
+     * @return string
      */
     public function getUploadDir($params)
     {
@@ -174,6 +198,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the upload file URL.
+     * 
+     * @param array $params
+     * @return string
      */
     public function getUploadUrl($params)
     {
@@ -185,6 +212,10 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Update file paths for a link entity.
+     * 
+     * @param object $item
+     * @param string $tmpId
+     * @return object
      */
     public function updateFilePath($item, $tmpId)
     {
