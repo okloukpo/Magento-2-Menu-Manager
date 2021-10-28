@@ -126,6 +126,18 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Class Config constructor.
+     * 
+     * @param Session $backendAuthSession
+     * @param Filesystem $filesystem
+     * @param Validator $formKeyValidator
+     * @param FormKey $formKey
+     * @param Repository $assetRepository
+     * @param ScopeConfigInterface $scopeConfig
+     * @param Parser $xmlParser
+     * @param Reader $moduleDirReader
+     * @param ResourceConnection $resourceConnection
+     * @param Stores $storesHelper
+
      */
     public function __construct(
         \Magento\Backend\Model\Auth\Session $backendAuthSession,
