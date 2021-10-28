@@ -32,6 +32,11 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     
     /**
      * WidgetMenu block class constructor.
+     * 
+     * @param Context $context
+     * @param Menu $menuHelper
+     * @param Links $linksHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
@@ -55,6 +60,9 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
     
     /**
      * Render a list menu.
+     * 
+     * @param array $items
+     * @return string
      */
     public function renderMenu($items)
     {
@@ -70,6 +78,10 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a submenu link.
+     * 
+     * @param array $item
+     * @param bool $hasChildren
+     * @return string
      */
     public function renderMenuLink($item, $hasChildren = false)
     {
@@ -95,6 +107,9 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item HTML.
+     * 
+     * @param array $item
+     * @return string
      */
     public function getItemHtml($item)
     {
@@ -115,6 +130,10 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item children HTML.
+     * 
+     * @param array $item
+     * @param array $children
+     * @return string
      */
     public function getChildrenHtml($item, $children)
     {
@@ -136,6 +155,11 @@ class WidgetMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a parent link block sublayout.
+     * 
+     * @param array $item
+     * @param int $level
+     * @param bool $hasChildren
+     * @return string
      */
     public function renderBlockSublayout($item, $level, $hasChildren = false)
     {
