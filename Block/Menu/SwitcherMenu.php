@@ -32,7 +32,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * SwitcherMenu block class constructor.
-     * 
+     *
      * @param Context $context
      * @param Menu $menuHelper
      * @param Links $linksHelper
@@ -60,7 +60,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
     
     /**
      * Render a list menu.
-     * 
+     *
      * @param array $items
      * @return string
      */
@@ -78,7 +78,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a menu link.
-     * 
+     *
      * @param array $item
      * @return string
      */
@@ -130,7 +130,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item children HTML.
-     * 
+     *
      * @param array $items
      * @param int $level
      * @param bool $hasChildren
@@ -184,7 +184,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a parent link block sublayout.
-     * 
+     *
      * @param array $item
      * @param int $level
      * @return string
@@ -209,7 +209,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the UL element attributes
-     * 
+     *
      * @param int $level
      * @param bool $hasChildren
      * @return string
@@ -229,7 +229,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the UL element CSS classes.
-     * 
+     *
      * @param int $level
      * @param bool $hasChildren
      * @return string
@@ -252,7 +252,7 @@ class SwitcherMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the LI element CSS classes.
-     * 
+     *
      * @param int $level
      * @param bool $hasChildren
      * @return string

@@ -710,18 +710,5 @@ FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
  140 | WARNING | Missing @param for argument in method annotation
 ---------------------------------------------------------------------------------------------------
 
-
-FILE: ...ers/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Block/Menu/SwitcherMenu.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 8 WARNINGS AFFECTING 8 LINES
----------------------------------------------------------------------------------------------------
-  36 | WARNING | Missing @param for argument in method annotation
-  59 | WARNING | Missing @param for argument in method annotation
-  74 | WARNING | Missing @param for argument in method annotation
- 123 | WARNING | Missing @param for argument in method annotation
- 172 | WARNING | Missing @param for argument in method annotation
- 193 | WARNING | Missing @param for argument in method annotation
- 209 | WARNING | Missing @param for argument in method annotation
- 228 | WARNING | Missing @param for argument in method annotation
----------------------------------------------------------------------------------------------------
+Time: 8.05 secs; Memory: 14MB
 

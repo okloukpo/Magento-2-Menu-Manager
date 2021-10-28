@@ -46,7 +46,7 @@ class MenuSelector extends \Magento\Backend\Block\Template
     
     /**
      * Render the widget form field.
-     * 
+     *
      * @param AbstractElement $element
      * @return AbstractElement
      */
