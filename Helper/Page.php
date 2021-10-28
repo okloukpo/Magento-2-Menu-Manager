@@ -87,7 +87,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a CMS pages collection.
-     * 
+     *
      * @param int $entityId
      * @return Collection
      */
@@ -114,7 +114,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a CMS page.
-     * 
+     *
      * @param int $id
      * @return PageFactory
      */
@@ -125,7 +125,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a pages URL array.
-     * 
+     *
      * @param int $entityId
      * @return array
      */
@@ -145,7 +145,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a page URL.
-     * 
+     *
      * @param int $id
      * @return string
      */
@@ -164,7 +164,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate page links.
-     * 
+     *
      * @param array $data
      * @param int $parentId
      * @param int $parentLinkId

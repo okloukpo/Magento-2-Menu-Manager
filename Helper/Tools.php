@@ -23,12 +23,18 @@ class Tools extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Convert an array to CSV format
+     * 
+     * @param array $data
+     * @param string $delimiter
+     * @param string $enclosure
+     * @param string $escapeChar
+     * @return string
      */
-    public function arrayTocsv($data, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
+    public function arrayTocsv($data, $delimiter = ',', $enclosure = '"', $escapeChar = "\\")
     {
         $f = fopen('php://memory', 'r+');
         foreach ($data as $item) {
-            fputcsv($f, $item, $delimiter, $enclosure, $escape_char);
+            fputcsv($f, $item, $delimiter, $enclosure, $escapeChar);
         }
         rewind($f);
         
@@ -37,6 +43,9 @@ class Tools extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Sanitize a file name
+     * 
+     * @param string $str
+     * @return string
      */
     public function sanitizeFileName($str)
     {

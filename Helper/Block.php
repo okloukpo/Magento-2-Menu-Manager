@@ -35,7 +35,7 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Block helper class constructor.
-     * 
+     *
      * @param PageFactory $pageFactory
      * @param Config $configHelper
      */
@@ -49,7 +49,7 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the header menu HTML.
-     * 
+     *
      * @param array $items
      * @param array $menuData
      * @return string
@@ -66,7 +66,7 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the top menu HTML.
-     * 
+     *
      * @param array $items
      * @param array $menuData
      * @return string
@@ -83,7 +83,7 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the footer menu HTML.
-     * 
+     *
      * @param array $items
      * @param array $menuData
      * @return string
@@ -100,7 +100,7 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu link config form HTML.
-     * 
+     *
      * @param array $data
      * @return string
      */
@@ -115,7 +115,7 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Render an error message.
-     * 
+     *
      * @param string $msg
      * @return string
      */

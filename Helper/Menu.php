@@ -113,7 +113,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu collection
-     * 
+     *
      * @param array $filters
      * @return Collection
      */
@@ -135,7 +135,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu
-     * 
+     *
      * @param int $id
      * @return MenuEntityFactory
      */
@@ -146,7 +146,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu links
-     * 
+     *
      * @param int $menuId
      * @return Collection
      */
@@ -165,7 +165,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate a menu links
-     * 
+     *
      * @param array $data
      * @return bool
      */
@@ -194,7 +194,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu links array
-     * 
+     *
      * @param int $menuId
      * @return array
      */
@@ -219,7 +219,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Build a menu link array recursively
-     * 
+     *
      * @param array $data
      * @param array $items
      * @return array
@@ -267,7 +267,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Save a menu data
-     * 
+     *
      * @param array $data
      * @return int
      */
@@ -305,7 +305,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Update a menu links
-     * 
+     *
      * @param array $data
      */
     public function updateMenuLinks($data)
@@ -329,7 +329,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
     
     /**
      * Check if a menu link needs an image.
-     * 
+     *
      * @param array $item
      * @param array $menuData
      * @return bool
@@ -363,7 +363,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu link image.
-     * 
+     *
      * @param array $item
      * @return string
      */
@@ -384,7 +384,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Save a menu links recursively
-     * 
+     *
      * @param array $tableData
      */
     public function saveMenuLinks($tableData)
@@ -402,7 +402,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Save a menu link data
-     * 
+     *
      * @param object $row
      * @param int $i
      */
@@ -444,7 +444,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu link URL
-     * 
+     *
      * @param string $linkType
      * @param int $id
      * @return int
@@ -476,7 +476,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the link url options
-     * 
+     *
      * @param array $data
      * @return array
      */
@@ -513,6 +513,9 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
   
     /**
      * Check if the menu can be displayed for a store.
+     * 
+     * @param array $menu
+     * @return bool
      */
     public function canDisplayForStore($menu)
     {
@@ -528,7 +531,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if the current link is being viewed
-     * 
+     *
      * @param object $item
      * @return bool
      */
@@ -554,7 +557,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Delete a menu
-     * 
+     *
      * @param int $id
      */
     public function deleteMenu($id)
@@ -565,7 +568,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Delete a menu links
-     * 
+     *
      * @param int $menuId
      * @param array $linkIds
      */

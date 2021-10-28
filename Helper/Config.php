@@ -25,52 +25,52 @@ use Magento\Framework\UrlInterface;
 class Config extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
-     * Module name
+     * Default module name
      */
     const MODULE_NAME = 'Naxero_MenuManager';
 
     /**
-     * Module alias
+     * Default module alias
      */
     const MODULE_ALIAS = 'naxero_mm';
 
     /**
-     * Module path
+     * Default module path
      */
     const MODULE_PATH = 'Naxero\MenuManager';
 
     /**
-     * Module route
+     * Default module route
      */
     const MODULE_ROUTE = 'naxero-mm';
 
     /**
-     * Module tag
+     * Default module tag
      */
     const MODULE_TAG = 'naxero_mm';
 
     /**
-     * Module title
+     * Default module title
      */
     const MODULE_TITLE = 'Naxero Menu Manager';
 
     /**
-     * @var String
+     * Default config file name
      */
     const CONFIG_FILE_NAME = 'config.xml';
 
     /**
-     * @var String
+     * Default link entity table name
      */
     const LINK_ENTITY_TABLE = 'naxero_menumanager_links';
 
     /**
-     * @var String
+     * Default menu entity table name
      */
     const MENU_ENTITY_TABLE = 'naxero_menumanager_menus';
 
     /**
-     * @var String
+     * Default sitemap entity table
      */
     const SITEMAP_ENTITY_TABLE = 'naxero_menumanager_sitemaps';
 
@@ -126,7 +126,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Class Config constructor.
-     * 
+     *
      * @param Session $backendAuthSession
      * @param Filesystem $filesystem
      * @param Validator $formKeyValidator
@@ -137,7 +137,6 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
      * @param Reader $moduleDirReader
      * @param ResourceConnection $resourceConnection
      * @param Stores $storesHelper
-
      */
     public function __construct(
         \Magento\Backend\Model\Auth\Session $backendAuthSession,
@@ -173,6 +172,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a request is valid
+     * 
+     * @param object $request
+     * @return bool
      */
     public function isValidRequest($request)
     {
@@ -181,6 +183,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if an AJAX request is valid
+     * 
+     * @param object $request
+     * @return bool
      */
     public function isValidAjaxRequest($request)
     {
@@ -190,6 +195,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if an admin request is valid
+     * 
+     * @param object $request
+     * @return bool
      */
     public function isValidAdminRequest($request)
     {
@@ -199,6 +207,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if an admin AJAX request is valid
+     * 
+     * @param object $request
+     * @return bool
      */
     public function isValidAdminAjaxRequest($request)
     {
@@ -216,6 +227,10 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a module configuration value.
+     * 
+     * @param string $field
+     * @param bool $core
+     * @return string
      */
     public function value($field, $core = false)
     {
@@ -232,6 +247,10 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a module configuration array value.
+     * 
+     * @param string $field
+     * @param bool $core
+     * @return array
      */
     public function arrayValue($field, $core = false)
     {
@@ -281,6 +300,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Convert a value to boolean.
+     * 
+     * @param string $value
+     * @return bool
      */
     public function toBooleanFilter($value)
     {
@@ -291,6 +313,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an icon URL.
+     * 
+     * @param string $fileName
+     * @return string
      */
     public function getIconUrl($fileName)
     {
@@ -306,6 +331,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
      * Finds a file path from file name.
      *
      * @param string $fileName
+     * @param string $moduleSubdir
      * @return string
      */
     public function getFilePath($fileName, $moduleSubdir = Dir::MODULE_ETC_DIR)
@@ -372,6 +398,9 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an entity table fields.
+     * @param string $tableName
+     * @param bool $primaryKey
+     * @return array
      */
     public function getEntityFields($tableName, $primaryKey = true)
     {

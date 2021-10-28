@@ -73,7 +73,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a links collection
-     * 
+     *
      * @param array $filters
      * @return Collection
      */
@@ -95,7 +95,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a single link
-     * 
+     *
      * @param int $id
      * @return LinkEntityFactory
      */
@@ -106,7 +106,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a link configuration data.
-     * 
+     *
      * @param array $item
      * @return array
      */
@@ -126,7 +126,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a single link by field
-     * 
+     *
      * @param Collection $fields
      * @return int
      */
@@ -153,7 +153,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a link needs a block sublayout display.
-     * 
+     *
      * @param array $item
      * @return bool
      */
@@ -171,7 +171,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the upload file path.
-     * 
+     *
      * @param array $params
      * @return string
      */
@@ -198,7 +198,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the upload file URL.
-     * 
+     *
      * @param array $params
      * @return string
      */
@@ -212,7 +212,7 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Update file paths for a link entity.
-     * 
+     *
      * @param object $item
      * @param string $tmpId
      * @return object
