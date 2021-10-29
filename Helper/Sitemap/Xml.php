@@ -79,7 +79,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Sitemap XML helper class constructor.
-     * 
+     *
      * @param File $fileDriver
      * @param Filesystem $filesystem
      * @param DateTime $datetime
@@ -117,7 +117,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Load an XML sitemap collection
-     * 
+     *
      * @param array $filters
      * @return Collection
      */
@@ -139,7 +139,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Load an XML sitemap
-     * 
+     *
      * @param int $id
      */
     public function getSitemap($id)
@@ -150,7 +150,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate an XML sitemap
-     * 
+     *
      * @param array $data
      */
     public function generateSitemap($data)
@@ -164,7 +164,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate multiple XML sitemaps
-     * 
+     *
      * @param array $filters
      */
     public function generateSitemaps($filters = [])
@@ -179,7 +179,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Create the XML sitemap file
-     * 
+     *
      * @param array $item
      * @param string $content
      */
@@ -205,7 +205,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Write to the XML sitemap file.
-     * 
+     *
      * @param object $writeDirectory
      * @param string $filePath
      * @param string $content
@@ -224,7 +224,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Save an XML sitemap
-     * 
+     *
      * @param array $data
      * @return int $id
      */
@@ -271,7 +271,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Update an XML sitemap file location on the server
-     * 
+     *
      * @param array $item
      * @param array $data
      */
@@ -303,7 +303,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
     
     /**
      * Get an XML sitemap links
-     * 
+     *
      * @param array $item
      */
     public function getSitemapLinks($item)
@@ -328,7 +328,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Create an XML sitemap links content
-     * 
+     *
      * @param array $item
      * @return string
      */
@@ -368,7 +368,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an XML sitemap item images
-     * 
+     *
      * @param array $item
      * @param array $sitemap
      * @return string
@@ -414,7 +414,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an XML sitemap file image
-     * 
+     *
      * @param array $image
      * @return string
      */
@@ -432,7 +432,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an XML sitemap item URL
-     * 
+     *
      * @param array $item
      * @return string
      */
@@ -451,7 +451,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Delete an XML sitemap
-     * 
+     *
      * @param int $id
      */
     public function deleteSitemap($id)

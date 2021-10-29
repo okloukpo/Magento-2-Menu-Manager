@@ -513,7 +513,7 @@ class Menu extends \Magento\Framework\App\Helper\AbstractHelper
   
     /**
      * Check if the menu can be displayed for a store.
-     * 
+     *
      * @param array $menu
      * @return bool
      */

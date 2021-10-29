@@ -172,7 +172,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a request is valid
-     * 
+     *
      * @param object $request
      * @return bool
      */
@@ -183,7 +183,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if an AJAX request is valid
-     * 
+     *
      * @param object $request
      * @return bool
      */
@@ -195,7 +195,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if an admin request is valid
-     * 
+     *
      * @param object $request
      * @return bool
      */
@@ -207,7 +207,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if an admin AJAX request is valid
-     * 
+     *
      * @param object $request
      * @return bool
      */
@@ -227,7 +227,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a module configuration value.
-     * 
+     *
      * @param string $field
      * @param bool $core
      * @return string
@@ -247,7 +247,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a module configuration array value.
-     * 
+     *
      * @param string $field
      * @param bool $core
      * @return array
@@ -300,7 +300,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Convert a value to boolean.
-     * 
+     *
      * @param string $value
      * @return bool
      */
@@ -313,7 +313,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an icon URL.
-     * 
+     *
      * @param string $fileName
      * @return string
      */

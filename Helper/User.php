@@ -45,6 +45,11 @@ class User extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Block helper class constructor.
+     *
+     * @param AuthorizationLink $authLink
+     * @param Resolver $localeResolver
+     * @param Session $customerSession
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Customer\Block\Account\AuthorizationLink $authLink,
@@ -76,6 +81,8 @@ class User extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if the customer group is valid for button display.
+     *
+     * @param array $group
      */
     public function userHasGroup($groups)
     {

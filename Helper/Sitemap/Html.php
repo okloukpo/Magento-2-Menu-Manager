@@ -29,7 +29,7 @@ class Html extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Sitemap HTML helper class constructor.
-     * 
+     *
      * @param Links $linksHelper
      */
     public function __construct(

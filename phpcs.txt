@@ -477,57 +477,21 @@ FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 2 LINES
 ------------------------------------------------------------------------------------------------
 
 
-FILE: ...dfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Api/Data/SitemapEntityInterface.php
----------------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
----------------------------------------------------------------------------------------------------
- 147 | WARNING | $fileName parameter is missing in method arguments signature
- 150 | WARNING | $title parameter is missing in method annotation
----------------------------------------------------------------------------------------------------
-
-
 FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Category.php
 ----------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 7 WARNINGS AFFECTING 7 LINES
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 3 LINES
 ----------------------------------------------------------------------------------------------
-  67 | WARNING | Missing @param for argument in method annotation
-  90 | WARNING | Missing @param for argument in method annotation
- 109 | WARNING | Missing @param for argument in method annotation
- 134 | WARNING | Missing @param for argument in method annotation
- 144 | WARNING | Missing @param for argument in method annotation
- 154 | WARNING | The use of function basename() is discouraged
- 173 | WARNING | Missing @param for argument in method annotation
+  99 | WARNING | $filter parameter is missing in method arguments signature
+ 102 | WARNING | $filters parameter is missing in method annotation
+ 173 | WARNING | The use of function basename() is discouraged
 ----------------------------------------------------------------------------------------------
-
-
-FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Stores.php
---------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 5 LINES
---------------------------------------------------------------------------------------------
-  39 | WARNING | Missing @param for argument in method annotation
-  58 | WARNING | Missing @param for argument in method annotation
-  66 | WARNING | Missing @param for argument in method annotation
-  76 | WARNING | Missing @param for argument in method annotation
- 110 | WARNING | Missing @param for argument in method annotation
---------------------------------------------------------------------------------------------
 
 
 FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Product.php
 ---------------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 12 WARNINGS AFFECTING 12 LINES
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ---------------------------------------------------------------------------------------------
-  59 | WARNING | Missing @param for argument in method annotation
-  78 | WARNING | Missing @param for argument in method annotation
-  86 | WARNING | Missing @param for argument in method annotation
-  90 | WARNING | Code must not contain multiple empty lines in a row; found 2 empty lines.
-  95 | WARNING | Missing @param for argument in method annotation
- 103 | WARNING | Missing @param for argument in method annotation
- 111 | WARNING | Missing @param for argument in method annotation
- 130 | WARNING | Missing @param for argument in method annotation
- 154 | WARNING | Missing @param for argument in method annotation
- 162 | WARNING | Missing @param for argument in method annotation
- 172 | WARNING | Missing @param for argument in method annotation
- 202 | WARNING | Missing @param for argument in method annotation
+ 102 | WARNING | Code must not contain multiple empty lines in a row; found 2 empty lines.
 ---------------------------------------------------------------------------------------------
 
 
@@ -535,9 +499,36 @@ FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helpe
 ------------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
 ------------------------------------------------------------------------------------------
- 49 | WARNING | Missing @param for argument in method annotation
- 80 | WARNING | Missing @param for argument in method annotation
+ 85 | WARNING | $group parameter is missing in method arguments signature
+ 87 | WARNING | $groups parameter is missing in method annotation
 ------------------------------------------------------------------------------------------
 
 
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Tools.php
+---------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 2 LINES
+---------------------------------------------------------------------------------------------------
+ 35 | WARNING | The use of function fopen() is discouraged; use
+    |         | Magento\Framework\Filesystem\DriverInterface::fileOpen()() instead
+ 41 | WARNING | The code must be wrapped with a try block if the method uses system resources.
+ 41 | WARNING | The use of function stream_get_contents() is discouraged
+---------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Config.php
+--------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+--------------------------------------------------------------------------------------------
+ 401 | WARNING | There must be exactly one blank line before tags
+--------------------------------------------------------------------------------------------
+
+
+FILE: /Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Links.php
+-------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+-------------------------------------------------------------------------------------------
+ 235 | WARNING | The use of function basename() is discouraged
+-------------------------------------------------------------------------------------------
+
+Time: 11.56 secs; Memory: 14MB
 

@@ -23,7 +23,7 @@ class Tools extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Convert an array to CSV format
-     * 
+     *
      * @param array $data
      * @param string $delimiter
      * @param string $enclosure
@@ -43,7 +43,7 @@ class Tools extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Sanitize a file name
-     * 
+     *
      * @param string $str
      * @return string
      */
