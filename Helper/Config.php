@@ -398,6 +398,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an entity table fields.
+     *
      * @param string $tableName
      * @param bool $primaryKey
      * @return array

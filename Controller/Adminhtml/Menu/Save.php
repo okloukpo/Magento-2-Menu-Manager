@@ -34,6 +34,11 @@ class Save extends \Magento\Backend\App\Action
 
     /**
      * Menu save class constructor.
+     *
+     * @param Context $context
+     * @param JsonFactory $jsonFactory
+     * @param Menu $menuHelper
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

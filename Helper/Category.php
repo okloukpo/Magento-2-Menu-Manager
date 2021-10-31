@@ -96,7 +96,7 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get the catalog root categories.
      *
-     * @param array $filter
+     * @param array $filters
      * @return object
      */
     public function getCategories($filters = [])

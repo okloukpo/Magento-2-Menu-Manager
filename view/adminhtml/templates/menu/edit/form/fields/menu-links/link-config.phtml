@@ -104,7 +104,7 @@ if (!empty($data['link_config'])) {
                         </label>
                         <div class="admin__field-control control">
                             <select id="target" name="target" class="select admin__control-select">
-                                <?php foreach ($this->targetSource->toOptionArray() as $o): ?>
+                                <?php foreach ($block->targetSource->toOptionArray() as $o): ?>
                                     <option value="<?= $block->escapeHtmlAttr($o['value']) ?>">
                                         <?= $block->escapeHtml($o['label']) ?>
                                     </option>
@@ -135,7 +135,7 @@ if (!empty($data['link_config'])) {
                         </label>
                         <div class="admin__field-control control">
                             <select id="sublayout" name="sublayout" class="select admin__control-select">
-                                <?php foreach ($this->sublayoutSource->toOptionArray() as $o): ?>
+                                <?php foreach ($block->sublayoutSource->toOptionArray() as $o): ?>
                                     <option value="<?= $block->escapeHtmlAttr($o['value']) ?>">
                                         <?= $block->escapeHtml($o['label']) ?>
                                     </option>
@@ -153,7 +153,7 @@ if (!empty($data['link_config'])) {
                         </label>
                         <div class="admin__field-control control">
                             <select id="block" name="block" class="select admin__control-select">
-                                <?php foreach ($this->blocksSource->toOptionArray() as $o): ?>
+                                <?php foreach ($block->blocksSource->toOptionArray() as $o): ?>
                                     <option value="<?= $block->escapeHtmlAttr($o['value']) ?>">
                                         <?= $block->escapeHtml($o['label']) ?>
                                     </option>
@@ -228,8 +228,8 @@ require([
 
     // Initialize the link config form handler
     LinkConfigForm.init(
-        '<?= $data['entity_id'] ?>',
-        '<?= $data['menu_id'] ?>'
+        '<?= $block->escapeHtml($data['entity_id']) ?>',
+        '<?= $block->escapeHtml($data['menu_id']) ?>'
     );
 });
 </script>

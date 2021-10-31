@@ -27,6 +27,8 @@ class Sitemap implements \Magento\Framework\Option\ArrayInterface
 
     /**
      * Sitemap source class constructor.
+     *
+     * @param SitemapFactory $sitemapFactory
      */
     public function __construct(
         \Magento\Sitemap\Model\SitemapFactory $sitemapFactory

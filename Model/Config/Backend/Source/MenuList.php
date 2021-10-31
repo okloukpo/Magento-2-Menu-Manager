@@ -16,11 +16,10 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class MenuList
+ * Class MenuList source.
  */
 class MenuList implements \Magento\Framework\Option\ArrayInterface
 {
-
     /**
      * @var Menu
      */
@@ -28,6 +27,8 @@ class MenuList implements \Magento\Framework\Option\ArrayInterface
 
     /**
      * HeaderMenu block class constructor.
+     * 
+     * @param Menu $menuHelper
      */
     public function __construct(
         \Naxero\MenuManager\Helper\Menu $menuHelper

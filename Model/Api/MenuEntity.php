@@ -21,7 +21,6 @@ namespace Naxero\MenuManager\Model\Api;
  */
 class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
 {
-
     /**
      * @var Menu
      */
@@ -29,6 +28,8 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
 
     /**
      * Menu API model class constructor
+     *
+     * @param Menu $menuHelper
      */
     public function __construct(
         \Naxero\MenuManager\Helper\Menu $menuHelper
@@ -52,6 +53,9 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
 
     /**
      * Get a menu by ID.
+     *
+     * @param int $menuId
+     * @return array
      */
     public function getMenu($menuId)
     {

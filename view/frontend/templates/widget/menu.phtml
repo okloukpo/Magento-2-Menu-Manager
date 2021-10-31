@@ -6,4 +6,4 @@
     $items = $block->menuHelper->getMenuLinksArray($menuId);
 ?>
 
-<?= $block->widgetMenuBlock->renderMenu($items) ?>
+<?= $block->escapeHtml($block->widgetMenuBlock->renderMenu($items)) ?>

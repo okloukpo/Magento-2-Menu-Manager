@@ -23,12 +23,14 @@ interface LinkInterface
 {
     /**
      * Get a menu links
+     *
      * @return mixed
      */
     public function getLinks();
 
     /**
      * Get a menu link by ID
+     *
      * @param string $linkId
      * @return mixed
      */

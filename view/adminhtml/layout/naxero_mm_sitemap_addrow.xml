@@ -15,7 +15,10 @@
  */
 -->
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+<page
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd"
+>
     <update handle="styles"/>
     <update handle="editor"/>
     <head>
@@ -23,10 +26,16 @@
     </head>
     <body>
         <referenceBlock name="page.actions.toolbar">
-            <block class="Magento\Backend\Block\Template" template="Naxero_MenuManager::sitemap/edit/form/buttons.phtml" />
+            <block
+                class="Magento\Backend\Block\Template"
+                template="Naxero_MenuManager::sitemap/edit/form/buttons.phtml" 
+            />
         </referenceBlock>
         <referenceContainer name="content">
-           <block class="Naxero\MenuManager\Block\Adminhtml\Sitemap\AddRow" name="add_sitemap_row" />
+           <block
+                class="Naxero\MenuManager\Block\Adminhtml\Sitemap\AddRow"
+                name="add_sitemap_row" 
+            />
         </referenceContainer>
     </body>
 </page>

@@ -21,8 +21,14 @@
 >
 
     <!-- API Preferences -->
-    <preference for="Naxero\MenuManager\Api\MenuInterface" type="Naxero\MenuManager\Model\Api\MenuEntity"/>
-    <preference for="Naxero\MenuManager\Api\LinkInterface" type="Naxero\MenuManager\Model\Api\LinkEntity"/>
+    <preference
+        for="Naxero\MenuManager\Api\MenuInterface"
+        type="Naxero\MenuManager\Model\Api\MenuEntity"
+    />
+    <preference
+        for="Naxero\MenuManager\Api\LinkInterface"
+        type="Naxero\MenuManager\Model\Api\LinkEntity"
+    />
 
     <!-- Console commands -->
     <type name="Magento\Framework\Console\CommandListInterface">
@@ -31,7 +37,9 @@
                 <item
                     name="maxero.sitemap.generate" 
                     xsi:type="object"
-                >Naxero\MenuManager\Console\Command\Sitemap\Generate</item>
+                >
+                    Naxero\MenuManager\Console\Command\Sitemap\Generate
+                </item>
             </argument>
         </arguments>
     </type>
@@ -42,14 +50,31 @@
         type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult"
     >
         <arguments>
-            <argument name="mainTable" xsi:type="string">naxero_menumanager_menus</argument>
-            <argument name="resourceModel" xsi:type="string">Naxero\MenuManager\Model\ResourceModel\MenuEntity</argument>
+            <argument
+                name="mainTable"
+                xsi:type="string"
+            >
+                naxero_menumanager_menus
+            </argument>
+            <argument
+                name="resourceModel"
+                xsi:type="string"
+            >
+                Naxero\MenuManager\Model\ResourceModel\MenuEntity
+            </argument>
         </arguments>
     </virtualType>
-    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+    <type
+        name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory"
+    >
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="naxero_menumanager_menu_index_data_source" xsi:type="string">Naxero\MenuManager\Model\ResourceModel\MenuEntity\Collection</item>
+                <item
+                    name="naxero_menumanager_menu_index_data_source"
+                    xsi:type="string"
+                >
+                    Naxero\MenuManager\Model\ResourceModel\MenuEntity\Collection
+                </item>
             </argument>
         </arguments>
     </type>
@@ -60,14 +85,31 @@
         type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult"
     >
         <arguments>
-            <argument name="mainTable" xsi:type="string">naxero_menumanager_links</argument>
-            <argument name="resourceModel" xsi:type="string">Naxero\MenuManager\Model\ResourceModel\LinkEntity</argument>
+            <argument
+                name="mainTable"
+                xsi:type="string"
+            >
+                naxero_menumanager_links
+            </argument>
+            <argument
+                name="resourceModel"
+                xsi:type="string"
+            >
+                Naxero\MenuManager\Model\ResourceModel\LinkEntity
+            </argument>
         </arguments>
     </virtualType>
-    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+    <type
+        name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory"
+    >
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="naxero_menumanager_link_index_data_source" xsi:type="string">Naxero\MenuManager\Model\ResourceModel\LinkEntity\Collection</item>
+                <item
+                    name="naxero_menumanager_link_index_data_source"
+                    xsi:type="string"
+                >
+                    Naxero\MenuManager\Model\ResourceModel\LinkEntity\Collection
+                </item>
             </argument>
         </arguments>
     </type>
@@ -78,14 +120,31 @@
         type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult"
     >
         <arguments>
-            <argument name="mainTable" xsi:type="string">naxero_menumanager_sitemaps</argument>
-            <argument name="resourceModel" xsi:type="string">Naxero\MenuManager\Model\ResourceModel\SitemapEntity</argument>
+            <argument
+                name="mainTable"
+                xsi:type="string"
+            >
+                naxero_menumanager_sitemaps
+            </argument>
+            <argument
+                name="resourceModel"
+                xsi:type="string"
+            >
+                Naxero\MenuManager\Model\ResourceModel\SitemapEntity
+            </argument>
         </arguments>
     </virtualType>
-    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+    <type
+        name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory"
+    >
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="naxero_menumanager_sitemap_index_data_source" xsi:type="string">Naxero\MenuManager\Model\ResourceModel\SitemapEntity\Collection</item>
+                <item
+                    name="naxero_menumanager_sitemap_index_data_source"
+                    xsi:type="string"
+                >
+                    Naxero\MenuManager\Model\ResourceModel\SitemapEntity\Collection
+                </item>
             </argument>
         </arguments>
     </type>

@@ -9,7 +9,7 @@
 <style>
     <?php if (!empty($menuData['zindex'])): ?>
     .mm-top-menu {
-        z-index: <?= $menuData['zindex'] ?> !important;
+        z-index: <?= $block->escapeHtml($menuData['zindex']) ?> !important;
     }
     <?php endif; ?>
 
@@ -56,9 +56,9 @@
 <!-- Top menu HTML -->
 <nav class="navigation" data-action="navigation">
     <ul  
-        class="ui-menu ui-widget ui-widget-content ui-corner-all mm-top-menu mm-menu <?= $orientation ?>"
+        class="ui-menu ui-widget ui-widget-content ui-corner-all mm-top-menu mm-menu <?= $block->escapeHtmlAttr($orientation) ?>"
         data-mage-init='{"menu":{"responsive":true, "expanded":true, "delay": 200, "position":{"my":"left top","at":"left+10 top+40"}}}'
     >
-        <?= $block->renderMenu($items) ?> 
+        <?= $block->escapeHtml($block->renderMenu($items)) ?> 
     </ul>
 </nav> 

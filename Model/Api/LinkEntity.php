@@ -21,7 +21,6 @@ namespace Naxero\MenuManager\Model\Api;
  */
 class LinkEntity implements \Naxero\MenuManager\Api\LinkInterface
 {
-
     /**
      * @var Links
      */
@@ -29,6 +28,8 @@ class LinkEntity implements \Naxero\MenuManager\Api\LinkInterface
 
     /**
      * Link API model class constructor
+     *
+     * @param Links $linksHelper
      */
     public function __construct(
         \Naxero\MenuManager\Helper\Links $linksHelper
@@ -52,6 +53,9 @@ class LinkEntity implements \Naxero\MenuManager\Api\LinkInterface
 
     /**
      * Get a menu link.
+     *
+     * @param int $linkId
+     * @return array
      */
     public function getLink($linkId)
     {

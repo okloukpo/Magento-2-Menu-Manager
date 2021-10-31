@@ -232,7 +232,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * Set store views
      *
-     * @param string $data
+     * @param string $storeViews
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
     public function setStoreViews($storeViews)

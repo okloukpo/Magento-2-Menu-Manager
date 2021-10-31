@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class Override
+ * Class Override source.
  */
 class Override implements \Magento\Framework\Option\ArrayInterface
 {

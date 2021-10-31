@@ -23,12 +23,14 @@ interface MenuInterface
 {
     /**
      * Get menus
+     *
      * @return mixed
      */
     public function getMenus();
 
     /**
      * Get a menu
+     *
      * @param string $menuId
      * @return mixed
      */

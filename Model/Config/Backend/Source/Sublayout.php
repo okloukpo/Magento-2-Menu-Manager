@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class Sublayout
+ * Class Sublayout source.
  */
 class Sublayout implements \Magento\Framework\Option\ArrayInterface
 {

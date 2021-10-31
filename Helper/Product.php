@@ -100,7 +100,6 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
         return $this->getProduct($productId)->getData('has_options');
     }
 
-
     /**
      * Check if a product has parent products.
      *

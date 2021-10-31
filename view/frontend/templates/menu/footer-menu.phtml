@@ -99,14 +99,14 @@
 
     <?php if (!empty($menuData['zindex'])): ?>
         .mm-footer-menu ul {
-            z-index: <?= $menuData['zindex'] ?> !important;
+            z-index: <?= $block->escapeHtml($menuData['zindex']) ?> !important;
         }
     <?php endif; ?>
 </style>
 
 <!-- Footer menu HTML -->
-<div class="mm-footer-menu mm-menu <?= $orientation ?>">
-    <?= $block->renderMenu($items) ?> 
+<div class="mm-footer-menu mm-menu <?= $block->escapeHtmlAttr($orientation) ?>">
+    <?= $block->escapeHtml($block->renderMenu($items)) ?> 
 </div>
 
 <script>

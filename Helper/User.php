@@ -82,7 +82,7 @@ class User extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Check if the customer group is valid for button display.
      *
-     * @param array $group
+     * @param array $groups
      */
     public function userHasGroup($groups)
     {

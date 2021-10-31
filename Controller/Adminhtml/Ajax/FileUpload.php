@@ -103,6 +103,8 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * Upload a file.
+     *
+     * @param object $request
      */
     public function uploadFile($request)
     {
@@ -135,6 +137,8 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * Get the upload response.
+     *
+     * @param object $uploader
      */
     public function getUploadResponse($uploader)
     {
@@ -157,6 +161,8 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * Get the error response.
+     *
+     * @param string $msg
      */
     public function getErrorResponse($msg = null)
     {
