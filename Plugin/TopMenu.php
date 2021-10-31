@@ -75,6 +75,9 @@ class TopMenu
     
     /**
      * Render the menu nodes.
+     *
+     * @param object $subject
+     * @param object $proceed
      */
     public function aroundToHtml($subject, callable $proceed)
     {

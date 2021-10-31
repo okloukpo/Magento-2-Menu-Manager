@@ -34,8 +34,13 @@
             />
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Naxero\MenuManager\Block\Adminhtml\Menu\AddRow" name="add_menu_row" />
-            <block class="Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Buttons\Generate"/>
+            <block
+                class="Naxero\MenuManager\Block\Adminhtml\Menu\AddRow"
+                name="add_menu_row"
+            />
+            <block
+                class="Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Buttons\Generate"
+            />
             <block 
                 class="Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Tabs"
                 template="Naxero_MenuManager::menu/edit/form/tabs.phtml"
@@ -43,7 +48,9 @@
                 <arguments>
                     <argument
                         name="fields_data"
-                        xsi:type="object">Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Fields
+                        xsi:type="object"
+                    >
+                        Naxero\MenuManager\Block\Adminhtml\Menu\Edit\Fields
                     </argument>
                 </arguments>
             </block>
