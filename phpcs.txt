@@ -49,49 +49,12 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ------------------------------------------------------------------------------------
 
 
-FILE: ...Users/davidfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/di.xml
-------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 6 WARNINGS AFFECTING 6 LINES
-------------------------------------------------------------------------------------
- 46 | WARNING | Line exceeds 120 characters; contains 121 characters
- 52 | WARNING | Line exceeds 120 characters; contains 156 characters
- 64 | WARNING | Line exceeds 120 characters; contains 121 characters
- 70 | WARNING | Line exceeds 120 characters; contains 156 characters
- 82 | WARNING | Line exceeds 120 characters; contains 124 characters
- 88 | WARNING | Line exceeds 120 characters; contains 162 characters
-------------------------------------------------------------------------------------
-
-
-FILE: ...ty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/etc/adminhtml/system.xml
-------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
-------------------------------------------------------------------------------------
- 35 | WARNING | Line exceeds 120 characters; contains 128 characters
-------------------------------------------------------------------------------------
-
-
-FILE: ...Hub/naxero.com/Magento-2-Menu-Manager/Model/Config/Backend/Source/MenuList.php
-------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
-------------------------------------------------------------------------------------
- 31 | WARNING | Missing @param for argument in method annotation
-------------------------------------------------------------------------------------
-
-
 FILE: .../naxero.com/Magento-2-Menu-Manager/view/frontend/templates/menu/top-menu.phtml
 ------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
 ------------------------------------------------------------------------------------
  59 | WARNING | Line exceeds 120 characters; contains 129 characters
  60 | WARNING | Line exceeds 120 characters; contains 136 characters
-------------------------------------------------------------------------------------
-
-
-FILE: ...xero.com/Magento-2-Menu-Manager/view/frontend/templates/menu/footer-menu.phtml
-------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
-------------------------------------------------------------------------------------
- 109 | WARNING | Unescaped output detected.
 ------------------------------------------------------------------------------------
 
 
@@ -127,15 +90,6 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
 ------------------------------------------------------------------------------------
 
 
-FILE: ...ro.com/Magento-2-Menu-Manager/view/adminhtml/ui_component/mm_sitemap_index.xml
-------------------------------------------------------------------------------------
-FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
-------------------------------------------------------------------------------------
- 74 | WARNING | Line exceeds 120 characters; contains 154 characters
- 77 | WARNING | Line exceeds 120 characters; contains 159 characters
-------------------------------------------------------------------------------------
-
-
 FILE: ...idfiaty/Documents/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Category.php
 ------------------------------------------------------------------------------------
 FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
@@ -163,5 +117,5 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
  235 | WARNING | The use of function basename() is discouraged
 ------------------------------------------------------------------------------------
 
-Time: 8.21 secs; Memory: 14MB
+Time: 10.16 secs; Memory: 14MB
 

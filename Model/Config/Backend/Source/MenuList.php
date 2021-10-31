@@ -27,7 +27,7 @@ class MenuList implements \Magento\Framework\Option\ArrayInterface
 
     /**
      * HeaderMenu block class constructor.
-     * 
+     *
      * @param Menu $menuHelper
      */
     public function __construct(
