@@ -76,5 +76,5 @@ FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
  235 | WARNING | The use of function basename() is discouraged
 ------------------------------------------------------------------------------------
 
-Time: 7.91 secs; Memory: 14MB
+Time: 7.93 secs; Memory: 14MB
 
