@@ -41,15 +41,15 @@
         ], function($, FormTabs) {
             // Initialize the form tabs JS
             FormTabs.init(
-                '<?= $block->escapeHtml(json_encode($fieldsets)) ?>',
-                '<?= $block->escapeHtml(json_encode($menuId)) ?>'
+                '<?= /* @noEscape */ json_encode($fieldsets) ?>',
+                '<?= /* @noEscape */ json_encode($menuId) ?>'
             );
 
             // Show the form container
             $('#container').show();
 
             // Update the override menu field options
-            var overrides = '<?= $block->escapeHtml(json_encode($overrides)) ?>';
+            var overrides = '<?= /* @noEscape */ json_encode($overrides) ?>';
             $('#override option').each(function () {
                 if (overrides.includes($(this).val())) {
                     $(this).prop('disabled', true);

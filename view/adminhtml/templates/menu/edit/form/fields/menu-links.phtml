@@ -46,8 +46,8 @@
     ], function($, MenuLinks) {
         // Menu links table
         MenuLinks.buildTable(
-            <?= $block->escapeHtml(json_encode($config)) ?>,
-            <?= $block->escapeHtml(json_encode($menuLinks)) ?>,
+            <?= /* @noEscape */ json_encode($config) ?>,
+            <?= /* @noEscape */ json_encode($menuLinks) ?>,
             <?= (int) $block->escapeHtml($menuId) ?>
         );
     });
