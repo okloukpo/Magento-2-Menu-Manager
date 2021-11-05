@@ -107,7 +107,7 @@
 
 <!-- Header menu HTML -->
 <div class="mm-header-menu mm-menu <?= $block->escapeHtmlAttr($orientation) ?>">
-    <?= $block->escapeHtml($block->renderMenu($items)) ?> 
+    <?= /* @noEscape */ $block->renderMenu($items) ?> 
 </div>
 
 <script>

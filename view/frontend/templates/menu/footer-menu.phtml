@@ -106,7 +106,7 @@
 
 <!-- Footer menu HTML -->
 <div class="mm-footer-menu mm-menu <?= $block->escapeHtmlAttr($orientation) ?>">
-    <?= $block->escapeHtml($block->renderMenu($items)) ?> 
+    <?= /* @noEscape */ $block->renderMenu($items) ?> 
 </div>
 
 <script>

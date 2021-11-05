@@ -68,6 +68,6 @@
         class="<?= $block->escapeHtmlAttr($ulClasses) ?>"
         data-mage-init='<?= $block->escapeHtmlAttr($mageInit) ?>'
     >
-        <?= $block->escapeHtml($block->renderMenu($items)) ?> 
+        <?= /* @noEscape */ $block->renderMenu($items) ?> 
     </ul>
 </nav> 
