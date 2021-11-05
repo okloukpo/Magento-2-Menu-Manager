@@ -64,7 +64,7 @@
                 <label>Sitemap</label>
                 <field
                     id="changefreq"
-                    translate="label"
+                    translate="label comment"
                     type="select"
                     sortOrder="1"
                     showInDefault="1"
@@ -78,7 +78,7 @@
                 <field
                     id="priority"
                     translate="label comment"
-                    type="text"
+                    type="select"
                     sortOrder="2"
                     showInDefault="1"
                     showInWebsite="1"
@@ -86,10 +86,10 @@
                     canRestore="1"
                 >
                     <label>Priority</label>
+                    <source_model>Magento\Sitemap\Model\Config\Backend\Priority</source_model>
                     <comment>
                         Valid values range from 0.0 to 1.0.
                     </comment>
-                    <backend_model>Magento\Sitemap\Model\Config\Backend\Priority</backend_model>
                 </field>
             </group>
          </section>
