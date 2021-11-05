@@ -32,13 +32,18 @@ class Tabs extends \Magento\Backend\Block\Template
 
     /**
      * Form class constructor
+     *
+     * @param Context $context
+     * @param Http $request
+     * @param Menu $menuHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\App\Request\Http $request,
         \Naxero\MenuManager\Helper\Menu $menuHelper,
         array $data = []
-    ) {        
+    ) {
         parent::__construct($context, $data);
 
         $this->request = $request;
@@ -48,7 +53,8 @@ class Tabs extends \Magento\Backend\Block\Template
     /**
      * Get the menu ID from request
      */
-    public function getMenuId() {
+    public function getMenuId()
+    {
         return (int) $this->request->getParam('id');
     }
 }

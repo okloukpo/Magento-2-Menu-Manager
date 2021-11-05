@@ -46,10 +46,13 @@ class Generate extends Command
     /**
      * @var Xml
      */
-	public $sitemapXmlHelper;
+    public $sitemapXmlHelper;
 
     /**
      * UpdateKeywords command class constructor.
+     *
+     * @param Config $configHelper
+     * @param Xml $sitemapXmlHelper
      */
     public function __construct(
         \Naxero\MenuManager\Helper\Config $configHelper,
@@ -76,6 +79,7 @@ class Generate extends Command
 
     /**
      * Run the CLI command.
+     *
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int|void|null
@@ -94,21 +98,19 @@ class Generate extends Command
                     $this->sitemapXmlHelper->generateSitemap([
                         'id' => $entityId
                     ]);
-                } else if (!empty($fileName)) {
+                } elseif (!empty($fileName)) {
                     $this->sitemapXmlHelper->generateSitemaps([
                         'file_name' => $fileName
                     ]);
-                }
-                else {
-                    $this->sitemapXmlHelper->generateSitemaps();             
+                } else {
+                    $this->sitemapXmlHelper->generateSitemaps();
                 }
 
                 // Success message
                 $output->writeln(
                     __('<info>Sitemaps successfully generated.</info>')
                 );
-            }
-            catch (\Exception $e) {
+            } catch (\Exception $e) {
                 $output->writeln(__($e->getMessage()));
             }
         } else {

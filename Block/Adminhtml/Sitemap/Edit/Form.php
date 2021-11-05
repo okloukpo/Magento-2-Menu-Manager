@@ -52,6 +52,15 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
 
     /**
      * Form class constructor
+     *
+     * @param Context $context
+     * @param Registry $registry
+     * @param FormFactory $formFactory
+     * @param IncludeImage $includeImageSource
+     * @param Priority $prioritySource
+     * @param Frequency $frequencySource
+     * @param MenuList $menuListSource
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -78,6 +87,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      *
      * @return $this
      */
+    // phpcs:ignore
     public function _prepareForm()
     {
         // Prepare parameters

@@ -1,53 +1,53 @@
 
 <!-- Block data -->
-<?php 
+<?php
     // Link data
-    $data = $block->getLinkData(); 
+    $data = $block->getLinkData();
 
     // Link config
     $linkConfig = null;
-    if (!empty($data['link_config'])) {
-        $linkConfig = is_array($data['link_config'])
-        ? $data['link_config']
-        : json_decode($data['link_config']);
-    }
+if (!empty($data['link_config'])) {
+    $linkConfig = is_array($data['link_config'])
+    ? $data['link_config']
+    : json_decode($data['link_config']);
+}
 ?>
 
 <!-- Form messages -->
 <div
-    id="mm-link-config-messages-<?= $data['entity_id'] ?>"
+    id="mm-link-config-messages-<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
     class="messages"
 ></div>
 
-<div id="mm-config-tabs-links-<?= $data['entity_id'] ?>">
+<div id="mm-config-tabs-links-<?= $block->escapeHtmlAttr($data['entity_id']) ?>">
     <ul class="tabs-horiz">
         <li>
             <a 
-                id="config_tab_link_1_<?= $data['entity_id'] ?>"
-                href="#config_tab_content_1_<?= $data['entity_id'] ?>"
+                id="config_tab_link_1_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
+                href="#config_tab_content_1_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
             >
                 <span>
-                    <?= __('Attributes') ?>          
+                    <?= $block->escapeHtml(__('Attributes')) ?>          
                 </span>
             </a>
         </li>
         <li>
             <a 
-                id="config_tab_link_2_<?= $data['entity_id'] ?>"
-                href="#config_tab_content_2_<?= $data['entity_id'] ?>"
+                id="config_tab_link_2_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
+                href="#config_tab_content_2_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
             >
                 <span>
-                    <?= __('Layout') ?>          
+                    <?= $block->escapeHtml(__('Layout')) ?>          
                 </span>
             </a>
         </li>
         <li>
             <a 
-                id="config_tab_link_3_<?= $data['entity_id'] ?>"
-                href="#config_tab_content_3_<?= $data['entity_id'] ?>"
+                id="config_tab_link_3_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
+                href="#config_tab_content_3_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
             >
                 <span>
-                    <?= __('Image') ?>          
+                    <?= $block->escapeHtml(__('Image')) ?>          
                 </span>
             </a>
         </li>
@@ -56,32 +56,32 @@
 
 <!-- Link config form -->
 <form
-    id="link-config-form-<?= $data['entity_id'] ?>"
+    id="link-config-form-<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
     name="link-config-form"
     method="POST"
     enctype="multipart/form-data"
 >
     <!-- Tabs content -->
-    <div id="mm-config-tabs-content-<?= $data['entity_id'] ?>">
+    <div id="mm-config-tabs-content-<?= $block->escapeHtmlAttr($data['entity_id']) ?>">
         <!-- Tab 1 content -->
-        <div id="config_tab_content_1_<?= $data['entity_id'] ?>">
+        <div id="config_tab_content_1_<?= $block->escapeHtmlAttr($data['entity_id']) ?>">
             <div>
                 <fieldset class="fieldset admin__fieldset fieldset-wide">
                     <legend class="admin__legend legend">
                         <span>
-                            <?= __('Link settings') ?>
+                            <?= $block->escapeHtml(__('Link settings')) ?>
                         </span>
                     </legend>
 
                     <!-- Hidden fields -->
-                    <input type="hidden" name="link_id" value="<?= $data['entity_id'] ?>">
-                    <input type="hidden" name="menu_id" value="<?= $data['menu_id'] ?>">
+                    <input type="hidden" name="link_id" value="<?= $block->escapeHtmlAttr($data['entity_id']) ?>">
+                    <input type="hidden" name="menu_id" value="<?= $block->escapeHtmlAttr($data['menu_id']) ?>">
 
                     <!-- Link title -->
                     <div class="admin__field field">
                         <label class="label admin__field-label">
                             <span>
-                                <?= __('Link title') ?>
+                                <?= $block->escapeHtml(__('Link title')) ?>
                             </span>
                         </label>
                         <div class="admin__field-control control">
@@ -90,7 +90,7 @@
                                 class="input-text admin__control-text"
                                 type="text"
                                 value=""
-                                placeholder="<?= __('Link title attribute') ?>"
+                                placeholder="<?= $block->escapeHtmlAttr(__('Link title attribute')) ?>"
                             >
                         </div>
                     </div>
@@ -99,14 +99,14 @@
                     <div class="admin__field field">
                         <label class="label admin__field-label">
                             <span>
-                                <?= __('Link target') ?>
+                                <?= $block->escapeHtml(__('Link target')) ?>
                             </span>
                         </label>
                         <div class="admin__field-control control">
                             <select id="target" name="target" class="select admin__control-select">
-                                <?php foreach ($this->targetSource->toOptionArray() as $o): ?>
-                                    <option value="<?= $o['value'] ?>">
-                                        <?= $o['label'] ?>
+                                <?php foreach ($block->targetSource->toOptionArray() as $o): ?>
+                                    <option value="<?= $block->escapeHtmlAttr($o['value']) ?>">
+                                        <?= $block->escapeHtml($o['label']) ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -117,12 +117,12 @@
         </div>
 
         <!-- Tab 2 content -->
-        <div id="config_tab_content_2_<?= $data['entity_id'] ?>">
+        <div id="config_tab_content_2_<?= $block->escapeHtmlAttr($data['entity_id']) ?>">
             <div>
                 <fieldset class="fieldset admin__fieldset fieldset-wide">
                     <legend class="admin__legend legend">
                         <span>
-                            <?= __('Children layout') ?>
+                            <?= $block->escapeHtml(__('Children layout')) ?>
                         </span>
                     </legend>
 
@@ -130,14 +130,14 @@
                     <div class="admin__field field">
                         <label class="label admin__field-label">
                             <span>
-                                <?= __('Layout type') ?>
+                                <?= $block->escapeHtml(__('Layout type')) ?>
                             </span>
                         </label>
                         <div class="admin__field-control control">
                             <select id="sublayout" name="sublayout" class="select admin__control-select">
-                                <?php foreach ($this->sublayoutSource->toOptionArray() as $o): ?>
-                                    <option value="<?= $o['value'] ?>">
-                                        <?= $o['label'] ?>
+                                <?php foreach ($block->sublayoutSource->toOptionArray() as $o): ?>
+                                    <option value="<?= $block->escapeHtmlAttr($o['value']) ?>">
+                                        <?= $block->escapeHtml($o['label']) ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -148,14 +148,14 @@
                     <div class="admin__field field">
                         <label class="label admin__field-label">
                             <span>
-                                <?= __('Block') ?>
+                                <?= $block->escapeHtml(__('Block')) ?>
                             </span>
                         </label>
                         <div class="admin__field-control control">
                             <select id="block" name="block" class="select admin__control-select">
-                                <?php foreach ($this->blocksSource->toOptionArray() as $o): ?>
-                                    <option value="<?= $o['value'] ?>">
-                                        <?= $o['label'] ?>
+                                <?php foreach ($block->blocksSource->toOptionArray() as $o): ?>
+                                    <option value="<?= $block->escapeHtmlAttr($o['value']) ?>">
+                                        <?= $block->escapeHtml($o['label']) ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -166,12 +166,12 @@
         </div>
 
         <!-- Tab 3 content -->
-        <div id="config_tab_content_3_<?= $data['entity_id'] ?>">
+        <div id="config_tab_content_3_<?= $block->escapeHtmlAttr($data['entity_id']) ?>">
             <div>
                 <fieldset class="fieldset admin__fieldset fieldset-wide">
                     <legend class="admin__legend legend">
                         <span>
-                            <?= __('Image') ?>
+                            <?= $block->escapeHtml(__('Image')) ?>
                         </span>
                     </legend>
 
@@ -179,14 +179,14 @@
                     <div class="admin__field field">
                         <label class="label admin__field-label">
                             <span>
-                                <?= __('Thumbnail image') ?>
+                                <?= $block->escapeHtml(__('Thumbnail image')) ?>
                             </span>
                         </label>
                         <div class="admin__field-control control">
                             <!-- Upload field -->
                             <input
-                                id="icon_upload_<?= $data['entity_id'] ?>"
-                                name="icon_upload_<?= $data['entity_id'] ?>" 
+                                id="icon_upload_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
+                                name="icon_upload_<?= $block->escapeHtmlAttr($data['entity_id']) ?>" 
                                 class="input-text admin__control-text"
                                 type="file"
                                 accept=".jpg, .png, .gif"
@@ -194,20 +194,20 @@
             
                             <!-- Hidden file data field -->
                             <input
-                                id="icon_<?= $data['entity_id'] ?>"
-                                name="icon_<?= $data['entity_id'] ?>" 
+                                id="icon_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
+                                name="icon_<?= $block->escapeHtmlAttr($data['entity_id']) ?>" 
                                 class="input-text admin__control-text"
                                 type="hidden"
                             >
 
                             <!-- Icon preview box -->
                             <div 
-                                id="icon_preview_<?= $data['entity_id'] ?>"
+                                id="icon_preview_<?= $block->escapeHtmlAttr($data['entity_id']) ?>"
                                 class="icon-preview"
                             >
                                 <?php if ($linkConfig && isset($linkConfig->icon)): ?>
                                     <img 
-                                        src="<?= $block->getViewFileUrl($linkConfig->icon); ?>"
+                                        src="<?= $block->escapeHtmlAttr($block->getViewFileUrl($linkConfig->icon)); ?>"
                                     >
                                 <?php endif; ?>
                             </div>
@@ -228,8 +228,8 @@ require([
 
     // Initialize the link config form handler
     LinkConfigForm.init(
-        '<?= $data['entity_id'] ?>',
-        '<?= $data['menu_id'] ?>'
+        '<?= $block->escapeHtml($data['entity_id']) ?>',
+        '<?= $block->escapeHtml($data['menu_id']) ?>'
     );
 });
 </script>

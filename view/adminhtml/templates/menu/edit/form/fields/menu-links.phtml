@@ -7,15 +7,15 @@
 
 <!-- Table buttons -->
 <button type="button" id="mm-button-add">
-    <?= __('Add') ?>
+    <?= $block->escapeHtml(__('Add')) ?>
 </button>
 
 <button type="button" id="mm-button-del">
-    <?= __('Delete') ?>
+    <?= $block->escapeHtml(__('Delete')) ?>
 </button>
 
 <button type="button" id="mm-button-generate">
-    <?= __('Generate') ?>
+    <?= $block->escapeHtml(__('Generate')) ?>
 </button>
 
 <div id="mm-tree-messages" class="messages mm-tree-messages">
@@ -24,7 +24,7 @@
 <!-- Table placeholder -->
 <div id="mm-tree">
     <form
-        id="link-config-form-<?= $menuId ?>"
+        id="link-config-form-<?= $block->escapeHtmlAttr($menuId) ?>"
         name="link-config-form"
         enctype="multipart/form-data"
     >
@@ -33,7 +33,7 @@
 
 <!-- Generator form placeholder -->
 <div id="mm-generator-form">
-    <?= $block->renderGeneratorForm() ?>
+    <?= $block->escapeHtml($block->renderGeneratorForm()) ?>
 </div>
 
 <!-- Table handler script -->
@@ -46,9 +46,9 @@
     ], function($, MenuLinks) {
         // Menu links table
         MenuLinks.buildTable(
-            <?= json_encode($config) ?>,
-            <?= json_encode($menuLinks) ?>,
-            <?= (int) $menuId ?>
+            <?= /* @noEscape */ json_encode($config) ?>,
+            <?= /* @noEscape */ json_encode($menuLinks) ?>,
+            <?= (int) $block->escapeHtml($menuId) ?>
         );
     });
 </script>

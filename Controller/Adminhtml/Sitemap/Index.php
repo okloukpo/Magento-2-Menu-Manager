@@ -49,5 +49,5 @@ class Index extends \Magento\Backend\App\Action
             ->prepend(__('Sitemap list'));
 
         return $resultPage;
-    }    
+    }
 }

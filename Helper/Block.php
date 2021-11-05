@@ -35,6 +35,9 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Block helper class constructor.
+     *
+     * @param PageFactory $pageFactory
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Framework\View\Result\PageFactory $pageFactory,
@@ -46,6 +49,10 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the header menu HTML.
+     *
+     * @param array $items
+     * @param array $menuData
+     * @return string
      */
     public function getHeaderMenuHtml($items, $menuData)
     {
@@ -59,6 +66,10 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the top menu HTML.
+     *
+     * @param array $items
+     * @param array $menuData
+     * @return string
      */
     public function getTopMenuHtml($items, $menuData)
     {
@@ -72,6 +83,10 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the footer menu HTML.
+     *
+     * @param array $items
+     * @param array $menuData
+     * @return string
      */
     public function getFooterMenuHtml($items, $menuData)
     {
@@ -85,6 +100,9 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a menu link config form HTML.
+     *
+     * @param array $data
+     * @return string
      */
     public function getLinkConfigFormHtml($data)
     {
@@ -97,6 +115,9 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Render an error message.
+     *
+     * @param string $msg
+     * @return string
      */
     public function getErrorHtml($msg)
     {
@@ -106,5 +127,4 @@ class Block extends \Magento\Framework\App\Helper\AbstractHelper
         ->setData('msg', $msg)
         ->toHtml();
     }
-
 }

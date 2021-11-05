@@ -27,12 +27,12 @@ class AddRow extends \Magento\Backend\App\Action
     /**
      * @var \Naxero\MenuManager\Model\MenuEntityFactory
      */
-	public $menuEntityFactory;
+    public $menuEntityFactory;
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\Registry $coreRegistry
-     * @param \Naxero\MenuManager\Model\MenuEntityFactory $MenuEntityFactory
+     * @param \Naxero\MenuManager\Model\MenuEntityFactory $menuEntityFactory
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

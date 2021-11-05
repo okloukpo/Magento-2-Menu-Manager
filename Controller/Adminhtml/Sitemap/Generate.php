@@ -23,10 +23,13 @@ class Generate extends \Magento\Backend\App\Action
     /**
      * @var Xml
      */
-	public $sitemapXmlHelper;
+    public $sitemapXmlHelper;
 
     /**
      * Sitemap save class controller constructor
+     *
+     * @param Context $context
+     * @param Xml $sitemapXmlHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -55,8 +58,7 @@ class Generate extends \Magento\Backend\App\Action
             } catch (\Exception $e) {
                 $this->messageManager->addError(__($e->getMessage()));
             }
-        }
-        else {
+        } else {
             $this->messageManager->addSuccess(__('The sitemap must be saved before generating links.'));
         }
 

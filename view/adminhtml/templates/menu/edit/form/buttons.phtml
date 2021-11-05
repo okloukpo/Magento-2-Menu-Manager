@@ -1,12 +1,12 @@
 <!-- Delete button -->
 <button
     id="mm-delete-button"
-    title="<?= __('Delete') ?>"
+    title="<?= $block->escapeHtmlAttr(__('Delete')) ?>"
     type="button"
     class="action-secondary ui-button"
 >
     <span class="ui-button-text">
-        <span><?= __('Delete') ?></span>
+        <span><?= $block->escapeHtml(__('Delete')) ?></span>
     </span>
 </button>
 
@@ -14,13 +14,13 @@
     <div class="messages">
         <div class="message info">
             <span class="message-text">            
-                <?= __('Warning') ?>
+                <?= $block->escapeHtml(__('Warning')) ?>
             </span>
         </div>
     </div>
     <p>            
-        <?= __('Deleting this menu will also delete all related links.') ?>
-        <?= __('Do you wish to continue?') ?>
+        <?= $block->escapeHtml(__('Deleting this menu will also delete all related links.')) ?>
+        <?= $block->escapeHtml(__('Do you wish to continue?')) ?>
     </p>
 </div>
 

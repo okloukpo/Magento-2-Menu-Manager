@@ -45,7 +45,7 @@ class FileUpload extends \Magento\Backend\App\Action
     /**
      * @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * @var Array
@@ -54,6 +54,13 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * FileUpload field class constructor
+     *
+     * @param Context $context
+     * @param UploaderFactory $uploaderFactory
+     * @param JsonFactory $jsonFactory
+     * @param Config $configHelper
+     * @param Block $blockHelper
+     * @param Links $linksHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -85,8 +92,7 @@ class FileUpload extends \Magento\Backend\App\Action
         // Process the request
         if ($this->configHelper->isValidAdminAjaxRequest($request)) {
             $response = $this->uploadFile($request);
-        }
-        else {
+        } else {
             return $this->getErrorResponse(
                 __('Invalid or expired request. Try refreshing the page.')
             );
@@ -97,9 +103,11 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * Upload a file.
+     *
+     * @param object $request
      */
     public function uploadFile($request)
-    {   
+    {
         // Prepare variables
         $fileData = $request->getFiles($this->params['file_id']);
 
@@ -118,8 +126,7 @@ class FileUpload extends \Magento\Backend\App\Action
             );
 
             return $this->getUploadResponse($uploader);
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return $this->getErrorResponse(
                 __($e->getMessage())
             );
@@ -130,6 +137,8 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * Get the upload response.
+     *
+     * @param object $uploader
      */
     public function getUploadResponse($uploader)
     {
@@ -152,11 +161,13 @@ class FileUpload extends \Magento\Backend\App\Action
 
     /**
      * Get the error response.
+     *
+     * @param string $msg
      */
     public function getErrorResponse($msg = null)
     {
         // Ddefault error message
-        $msg = $msg ? $msg 
+        $msg = $msg ? $msg
         : __('Server upload error. Please try again or check the logs.');
     
         // Error response array

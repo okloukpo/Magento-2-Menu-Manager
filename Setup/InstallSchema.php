@@ -56,8 +56,9 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             ->addColumn('product_images', Table::TYPE_SMALLINT, null, ['nullable' => false, 'default' => 0])
             ->addColumn('active', Table::TYPE_SMALLINT, null, ['nullable' => false, 'default' => 0])
             ->addIndex($installer->getIdxName(
-                'entity_id_index', ['entity_id']), ['entity_id']
-            );
+                'entity_id_index',
+                ['entity_id']
+            ), ['entity_id']);
 
         // Table 2
         $table2 = $installer->getConnection()
@@ -79,14 +80,17 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             ->addColumn('link_order', Table::TYPE_INTEGER, null, ['nullable' => false, 'default' => 0])
             ->addColumn('active', Table::TYPE_SMALLINT, null, ['nullable' => false, 'default' => 0])
             ->addIndex($installer->getIdxName(
-                'entity_id_index', ['entity_id']), ['entity_id']
-            )
+                'entity_id_index',
+                ['entity_id']
+            ), ['entity_id'])
             ->addIndex($installer->getIdxName(
-                'menu_id_index', ['menu_id']), ['menu_id']
-            )
+                'menu_id_index',
+                ['menu_id']
+            ), ['menu_id'])
             ->addIndex($installer->getIdxName(
-                'parent_id_index', ['parent_id']), ['parent_id']
-            )
+                'parent_id_index',
+                ['parent_id']
+            ), ['parent_id'])
             ->addForeignKey(
                 $installer->getFkName($tableName2, 'menu_id', $tableName1, 'entity_id'),
                 'menu_id',

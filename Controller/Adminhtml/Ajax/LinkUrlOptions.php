@@ -42,6 +42,12 @@ class LinkUrlOptions extends \Magento\Backend\App\Action
 
     /**
      * LinkUrlOptions class constructor
+     *
+     * @param Context $context
+     * @param JsonFactory $jsonFactory
+     * @param Menu $menuHelper
+     * @param Config $configHelper
+     * @param Block $blockHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -76,8 +82,7 @@ class LinkUrlOptions extends \Magento\Backend\App\Action
                     'data' => $this->menuHelper->getLinkUrlOptions($params['node'])
                 ];
             }
-        }
-        else {
+        } else {
             $response = $this->getErrorResponse();
         }
 
@@ -88,7 +93,7 @@ class LinkUrlOptions extends \Magento\Backend\App\Action
      * Get the error response.
      */
     public function getErrorResponse()
-    {    
+    {
         return  [
             'success' => false,
             'msg' => $this->blockHelper->getErrorHtml(

@@ -32,6 +32,11 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * NavMenu block class constructor.
+     *
+     * @param Context $context
+     * @param Menu $menuHelper
+     * @param Links $linksHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
@@ -48,14 +53,19 @@ class NavMenu extends \Magento\Framework\View\Element\Template
     /**
      * Get a menu data
      */
-    public function getMenuData() {
+    public function getMenuData()
+    {
         return $this->getData('menu_data');
     }
 
     /**
      * Render a list menu.
+     *
+     * @param array $items
+     * @return array
      */
-    public function renderMenu($items) {
+    public function renderMenu($items)
+    {
         $html = '';
         $i = 0;
         $j = 0;
@@ -71,8 +81,16 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a submenu link.
+     *
+     * @param array $item
+     * @param int $i
+     * @param int $j
+     * @param int $level
+     * @param bool $hasChildren
+     * @return string
      */
-    public function renderMenuLink($item, $i = 0, $j = 0, $level = 0, $hasChildren = false) {
+    public function renderMenuLink($item, $i = 0, $j = 0, $level = 0, $hasChildren = false)
+    {
         // Prepare variables
         $children = isset($item['children']) ? $item['children'] : [];
         $hasChildren = !empty($children);
@@ -90,8 +108,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
         if ($this->linksHelper->needsBlockSublayout($item)) {
             $hasChildren = true;
             $html .= $this->renderBlockSublayout($item);
-        } 
-        else if (!empty($children)) {
+        } elseif (!empty($children)) {
             $html .= $this->getChildrenHtml($classes, $level, $i, $children);
         }
 
@@ -103,8 +120,15 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item HTML.
+     *
+     * @param array $classes
+     * @param array $item
+     * @param array $config
+     * @param bool $hasChildren
+     * @return string
      */
-    public function getItemHtml($classes, $item, $config, $hasChildren) {
+    public function getItemHtml($classes, $item, $config, $hasChildren)
+    {
         $html = '';
         $html .= '<li class="' . $classes['li'] . '">';
         $html .= '<a class="' . $classes['a']  . '" ';
@@ -152,8 +176,15 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get a menu item children HTML.
+     *
+     * @param array $classes
+     * @param int $level
+     * @param int $i
+     * @param array $children
+     * @return string
      */
-    public function getChildrenHtml($classes, $level, $i, $children) {
+    public function getChildrenHtml($classes, $level, $i, $children)
+    {
         $hasChildren = true;
         $html = '';
         $html .= '<ul class="' . $classes['ul'] . '">';
@@ -161,7 +192,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
         foreach ($children as $child) {
             $html .= $this->renderMenuLink($child, $i, $j, $level + 1, $hasChildren);
             $j++;
-        } 
+        }
         $html .= '</ul>';
 
         return $html;
@@ -169,8 +200,12 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Render a parent link block sublayout.
+     *
+     * @param array $item
+     * @return string
      */
-    public function renderBlockSublayout($item) {
+    public function renderBlockSublayout($item)
+    {
         // Prepare variables
         $ulClasses = $this->getUlClasses($item);
         $liClasses = $this->getLiClasses($item);
@@ -185,7 +220,7 @@ class NavMenu extends \Magento\Framework\View\Element\Template
         $html .= '<span>&nbsp;</span>';
         $html .= $this->getLayout()
             ->createBlock(\Magento\Cms\Block\Block::class)
-            ->setBlockId($linkConfig['block']) 
+            ->setBlockId($linkConfig['block'])
             ->toHtml();
         $html .= '</li>';
         $html .= '</ul>';
@@ -195,8 +230,16 @@ class NavMenu extends \Magento\Framework\View\Element\Template
 
     /**
      * Get the UL element CSS classes.
+     *
+     * @param array $item
+     * @param int $level
+     * @param bool $hasChildren
+     * @param int $i
+     * @param int $j
+     * @return string
      */
-    public function getUlClasses($item, $level = 0, $hasChildren = false, $i = 0, $j = 0) {
+    public function getUlClasses($item, $level = 0, $hasChildren = false, $i = 0, $j = 0)
+    {
         // Base classes
         $classes = '';
         $classes .= ' ui-menu ui-widget ui-widget-content ui-corner-all';
@@ -213,13 +256,21 @@ class NavMenu extends \Magento\Framework\View\Element\Template
             $classes .= ' parent';
         }
 
-        return $classes;        
+        return $classes;
     }
 
     /**
      * Get the LI element CSS classes.
+     *
+     * @param array $item
+     * @param int $level
+     * @param bool $hasChildren
+     * @param int $i
+     * @param int $j
+     * @return string
      */
-    public function getLiClasses($item, $level = 0, $hasChildren = false, $i = 0, $j = 0) {
+    public function getLiClasses($item, $level = 0, $hasChildren = false, $i = 0, $j = 0)
+    {
         // General classes
         $classes = '';
         $classes .= 'level' . $level;
@@ -229,9 +280,8 @@ class NavMenu extends \Magento\Framework\View\Element\Template
         if ((int) $item['parent_id'] == 0) {
             $classes .= ' level-top';
             $classes .= ' nav-' . ($i + 1);
-        }
-        else {
-            $classes .= ' nav-' . ($i + 1) . '-' . ($j + 1);     
+        } else {
+            $classes .= ' nav-' . ($i + 1) . '-' . ($j + 1);
         }
 
         // Item with children
@@ -244,19 +294,23 @@ class NavMenu extends \Magento\Framework\View\Element\Template
             $classes .= ' category-item';
         }
 
-        return $classes;    
+        return $classes;
     }
 
     /**
      * Get the A element CSS classes.
+     *
+     * @param array $item
+     * @return string
      */
-    public function getAClasses($item) {
+    public function getAClasses($item)
+    {
         $classes = '';
         $classes .= ' ui-corner-all';
         if ((int) $item['parent_id'] == 0) {
             $classes .= ' level-top';
         }
 
-        return $classes;    
+        return $classes;
     }
 }

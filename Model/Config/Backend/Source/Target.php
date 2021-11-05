@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class Target
+ * Class Target source.
  */
 class Target implements \Magento\Framework\Option\ArrayInterface
 {

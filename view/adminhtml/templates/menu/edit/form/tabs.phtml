@@ -9,15 +9,15 @@
     id="mm-menu-edit-form"
     enctype="multipart/form-data"
     method="POST"
-    action="<?= $block->getUrl('naxero-mm/menu/save') ?>"
+    action="<?= $block->escapeHtmlAttr($block->getUrl('naxero-mm/menu/save')) ?>"
 >
     <div id="mm-tabs-links">
         <ul class="tabs-horiz">
             <?php foreach ($fieldsets as $f): ?>
                 <li>
-                    <a id="tab_link_<?= $f ?>" href="#<?= $f ?>">
+                    <a id="tab_link_<?= $block->escapeHtmlAttr($f) ?>" href="#<?= $block->escapeHtmlAttr($f) ?>">
                         <span>
-                            <?= $fieldsData[$f]['tab']['title'] ?>          
+                            <?= $block->escapeHtml($fieldsData[$f]['tab']['title']) ?>          
                         </span>
                     </a>
                 </li>
@@ -27,7 +27,7 @@
 
     <div id="mm-tabs-content">
         <?php foreach ($fieldsets as $f): ?>
-            <div id="tab_<?= $f ?>">
+            <div id="tab_<?= $block->escapeHtmlAttr($f) ?>">
                 <div></div>
             </div>
         <?php endforeach; ?>
@@ -41,15 +41,15 @@
         ], function($, FormTabs) {
             // Initialize the form tabs JS
             FormTabs.init(
-                '<?= json_encode($fieldsets) ?>',
-                '<?= json_encode($menuId) ?>'
+                '<?= /* @noEscape */ json_encode($fieldsets) ?>',
+                '<?= /* @noEscape */ json_encode($menuId) ?>'
             );
 
             // Show the form container
             $('#container').show();
 
             // Update the override menu field options
-            var overrides = '<?= json_encode($overrides) ?>';
+            var overrides = '<?= /* @noEscape */ json_encode($overrides) ?>';
             $('#override option').each(function () {
                 if (overrides.includes($(this).val())) {
                     $(this).prop('disabled', true);

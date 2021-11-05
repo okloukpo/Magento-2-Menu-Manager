@@ -29,6 +29,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_cacheTag = 'sitemap_entity';
 
     /**
@@ -36,6 +37,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @var string
      */
+    // phpcs:ignore
     public $_eventPrefix = 'sitemap_entity';
 
     /**
@@ -43,6 +45,7 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(
@@ -75,7 +78,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getSitemapMenus() {
+    public function getSitemapMenus()
+    {
         return $this->getData(self::SITEMAP_MENUS);
     }
 
@@ -84,7 +88,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getFileName() {
+    public function getFileName()
+    {
         return $this->getData(self::FILE_NAME);
     }
 
@@ -93,7 +98,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getFilePath() {
+    public function getFilePath()
+    {
         return $this->getData(self::FILE_PATH);
     }
 
@@ -102,7 +108,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getFileUrl() {
+    public function getFileUrl()
+    {
         return $this->getData(self::FILE_URL);
     }
 
@@ -111,7 +118,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getPriority() {
+    public function getPriority()
+    {
         return $this->getData(self::PRIORITY);
     }
 
@@ -120,7 +128,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getFrequency() {
+    public function getFrequency()
+    {
         return $this->getData(self::FREQUENCY);
     }
 
@@ -129,7 +138,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return string
      */
-    public function getIncludeImage() {
+    public function getIncludeImage()
+    {
         return $this->getData(self::INCLUDE_IMAGE);
     }
 
@@ -138,7 +148,8 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      *
      * @return int
      */
-    public function getLastUpdate() {
+    public function getLastUpdate()
+    {
         return $this->getData(self::LAST_UPDATE);
     }
 
@@ -148,79 +159,96 @@ class SitemapEntity extends AbstractModel implements SitemapEntityInterface, Ide
      * @param int $id
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setId($id) {
+    public function setId($id)
+    {
         return $this->setData(self::ENTITY_ID, $id);
     }
 
     /**
      * Set sitemap menus
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setSitemapMenus($data) {
+    public function setSitemapMenus($data)
+    {
         return $this->setData(self::SITEMAP_MENUS, $data);
     }
 
     /**
      * Set file name
      *
+     * @param string $fileName
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setFileName($fileName) {
+    public function setFileName($fileName)
+    {
         return $this->setData(self::FILE_NAME, $fileName);
     }
 
     /**
      * Set file path
      *
+     * @param string $filePath
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setFilePath($filePath) {
+    public function setFilePath($filePath)
+    {
         return $this->setData(self::FILE_PATH, $filePath);
     }
 
     /**
      * Set file URL
      *
+     * @param string $fileUrl
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setFileUrl($fileUrl) {
+    public function setFileUrl($fileUrl)
+    {
         return $this->setData(self::FILE_URL, $fileUrl);
     }
 
     /**
      * Set priority
      *
+     * @param float $priority
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setPriority($priority) {
+    public function setPriority($priority)
+    {
         return $this->setData(self::PRIORITY, $priority);
     }
 
     /**
      * Set frequency
      *
+     * @param string $frequency
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setFrequency($frequency) {
+    public function setFrequency($frequency)
+    {
         return $this->setData(self::FREQUENCY, $frequency);
     }
 
     /**
      * Set include image
      *
+     * @param int $data
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setIncludeImage($data) {
+    public function setIncludeImage($data)
+    {
         return $this->setData(self::INCLUDE_IMAGE, $data);
     }
 
     /**
      * Set last update
      *
+     * @param string $lastUpdate
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
-    public function setLastUpdate($lastUpdate) {
+    public function setLastUpdate($lastUpdate)
+    {
         return $this->setData(self::LAST_UPDATE, $lastUpdate);
     }
 }

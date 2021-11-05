@@ -18,7 +18,7 @@ namespace Naxero\MenuManager\Block\Adminhtml\Widget\Form;
 use Magento\Framework\Data\Form\Element\AbstractElement;
 
 /**
- * Class MenuSelector
+ * Class widget MenuSelector
  */
 class MenuSelector extends \Magento\Backend\Block\Template
 {
@@ -29,6 +29,10 @@ class MenuSelector extends \Magento\Backend\Block\Template
 
     /**
      * MenuSelector class constructor
+     *
+     * @param Context $context
+     * @param Menu $menuHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -42,6 +46,9 @@ class MenuSelector extends \Magento\Backend\Block\Template
     
     /**
      * Render the widget form field.
+     *
+     * @param AbstractElement $element
+     * @return AbstractElement
      */
     public function prepareElementHtml(AbstractElement $element)
     {

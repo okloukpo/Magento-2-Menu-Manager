@@ -29,6 +29,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_cacheTag = 'link_entity';
 
     /**
@@ -36,6 +37,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @var string
      */
+    // phpcs:ignore
     public $_eventPrefix = 'link_entity';
 
     /**
@@ -43,6 +45,7 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(
@@ -75,7 +78,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return int|null
      */
-    public function getMenuId() {
+    public function getMenuId()
+    {
         return $this->getData(self::MENU_ID);
     }
 
@@ -84,7 +88,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return int|null
      */
-    public function getParentId() {
+    public function getParentId()
+    {
         return $this->getData(self::PARENT_ID);
     }
 
@@ -93,7 +98,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkType() {
+    public function getLinkType()
+    {
         return $this->getData(self::LINK_TYPE);
     }
 
@@ -102,7 +108,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkUrl() {
+    public function getLinkUrl()
+    {
         return $this->getData(self::LINK_URL);
     }
 
@@ -111,7 +118,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkText() {
+    public function getLinkText()
+    {
         return $this->getData(self::LINK_TEXT);
     }
 
@@ -120,25 +128,28 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getLinkData() {
+    public function getLinkData()
+    {
         return $this->getData(self::LINK_DATA);
-    } 
+    }
 
     /**
      * Get link config
      *
      * @return string
      */
-    public function getLinkConfig() {
+    public function getLinkConfig()
+    {
         return $this->getData(self::LINK_CONFIG);
-    } 
+    }
 
     /**
      * Get order
      *
      * @return int|null
      */
-    public function getLinkOrder() {
+    public function getLinkOrder()
+    {
         return $this->getData(self::LINK_ORDER);
     }
 
@@ -147,7 +158,8 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      *
      * @return int
      */
-    public function getActive() {
+    public function getActive()
+    {
         return $this->getData(self::ACTIVE);
     }
 
@@ -157,88 +169,107 @@ class LinkEntity extends AbstractModel implements LinkEntityInterface, IdentityI
      * @param int $id
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setId($id) {
+    public function setId($id)
+    {
         return $this->setData(self::ENTITY_ID, $id);
     }
 
     /**
      * Set menu id
      *
+     * @param int $id
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setMenuId($id) {
+    public function setMenuId($id)
+    {
         return $this->setData(self::MENU_ID, $id);
     }
 
     /**
      * Set parent id
      *
+     * @param int $id
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setParentId($id) {
+    public function setParentId($id)
+    {
         return $this->setData(self::PARENT_ID, $id);
     }
 
     /**
      * Set link type
      *
+     * @param string $type
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkType($type) {
+    public function setLinkType($type)
+    {
         return $this->setData(self::LINK_TYPE, $type);
     }
 
     /**
      * Set link URL
      *
+     * @param string $url
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkUrl($url) {
+    public function setLinkUrl($url)
+    {
         return $this->setData(self::LINK_URL, $url);
     }
 
     /**
      * Set link text
      *
+     * @param string $text
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkText($text) {
+    public function setLinkText($text)
+    {
         return $this->setData(self::LINK_TEXT, $text);
     }
 
     /**
      * Set link data
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkData($data) {
+    public function setLinkData($data)
+    {
         return $this->setData(self::LINK_DATA, $data);
     }
 
     /**
      * Set link config
      *
+     * @param string $config
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkConfig($config) {
+    public function setLinkConfig($config)
+    {
         return $this->setData(self::LINK_CONFIG, $config);
     }
 
     /**
      * Set order
      *
+     * @param int $order
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setLinkOrder($order) {
+    public function setLinkOrder($order)
+    {
         return $this->setData(self::LINK_ORDER, $order);
     }
 
     /**
      * Set active
      *
+     * @param int $active
      * @return \Naxero\MenuManager\Api\Data\LinkEntityInterface
      */
-    public function setActive($active) {
+    public function setActive($active)
+    {
         return $this->setData(self::ACTIVE, $active);
     }
 }

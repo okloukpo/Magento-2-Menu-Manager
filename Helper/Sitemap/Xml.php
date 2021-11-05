@@ -50,35 +50,46 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var Config
      */
-	public $configHelper;
+    public $configHelper;
 
     /**
      * @var Product
      */
-	public $productHelper;
+    public $productHelper;
 
     /**
      * @var Category
      */
-	public $categoryHelper;
+    public $categoryHelper;
 
     /**
      * @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * @var Stores
      */
-	public $storesHelper;
+    public $storesHelper;
 
     /**
      * @var SitemapEntityFactory
      */
-	public $sitemapEntityFactory;
+    public $sitemapEntityFactory;
 
     /**
      * Sitemap XML helper class constructor.
+     *
+     * @param File $fileDriver
+     * @param Filesystem $filesystem
+     * @param DateTime $datetime
+     * @param Menu $menuHelper
+     * @param Config $configHelper
+     * @param Product $productHelper
+     * @param Category $categoryHelper
+     * @param Links $linksHelper
+     * @param Stores $storesHelper
+     * @param SitemapEntityFactory $sitemapEntityFactory
      */
     public function __construct(
         \Magento\Framework\Filesystem\Driver\File $fileDriver,
@@ -98,14 +109,17 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
         $this->menuHelper = $menuHelper;
         $this->configHelper = $configHelper;
         $this->productHelper = $productHelper;
-        $this->categoryHelper = $categoryHelper;   
-        $this->linksHelper = $linksHelper;  
-        $this->storesHelper = $storesHelper;                    
-        $this->sitemapEntityFactory = $sitemapEntityFactory;       
+        $this->categoryHelper = $categoryHelper;
+        $this->linksHelper = $linksHelper;
+        $this->storesHelper = $storesHelper;
+        $this->sitemapEntityFactory = $sitemapEntityFactory;
     }
 
     /**
      * Load an XML sitemap collection
+     *
+     * @param array $filters
+     * @return Collection
      */
     public function getSitemaps($filters = [])
     {
@@ -120,11 +134,13 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
             }
         }
 
-        return $collection;  
+        return $collection;
     }
 
     /**
      * Load an XML sitemap
+     *
+     * @param int $id
      */
     public function getSitemap($id)
     {
@@ -134,6 +150,8 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate an XML sitemap
+     *
+     * @param array $data
      */
     public function generateSitemap($data)
     {
@@ -146,6 +164,8 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate multiple XML sitemaps
+     *
+     * @param array $filters
      */
     public function generateSitemaps($filters = [])
     {
@@ -159,6 +179,9 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Create the XML sitemap file
+     *
+     * @param array $item
+     * @param string $content
      */
     public function createFile($item, $content)
     {
@@ -181,7 +204,12 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
     }
 
     /**
-     * Write to the XML sitemap file
+     * Write to the XML sitemap file.
+     *
+     * @param object $writeDirectory
+     * @param string $filePath
+     * @param string $content
+     * @return bool
      */
     public function write($writeDirectory, $filePath, $content)
     {
@@ -196,6 +224,9 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Save an XML sitemap
+     *
+     * @param array $data
+     * @return int $id
      */
     public function saveSitemap($data)
     {
@@ -221,11 +252,10 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
         foreach ($sitemapEntityFields as $field) {
             if (is_array($data[$field])) {
                 $item->setData(
-                    $field, 
+                    $field,
                     implode(',', $data[$field])
                 );
-            }
-            else {
+            } else {
                 $item->setData($field, $data[$field]);
             }
         }
@@ -241,17 +271,20 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Update an XML sitemap file location on the server
+     *
+     * @param array $item
+     * @param array $data
      */
     public function updateFileLocation($item, $data)
-    {   
+    {
         // Current file path
-        $curPath = BP . DIRECTORY_SEPARATOR 
-        . $item['file_path'] . DIRECTORY_SEPARATOR 
+        $curPath = BP . DIRECTORY_SEPARATOR
+        . $item['file_path'] . DIRECTORY_SEPARATOR
         . $item['file_name'];
 
         // New fifle path
-        $newPath = BP . DIRECTORY_SEPARATOR 
-        . $data['file_path'] . DIRECTORY_SEPARATOR 
+        $newPath = BP . DIRECTORY_SEPARATOR
+        . $data['file_path'] . DIRECTORY_SEPARATOR
         . $data['file_name'];
 
         // Handle location
@@ -264,12 +297,14 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
             $this->createFile($data, $content);
 
             // Delete the old file
-           $this->fileDriver->deleteFile($curPath);
+            $this->fileDriver->deleteFile($curPath);
         }
     }
     
     /**
      * Get an XML sitemap links
+     *
+     * @param array $item
      */
     public function getSitemapLinks($item)
     {
@@ -279,7 +314,7 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
         // Load the menus
         $menuIds = $this->menuHelper->getMenus([
             'entity_id' => ['in' => $idArray],
-            'active' => ['eq' => 1] 
+            'active' => ['eq' => 1]
         ])->getAllIds();
 
         // Get the links
@@ -293,9 +328,12 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Create an XML sitemap links content
+     *
+     * @param array $item
+     * @return string
      */
     public function createSitemapContent($item)
-    {   
+    {
         // Prepare variables
         $output = '';
         $output .= $this->getXmlFileHeader();
@@ -313,13 +351,13 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
             $images = $this->getSitemapItemImages($row, $item);
             foreach ($images as $image) {
                 $output .= $this->getXmlFileImage($image);
-            } 
+            }
 
             // Other tags
-            $output .= '<changefreq>' . $item['frequency']. '</changefreq>';  
-            $output .= '<priority>' . $item['priority']. '</priority>';  
-            $output .= '<lastmod>' . $item['last_update']. '</lastmod>';  
-            $output .= '</url>';   
+            $output .= '<changefreq>' . $item['frequency']. '</changefreq>';
+            $output .= '<priority>' . $item['priority']. '</priority>';
+            $output .= '<lastmod>' . $item['last_update']. '</lastmod>';
+            $output .= '</url>';
         }
 
         // File end
@@ -330,8 +368,13 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an XML sitemap item images
+     *
+     * @param array $item
+     * @param array $sitemap
+     * @return string
      */
-    public function getSitemapItemImages($item, $sitemap) {
+    public function getSitemapItemImages($item, $sitemap)
+    {
         // Prepare variables
         $output = [];
 
@@ -341,12 +384,10 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
             if ($item['link_type'] == 'product') {
                 if ($sitemap['include_image'] == IncludeImage::INCLUDE_ALL) {
                     $output = $images;
-                }
-                else if ($sitemap['include_image'] == IncludeImage::INCLUDE_BASE) {
+                } elseif ($sitemap['include_image'] == IncludeImage::INCLUDE_BASE) {
                     $output = $images[0];
                 }
-            }
-            else if ($item['link_type'] == 'category') {
+            } elseif ($item['link_type'] == 'category') {
                 $output[] = $this->categoryHelper->getCategoryImage($item['link_url']);
             }
         }
@@ -357,7 +398,8 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Get an XML sitemap file header
      */
-    public function getXmlFileHeader() {
+    public function getXmlFileHeader()
+    {
         $output = '';
         $output .= '<?xml version="1.0" encoding="UTF-8" ?>';
         $output .= "\n";
@@ -372,8 +414,12 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an XML sitemap file image
+     *
+     * @param array $image
+     * @return string
      */
-    public function getXmlFileImage($image) {
+    public function getXmlFileImage($image)
+    {
         $output = '';
         $output .= '<image:image>' . "\n";
         $output .= '<image:loc>' . $image['url'] . '</image:loc>' . "\n";
@@ -386,12 +432,16 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get an XML sitemap item URL
+     *
+     * @param array $item
+     * @return string
      */
-    public function getSitemapItemUrl($item) {
+    public function getSitemapItemUrl($item)
+    {
         $output = '';
         $output .= '<loc>';
         $output .= $this->menuHelper->getMenuLinkUrl(
-            $item['link_type'], 
+            $item['link_type'],
             $item['link_url']
         );
         $output .= '</loc>';
@@ -401,14 +451,17 @@ class Xml extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Delete an XML sitemap
+     *
+     * @param int $id
      */
-    public function deleteSitemap($id) {
+    public function deleteSitemap($id)
+    {
         // Load the entity and data
         $item = $this->getSitemap($id);
 
         // Get the file path
-        $curPath = BP . DIRECTORY_SEPARATOR 
-        . $item['file_path'] . DIRECTORY_SEPARATOR 
+        $curPath = BP . DIRECTORY_SEPARATOR
+        . $item['file_path'] . DIRECTORY_SEPARATOR
         . $item['file_name'];
 
         // Delete the file

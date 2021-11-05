@@ -22,6 +22,7 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
      *
      * @var \Magento\Framework\Registry
      */
+    // phpcs:ignore
     public $_coreRegistry = null;
 
     /**
@@ -41,6 +42,7 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
     /**
      * Initialize the block.
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_objectId = 'row_id';

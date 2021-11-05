@@ -6,10 +6,10 @@
 <div class="messages">
     <div class="message info">
         <span class="message-text">            
-            <?= __('Parent item for generated links:') ?>
+            <?= $block->escapeHtml(__('Parent item for generated links:')) ?>
         </span>
         <strong>
-            <?= __('Root') ?>
+            <?= $block->escapeHtml(__('Root')) ?>
         </strong>
     </div>
 </div>
@@ -18,28 +18,28 @@
 <form
     id="mm-generate-form"
     method="GET"
-    action="<?= $block->getUrl('naxero-mm/menu/generate') ?>"
+    action="<?= $block->escapeHtmlAttr($block->getUrl('naxero-mm/menu/generate')) ?>"
 >
     <!-- Form key -->
     <input
         type="hidden"
         name="form_key"
-        value="<?= $block->configHelper->getFormKey() ?>"
+        value="<?= $block->escapeHtmlAttr($block->configHelper->getFormKey()) ?>"
     >
 
     <!-- Menu ID -->
-    <input type="hidden" name="entity_id" value="<?= $menuId ?>">
+    <input type="hidden" name="entity_id" value="<?= $block->escapeHtmlAttr($menuId) ?>">
 
     <!-- Link type -->
     <div class="admin__field field">
         <label class="label admin__field-label">
-            <span><?= __('Link type') ?></span>
+            <span><?= $block->escapeHtml(__('Link type')) ?></span>
         </label>
         <div class="admin__field-control control">
             <select name="link_type" class="select admin__control-select">
-                <?php foreach($block->linkTypeSource->toOptionArray() as $option): ?>
-                    <option value="<?= $option['value'] ?>">
-                        <?= $option['label'] ?>
+                <?php foreach ($block->linkTypeSource->toOptionArray() as $option): ?>
+                    <option value="<?= $block->escapeHtmlAttr($option['value']) ?>">
+                        <?= $block->escapeHtml($option['label']) ?>
                     </option>
                 <?php endforeach; ?>
             </select>
@@ -49,7 +49,7 @@
     <!-- Start level -->
     <div class="admin__field field">
         <label class="label admin__field-label">
-            <span><?= __('Start level') ?></span>
+            <span><?= $block->escapeHtml(__('Start level')) ?></span>
         </label>
         <div class="admin__field-control control">
             <input

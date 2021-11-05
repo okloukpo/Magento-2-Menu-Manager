@@ -1,0 +1,52 @@
+
+FILE: ...GitHub/naxero.com/Magento-2-Menu-Manager/Setup/UpgradeSchema.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | ERROR | UpgradeSchema scripts are obsolete. Please use
+   |       | declarative schema approach in module's
+   |       | etc/db_schema.xml file
+----------------------------------------------------------------------
+
+
+FILE: ...GitHub/naxero.com/Magento-2-Menu-Manager/Setup/InstallSchema.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1 | ERROR | InstallSchema scripts are obsolete. Please use
+   |       | declarative schema approach in module's
+   |       | etc/db_schema.xml file
+----------------------------------------------------------------------
+
+
+FILE: ...nts/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Category.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 173 | WARNING | The use of function basename() is discouraged
+----------------------------------------------------------------------
+
+
+FILE: ...uments/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Tools.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 3 WARNINGS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 35 | WARNING | The use of function fopen() is discouraged; use
+    |         | Magento\Framework\Filesystem\DriverInterface::fileOpen()()
+    |         | instead
+ 41 | WARNING | The code must be wrapped with a try block if the
+    |         | method uses system resources.
+ 41 | WARNING | The use of function stream_get_contents() is
+    |         | discouraged
+----------------------------------------------------------------------
+
+
+FILE: ...uments/GitHub/naxero.com/Magento-2-Menu-Manager/Helper/Links.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 235 | WARNING | The use of function basename() is discouraged
+----------------------------------------------------------------------
+
+Time: 8.92 secs; Memory: 14MB
+

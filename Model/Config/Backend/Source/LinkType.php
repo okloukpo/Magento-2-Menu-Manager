@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class LinkType
+ * Class LinkType source
  */
 class LinkType implements \Magento\Framework\Option\ArrayInterface
 {

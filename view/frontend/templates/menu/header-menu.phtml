@@ -100,14 +100,14 @@
 
     <?php if (!empty($menuData['zindex'])): ?>
         .mm-header-menu ul {
-            z-index: <?= $menuData['zindex'] ?> !important;
+            z-index: <?= $block->escapeHtml($menuData['zindex']) ?> !important;
         }
     <?php endif; ?>
 </style>
 
 <!-- Header menu HTML -->
-<div class="mm-header-menu mm-menu <?= $orientation ?>">
-    <?= $block->renderMenu($items) ?> 
+<div class="mm-header-menu mm-menu <?= $block->escapeHtmlAttr($orientation) ?>">
+    <?= /* @noEscape */ $block->renderMenu($items) ?> 
 </div>
 
 <script>

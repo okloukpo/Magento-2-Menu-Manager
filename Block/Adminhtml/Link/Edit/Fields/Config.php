@@ -26,9 +26,9 @@ class Config extends \Magento\Backend\Block\Template
     public $request;
 
     /**
-     *  @var Links
+     * @var Links
      */
-	public $linksHelper;
+    public $linksHelper;
 
     /**
      * @var LinkType
@@ -52,6 +52,15 @@ class Config extends \Magento\Backend\Block\Template
 
     /**
      * Form class constructor
+     *
+     * @param Context $context
+     * @param Http $request
+     * @param Links $linksHelper
+     * @param LinkType $linkTypeSource
+     * @param Sublayout $sublayoutSource
+     * @param Blocks $blocksSource
+     * @param Target $targetSource
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -63,7 +72,6 @@ class Config extends \Magento\Backend\Block\Template
         \Naxero\MenuManager\Model\Config\Backend\Source\Target $targetSource,
         array $data = []
     ) {
-
         parent::__construct($context, $data);
 
         $this->request = $request;
@@ -77,7 +85,8 @@ class Config extends \Magento\Backend\Block\Template
     /**
      * Get a link data.
      */
-    public function getLinkData() {
+    public function getLinkData()
+    {
         // Prepare variables
         $data = $this->getData('link_data');
         if ((int) $data['entity_id'] > 0) {

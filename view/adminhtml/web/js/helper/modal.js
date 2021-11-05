@@ -42,23 +42,23 @@ define([
         /**
          * Create a link generator modal form
          */
-         generateLinksForm: function (element, callback) {
+        generateLinksForm: function (element, callback) {
             var options = this.getOptions();
             options.buttons = [
-                {
+               {
                     text: __('Confirm'),
                     class: '',
                     click: function () {
                         callback();
                     }
-                },
-                {
+            },
+               {
                     text: __('Cancel'),
                     class: '',
                     click: function () {
                         this.closeModal();
                     }
-                }            
+            }
             ];
 
             this.createModal(element, options);
@@ -73,7 +73,7 @@ define([
                 {
                     text: __('OK'),
                     class: ''
-                }          
+            }
             ];
             this.createModal(element, options);
         },
@@ -90,14 +90,14 @@ define([
                     click: function () {
                         callback();
                     }
-                },
+            },
                 {
                     text: __('Cancel'),
                     class: '',
                     click: function () {
                         this.closeModal();
                     }
-                }            
+            }
             ];
             this.createModal(element, options);
         },
@@ -107,22 +107,21 @@ define([
          */
         linkConfigForm: function (element, entityId) {
             var options = this.getOptions();
-            options.opened = function() {
+            options.opened = function () {
                 // Prepare variables
                 var row = window.parent.document.getElementById('mm-tree-row-' + entityId);
                 var linkConfigField = $(row).find('input[data-field="link_config"]');
                 var configData = linkConfigField.val();
 
                 // Set the config form values
-                if (configData) {   
-                    var lines = JSON.parse(configData);   
+                if (configData) {
+                    var lines = JSON.parse(configData);
                     for (var i in lines) {
                         if (lines[i].name == 'icon_' + entityId && lines[i].value) {
                             MMTools.addIconPreview(entityId, lines[i].value);
-                        }
-                        else {
+                        } else {
                             $('[name="' + lines[i].name + '"]').val(lines[i].value);
-                        } 
+                        }
                     }
                 }
             },
@@ -141,14 +140,14 @@ define([
                         linkConfigField.val(formData).trigger('change');
                         this.closeModal();
                     }
-                },
+            },
                 {
                     text: __('Cancel'),
                     class: '',
                     click: function () {
                         this.closeModal();
                     }
-                }            
+            }
             ];
             this.createModal(element, options);
         },

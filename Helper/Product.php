@@ -21,7 +21,7 @@ use Magento\Catalog\Model\Product\Attribute\Source\Status;
  * Class Product helper.
  */
 class Product extends \Magento\Framework\App\Helper\AbstractHelper
-{   
+{
     /**
      * @var Registry
      */
@@ -48,12 +48,19 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
     public $productCollectionFactory;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Class Product helper constructor.
+     *
+     * @param Registry $registry
+     * @param Image $imageHelper
+     * @param Data $priceHelper
+     * @param ProductFactory $productFactory
+     * @param CollectionFactory $productCollectionFactory
+     * @param LinkEntityFactory $linkEntityFactory
      */
     public function __construct(
         \Magento\Framework\Registry $registry,
@@ -73,6 +80,9 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a product is free.
+     *
+     * @param int $productId
+     * @return object
      */
     public function isFree($productId)
     {
@@ -81,15 +91,20 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a product has options.
+     *
+     * @param int $productId
+     * @return bool
      */
     public function hasOptions($productId)
     {
         return $this->getProduct($productId)->getData('has_options');
     }
 
-
     /**
      * Check if a product has parent products.
+     *
+     * @param object $product
+     * @return bool
      */
     public function hasParents($product)
     {
@@ -98,6 +113,9 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a product instance.
+     *
+     * @param int $productId
+     * @return object
      */
     public function getProduct($productId)
     {
@@ -106,6 +124,9 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a product collection.
+     *
+     * @param array $filters
+     * @return object
      */
     public function getProducts($filters = [])
     {
@@ -125,6 +146,9 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a product options array.
+     *
+     * @param int $entityId
+     * @return array
      */
     public function getProductOptions($entityId = 0)
     {
@@ -149,6 +173,9 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a product URL.
+     *
+     * @param int $id
+     * @return string
      */
     public function getProductUrl($id)
     {
@@ -157,6 +184,10 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a product image url.
+     *
+     * @param int $productId
+     * @param string $size
+     * @return string
      */
     public function getProductImage($productId, $size = 'product_page_image_small')
     {
@@ -167,6 +198,9 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a product images.
+     *
+     * @param int $productId
+     * @return array
      */
     public function getProductImages($productId)
     {
@@ -197,6 +231,10 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate product links.
+     *
+     * @param array $data
+     * @param int $parentId
+     * @param int $parentLinkId
      */
     public function generateProductLinks($data, $parentId = 0, $parentLinkId = 0)
     {
@@ -227,7 +265,7 @@ class Product extends \Magento\Framework\App\Helper\AbstractHelper
             $entity->setLinkConfig('[]');
 
             // Save the entity
-            $entity->save();       
+            $entity->save();
 
             // Increment
             $i++;

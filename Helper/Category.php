@@ -32,37 +32,46 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
     public $registry;
 
     /**
-     *  @var StoreManagerInterface
+     * @var StoreManagerInterface
      */
     public $storeManager;
 
     /**
-     *  @var CollectionFactory
+     * @var CollectionFactory
      */
     public $categoryCollectionFactory;
 
     /**
-     *  @var CategoryRepository
+     * @var CategoryRepository
      */
     public $categoryRepository;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
-     *  @var Links
+     * @var Links
      */
-	public $linksHepler;
+    public $linksHepler;
 
     /**
-     *  @var Stores
+     * @var Stores
      */
-	public $storesHepler;
+    public $storesHepler;
 
     /**
      * Class Category helper constructor.
+     *
+     * @param Category $categoryHelper
+     * @param Registry $registry
+     * @param StoreManagerInterface $storeManager
+     * @param CollectionFactory $categoryCollectionFactory
+     * @param CategoryRepository $categoryRepository
+     * @param LinkEntityFactory $linkEntityFactory
+     * @param Links $linksHepler
+     * @param Stores $storesHepler
      */
     public function __construct(
         \Magento\Catalog\Helper\Category $categoryHelper,
@@ -86,6 +95,9 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the catalog root categories.
+     *
+     * @param array $filters
+     * @return object
      */
     public function getCategories($filters = [])
     {
@@ -105,6 +117,9 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a catalog category.
+     *
+     * @param int $id
+     * @return object
      */
     public function getCategory($id)
     {
@@ -130,23 +145,27 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a category URL.
+     *
+     * @param int $id
+     * @return string
      */
     public function getCategoryUrl($id)
     {
-        $category = $this->getCategory($id);
-        
-        return $this->categoryHelper->getCategoryUrl($category);
+        return $this->categoryHelper->getCategoryUrl(
+            $this->getCategory($id)
+        );
     }
 
     /**
      * Get a category image.
+     *
+     * @param int $id
+     * @return string
      */
     public function getCategoryImage($id)
     {
         // Prepare variables
-        // Todo - remove test
-        //$url = $this->getCategory($id)->getImageUrl();
-        $url = $this->getCategory(38)->getImageUrl();
+        $url = $this->getCategory($id)->getImageUrl();
 
         // Create URL if the data is a path
         if ($url && !filter_var($url, FILTER_VALIDATE_URL)) {
@@ -169,6 +188,10 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate category links.
+     *
+     * @param array $data
+     * @param int $parentId
+     * @param int $parentLinkId
      */
     public function generateCategoryLinks($data, $parentId = 0, $parentLinkId = 0)
     {
@@ -201,10 +224,10 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
             ]));
             $entity->setLinkConfig('[]');
             $entity->setActive(1);
-            $entity->setLinkOrder(0); 
+            $entity->setLinkOrder(0);
 
             // Save the entity
-            $entity->save();     
+            $entity->save();
             
             // Handle Children
             if ((int) $item['children_count'] > 0) {
@@ -214,7 +237,7 @@ class Category extends \Magento\Framework\App\Helper\AbstractHelper
                     $item['entity_id'],
                     $entity->getId()
                 );
-            } 
+            }
         }
     }
 }

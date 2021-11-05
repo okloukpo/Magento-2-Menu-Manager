@@ -16,11 +16,10 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class Blocks
+ * Class Blocks source.
  */
 class Blocks implements \Magento\Framework\Option\ArrayInterface
 {
-
     /**
      * @var BlockFactory
      */
@@ -28,6 +27,8 @@ class Blocks implements \Magento\Framework\Option\ArrayInterface
 
     /**
      * HeaderMenu block class constructor.
+     *
+     * @param BlockFactory $blockFactory
      */
     public function __construct(
         \Magento\Cms\Model\BlockFactory $blockFactory
@@ -53,7 +54,7 @@ class Blocks implements \Magento\Framework\Option\ArrayInterface
             if ($item->isActive()) {
                 $options[] = [
                     'value' => $item->getIdentifier(),
-                    'label' => $item->getTitle()        
+                    'label' => $item->getTitle()
                 ];
             }
         }

@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class YesNo
+ * Class YesNo source.
  */
 class YesNo implements \Magento\Framework\Option\ArrayInterface
 {

@@ -144,7 +144,7 @@ interface SitemapEntityInterface
     /**
      * Set filfe name
      *
-     * @param string $fileName
+     * @param string $title
      * @return \Naxero\MenuManager\Api\Data\SitemapEntityInterface
      */
     public function setFileName($title);

@@ -1,5 +1,5 @@
 <div class="message error">
     <span class="message-text">
-        <?= $block->getData('msg') ?>
+        <?= $block->escapeHtml($block->getData('msg')) ?>
     </span>
 </div>

@@ -46,10 +46,16 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Block helper class constructor.
+     *
+     * @param File $fileIo
+     * @param File $fileDriver
+     * @param PageFactory $pageFactory
+     * @param Config $configHelper
+     * @param LinkEntityFactory $linkEntityFactory
      */
     public function __construct(
         \Magento\Framework\Filesystem\Io\File $fileIo,
@@ -67,6 +73,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a links collection
+     *
+     * @param array $filters
+     * @return Collection
      */
     public function getLinks($filters = [])
     {
@@ -81,11 +90,14 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
             }
         }
 
-        return $collection;  
+        return $collection;
     }
 
     /**
      * Get a single link
+     *
+     * @param int $id
+     * @return LinkEntityFactory
      */
     public function getLink($id)
     {
@@ -94,8 +106,12 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a link configuration data.
+     *
+     * @param array $item
+     * @return array
      */
-    public function getLinkConfig($item) {
+    public function getLinkConfig($item)
+    {
         if (isset($item['link_config']) && !empty($item['link_config'])) {
             $config = json_decode($item['link_config']);
             foreach ($config as $row) {
@@ -110,6 +126,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a single link by field
+     *
+     * @param Collection $fields
+     * @return int
      */
     public function getLinkIdByFields($fields)
     {
@@ -126,7 +145,6 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
         // Return the entity data
         if ($collection->getSize() > 0) {
-
             return $collection->getData()[0]['entity_id'];
         }
             
@@ -135,8 +153,12 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Check if a link needs a block sublayout display.
+     *
+     * @param array $item
+     * @return bool
      */
-    public function needsBlockSublayout($item) {
+    public function needsBlockSublayout($item)
+    {
         // Get the config
         $linkConfig = $this->getLinkConfig($item);
 
@@ -149,6 +171,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the upload file path.
+     *
+     * @param array $params
+     * @return string
      */
     public function getUploadDir($params)
     {
@@ -173,6 +198,9 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the upload file URL.
+     *
+     * @param array $params
+     * @return string
      */
     public function getUploadUrl($params)
     {
@@ -184,8 +212,13 @@ class Links extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Update file paths for a link entity.
+     *
+     * @param object $item
+     * @param string $tmpId
+     * @return object
      */
-    public function updateFilePath($item, $tmpId) {
+    public function updateFilePath($item, $tmpId)
+    {
         if ($tmpId && !empty($tmpId)) {
             // Prepare variables
             $data = $item->getData();

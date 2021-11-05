@@ -52,33 +52,44 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
     public $pageFactory;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Class Page helper constructor.
+     *
+     * @param StoreManagerInterface $storeManager
+     * @param PageRepositoryInterface $pageRepositoryInterface
+     * @param SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory
+     * @param Page $cmsPageModel
+     * @param Page $cmsPageHelper
+     * @param PageFactory $pageFactory
+     * @param LinkEntityFactory $linkEntityFactory
      */
     public function __construct(
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Cms\Api\PageRepositoryInterface $pageRepositoryInterface,
         \Magento\Framework\Api\SearchCriteriaBuilderFactory $searchCriteriaBuilderFactory,
-        \Magento\Cms\Model\Page $cmsPageModel, 
-        \Magento\Cms\Helper\Page $cmsPageHelper, 
+        \Magento\Cms\Model\Page $cmsPageModel,
+        \Magento\Cms\Helper\Page $cmsPageHelper,
         \Magento\Cms\Model\PageFactory $pageFactory,
         \Naxero\MenuManager\Model\LinkEntityFactory $linkEntityFactory
     ) {
         $this->storeManager = $storeManager;
         $this->pageRepositoryInterface = $pageRepositoryInterface;
-        $this->searchCriteriaBuilderFactory = $searchCriteriaBuilderFactory;        
-        $this->cmsPageModel = $cmsPageModel;   
-        $this->cmsPageHelper = $cmsPageHelper;   
-        $this->pageFactory = $pageFactory;             
+        $this->searchCriteriaBuilderFactory = $searchCriteriaBuilderFactory;
+        $this->cmsPageModel = $cmsPageModel;
+        $this->cmsPageHelper = $cmsPageHelper;
+        $this->pageFactory = $pageFactory;
         $this->linkEntityFactory = $linkEntityFactory;
     }
 
     /**
      * Get a CMS pages collection.
+     *
+     * @param int $entityId
+     * @return Collection
      */
     public function getPages($entityId = 0)
     {
@@ -103,6 +114,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a CMS page.
+     *
+     * @param int $id
+     * @return PageFactory
      */
     public function getPage($id)
     {
@@ -111,6 +125,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a pages URL array.
+     *
+     * @param int $entityId
+     * @return array
      */
     public function getPageOptions($entityId = 0)
     {
@@ -128,6 +145,9 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a page URL.
+     *
+     * @param int $id
+     * @return string
      */
     public function getPageUrl($id)
     {
@@ -144,6 +164,10 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate page links.
+     *
+     * @param array $data
+     * @param int $parentId
+     * @param int $parentLinkId
      */
     public function generatePageLinks($data, $parentId = 0, $parentLinkId = 0)
     {
@@ -170,7 +194,7 @@ class Page extends \Magento\Framework\App\Helper\AbstractHelper
             $entity->setLinkOrder($i);
 
             // Save the entity
-            $entity->save();         
+            $entity->save();
 
             // Increment
             $i++;

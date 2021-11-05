@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class Display
+ * Class Display source
  */
 class Display implements \Magento\Framework\Option\ArrayInterface
 {

@@ -19,20 +19,11 @@ use Magento\Backend\Block\Widget\Button\SplitButton;
 
 class Generate extends \Magento\Backend\Block\Widget\Container
 {
-    /**
-     * @param \Magento\Backend\Block\Widget\Context $context
-     * @param array $data
-     */
-    public function __construct(
-        \Magento\Backend\Block\Widget\Context $context,
-        array $data = []
-    ) {
-        parent::__construct($context, $data);
-    }
- 
+
     /**
      * Prepare layout.
      */
+    // phpcs:ignore
     public function _prepareLayout()
     {
         $addButtonProps = [
@@ -75,6 +66,7 @@ class Generate extends \Magento\Backend\Block\Widget\Container
     /**
      * Get a split button action URL
      *
+     * @param string $type
      * @return array
      */
     public function getActionUrl($type)

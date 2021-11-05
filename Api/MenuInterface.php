@@ -19,15 +19,18 @@ namespace Naxero\MenuManager\Api;
 /**
  * Menu API interface class
  */
-interface MenuInterface {
+interface MenuInterface
+{
     /**
      * Get menus
+     *
      * @return mixed
      */
     public function getMenus();
 
     /**
      * Get a menu
+     *
      * @param string $menuId
      * @return mixed
      */

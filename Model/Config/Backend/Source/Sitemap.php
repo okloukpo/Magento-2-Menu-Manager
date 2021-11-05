@@ -27,6 +27,8 @@ class Sitemap implements \Magento\Framework\Option\ArrayInterface
 
     /**
      * Sitemap source class constructor.
+     *
+     * @param SitemapFactory $sitemapFactory
      */
     public function __construct(
         \Magento\Sitemap\Model\SitemapFactory $sitemapFactory
@@ -49,7 +51,7 @@ class Sitemap implements \Magento\Framework\Option\ArrayInterface
         // Default option
         $options[] = [
             'value' => 0,
-            'label' => __('None')   
+            'label' => __('None')
         ];
 
         // Build the options
@@ -57,7 +59,7 @@ class Sitemap implements \Magento\Framework\Option\ArrayInterface
             $data = $item->getData();
             $options[] = [
                 'value' => $data['sitemap_id'],
-                'label' => $data['sitemap_filename']    
+                'label' => $data['sitemap_filename']
             ];
         }
 

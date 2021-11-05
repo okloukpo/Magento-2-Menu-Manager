@@ -44,11 +44,11 @@ define([
             for (var i = 0; i < data.length; i++) {
                 if (!this.isFormArrayField(data[i].name)) {
                     output[data[i].name] = data[i].value;
-                } 
+                }
             }
             
             // Process the multivalue fields
-            form.find('select.multiselect').each(function() {
+            form.find('select.multiselect').each(function () {
                 var selectedOptions = Array.from(this.selectedOptions);
                 var fieldName = this.getAttribute('name').replace('[]', '');
                 var options = [];
@@ -77,7 +77,7 @@ define([
             var fileFieldSelector = '#icon_' + entityId;
             $(previewFieldSelector).empty().show().html(
                 MMTemplate.getTemplate('icon_preview', {
-                    data: { 
+                    data: {
                         url: imageUrl,
                         entityId: entityId
                     }

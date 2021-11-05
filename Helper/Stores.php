@@ -29,12 +29,15 @@ class Stores extends \Magento\Framework\App\Helper\AbstractHelper
     public $storeManager;
 
     /**
-     *  @var LinkEntityFactory
+     * @var LinkEntityFactory
      */
-	public $linkEntityFactory;
+    public $linkEntityFactory;
 
     /**
      * Stores helper class constructor.
+     *
+     * @param StoreManagerInterface $storeManager
+     * @param LinkEntityFactory $linkEntityFactory
      */
     public function __construct(
         \Magento\Store\Model\StoreManagerInterface $storeManager,
@@ -54,6 +57,9 @@ class Stores extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get the current store.
+     *
+     * @param int $id
+     * @return object
      */
     public function getStore($id = null)
     {
@@ -62,6 +68,9 @@ class Stores extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a store URL.
+     *
+     * @param int $id
+     * @return string
      */
     public function getStoreUrl($id = null)
     {
@@ -72,6 +81,9 @@ class Stores extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Get a store media URL.
+     *
+     * @param int $id
+     * @return string
      */
     public function getStoreMediaUrl($id = null)
     {
@@ -106,6 +118,10 @@ class Stores extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Generate page links.
+     *
+     * @param array $data
+     * @param int $parentId
+     * @param int $parentLinkId
      */
     public function generateStoreLinks($data, $parentId = 0, $parentLinkId = 0)
     {

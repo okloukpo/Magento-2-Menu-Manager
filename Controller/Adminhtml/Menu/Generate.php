@@ -31,6 +31,10 @@ class Generate extends \Magento\Backend\App\Action
 
     /**
      * LinkUrlOptions class constructor
+     *
+     * @param Context $context
+     * @param Config $configHelper
+     * @param Menu $menuHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -75,14 +79,12 @@ class Generate extends \Magento\Backend\App\Action
 
                 // Redirect
                 return $this->_redirect('naxero-mm/menu/addrow/id/' . $entityId);
-            }
-            else {
+            } else {
                 $this->messageManager->addError(
                     __('Please save the menu before generating links.')
-                );                
+                );
             }
-        }
-        else {
+        } else {
             $this->messageManager->addError(
                 __('Invalid or expired request. Try refreshing the page.')
             );

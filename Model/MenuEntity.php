@@ -29,6 +29,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
     /**
      * @var string
      */
+    // phpcs:ignore
     public $_cacheTag = 'menu_entity';
 
     /**
@@ -36,6 +37,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @var string
      */
+    // phpcs:ignore
     public $_eventPrefix = 'menu_entity';
 
     /**
@@ -43,6 +45,7 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init(
@@ -75,7 +78,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getTitle() {
+    public function getTitle()
+    {
         return $this->getData(self::TITLE);
     }
 
@@ -84,7 +88,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getOverride() {
+    public function getOverride()
+    {
         return $this->getData(self::OVERRIDE);
     }
 
@@ -93,7 +98,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getOrientation() {
+    public function getOrientation()
+    {
         return $this->getData(self::ORIENTATION);
     }
 
@@ -102,7 +108,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getZindex() {
+    public function getZindex()
+    {
         return $this->getData(self::ZINDEX);
     }
 
@@ -111,7 +118,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getUserGroups() {
+    public function getUserGroups()
+    {
         return $this->getData(self::USER_GROUPS);
     }
 
@@ -120,7 +128,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return string
      */
-    public function getStoreViews() {
+    public function getStoreViews()
+    {
         return $this->getData(self::STORE_VIEWS);
     }
     
@@ -129,7 +138,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return int
      */
-    public function getCategoryImages() {
+    public function getCategoryImages()
+    {
         return $this->getData(self::CATEGORY_IMAGES);
     }
     
@@ -138,7 +148,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return int
      */
-    public function getProductImages() {
+    public function getProductImages()
+    {
         return $this->getData(self::PRODUCT_IMAGES);
     }
 
@@ -147,7 +158,8 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      *
      * @return int
      */
-    public function getActive() {
+    public function getActive()
+    {
         return $this->getData(self::ACTIVE);
     }
 
@@ -157,88 +169,107 @@ class MenuEntity extends AbstractModel implements MenuEntityInterface, IdentityI
      * @param int $id
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setId($id) {
+    public function setId($id)
+    {
         return $this->setData(self::ENTITY_ID, $id);
     }
 
     /**
      * Set menu title
      *
+     * @param string $title
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setTitle($title) {
+    public function setTitle($title)
+    {
         return $this->setData(self::TITLE, $title);
     }
 
     /**
      * Set menu override
      *
+     * @param string $menu
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setOverride($menu) {
+    public function setOverride($menu)
+    {
         return $this->setData(self::OVERRIDE, $menu);
     }
 
     /**
      * Set menu orientation
      *
+     * @param string $orientation
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setOrientation($orientation) {
+    public function setOrientation($orientation)
+    {
         return $this->setData(self::ORIENTATION, $orientation);
     }
 
     /**
      * Set menu z-index
      *
+     * @param int $zindex
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setZindex($zindex) {
+    public function setZindex($zindex)
+    {
         return $this->setData(self::ZINDEX, $zindex);
     }
 
     /**
      * Set user groups
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setUserGroups($data) {
+    public function setUserGroups($data)
+    {
         return $this->setData(self::USER_GROUPS, $data);
     }
 
     /**
      * Set store views
      *
+     * @param string $storeViews
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setStoreViews($storeViews) {
+    public function setStoreViews($storeViews)
+    {
         return $this->setData(self::STORE_VIEWS, $storeViews);
     }
 
     /**
      * Set category images
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setCategoryImages($data) {
+    public function setCategoryImages($data)
+    {
         return $this->setData(self::CATEGORY_IMAGES, $data);
     }
 
     /**
      * Set product images
      *
+     * @param string $data
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setProductImages($data) {
+    public function setProductImages($data)
+    {
         return $this->setData(self::PRODUCT_IMAGES, $data);
     }
 
     /**
      * Set active
      *
+     * @param int $active
      * @return \Naxero\MenuManager\Api\Data\MenuEntityInterface
      */
-    public function setActive($active) {
+    public function setActive($active)
+    {
         return $this->setData(self::ACTIVE, $active);
     }
 }

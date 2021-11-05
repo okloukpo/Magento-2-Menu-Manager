@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Model\Config\Backend\Source;
 
 /**
- * Class Orientation
+ * Class Orientation source
  */
 class Orientation implements \Magento\Framework\Option\ArrayInterface
 {

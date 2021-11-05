@@ -20,7 +20,7 @@ namespace Naxero\MenuManager\Model\Api;
  * Class Menu API model
  */
 class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
-{ 
+{
     /**
      * @var Menu
      */
@@ -28,6 +28,8 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
 
     /**
      * Menu API model class constructor
+     *
+     * @param Menu $menuHelper
      */
     public function __construct(
         \Naxero\MenuManager\Helper\Menu $menuHelper
@@ -42,7 +44,7 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
     {
         try {
             $response = $this->menuHelper->getMenus()->getData();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $response = ['error' => $e->getMessage()];
         }
  
@@ -51,12 +53,15 @@ class MenuEntity implements \Naxero\MenuManager\Api\MenuInterface
 
     /**
      * Get a menu by ID.
+     *
+     * @param int $menuId
+     * @return array
      */
     public function getMenu($menuId)
     {
         try {
             $response = $this->menuHelper->getMenu($menuId)->getData();
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $response = ['error' => $e->getMessage()];
         }
  

@@ -16,7 +16,7 @@
 namespace Naxero\MenuManager\Controller\Adminhtml\Ajax;
 
 /**
- * LinkConfig field class 
+ * LinkConfig field class
  */
 class LinkConfig extends \Magento\Backend\App\Action
 {
@@ -37,6 +37,11 @@ class LinkConfig extends \Magento\Backend\App\Action
 
     /**
      * LinkConfig field class constructor
+     *
+     * @param Context $context
+     * @param JsonFactory $jsonFactory
+     * @param Block $blockHelper
+     * @param Config $configHelper
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -68,8 +73,7 @@ class LinkConfig extends \Magento\Backend\App\Action
                 $response = $this->blockHelper
                     ->getLinkConfigFormHtml($params);
             }
-        }
-        else {
+        } else {
             $response = $this->getErrorResponse();
         }
 
@@ -80,7 +84,7 @@ class LinkConfig extends \Magento\Backend\App\Action
      * Get the error response.
      */
     public function getErrorResponse()
-    {    
+    {
         return  $this->blockHelper->getErrorHtml(
             __('Invalid or expired request. Try reloading the page.')
         );

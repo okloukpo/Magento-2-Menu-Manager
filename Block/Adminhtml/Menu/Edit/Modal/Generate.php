@@ -37,6 +37,12 @@ class Generate extends \Magento\Backend\Block\Template
 
     /**
      * Generate class constructor
+     *
+     * @param Context $context
+     * @param Config $configHelper
+     * @param LinkType $linkTypeSource
+     * @param YesNo $yesNoSource
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -44,7 +50,7 @@ class Generate extends \Magento\Backend\Block\Template
         \Naxero\MenuManager\Model\Config\Backend\Source\LinkType $linkTypeSource,
         \Naxero\MenuManager\Model\Config\Backend\Source\YesNo $yesNoSource,
         array $data = []
-    ) {        
+    ) {
         parent::__construct($context, $data);
 
         $this->configHelper = $configHelper;

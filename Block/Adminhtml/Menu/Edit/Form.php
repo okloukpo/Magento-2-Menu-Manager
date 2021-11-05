@@ -44,6 +44,13 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
 
     /**
      * Form class constructor
+     *
+     * @param Context $context
+     * @param Registry $registry
+     * @param FormFactory $formFactory
+     * @param Config $wysiwygConfig
+     * @param Fields $fieldsDataProvider
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -66,6 +73,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
      *
      * @return $this
      */
+    // phpcs:ignore
     public function _prepareForm()
     {
         // Prepare parameters
@@ -102,8 +110,8 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
             foreach ($fieldset['fields'] as $field) {
                 $item->addField($field['key'], $field['type'], $field['data']);
             }
-        }        
+        }
 
         return $form;
-    } 
+    }
 }

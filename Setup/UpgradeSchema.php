@@ -57,8 +57,9 @@ class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
                 ->addColumn('product_images', Table::TYPE_SMALLINT, null, ['nullable' => false, 'default' => 0])
                 ->addColumn('active', Table::TYPE_SMALLINT, null, ['nullable' => false, 'default' => 0])
                 ->addIndex($installer->getIdxName(
-                    'entity_id_index', ['entity_id']), ['entity_id']
-                );
+                    'entity_id_index',
+                    ['entity_id']
+                ), ['entity_id']);
 
             $installer->getConnection()->createTable($table1);
         }
@@ -84,14 +85,17 @@ class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
                 ->addColumn('link_order', Table::TYPE_INTEGER, null, ['nullable' => false, 'default' => 0])
                 ->addColumn('active', Table::TYPE_SMALLINT, null, ['nullable' => false, 'default' => 0])
                 ->addIndex($installer->getIdxName(
-                    'entity_id_index', ['entity_id']), ['entity_id']
-                )
+                    'entity_id_index',
+                    ['entity_id']
+                ), ['entity_id'])
                 ->addIndex($installer->getIdxName(
-                    'menu_id_index', ['menu_id']), ['menu_id']
-                )
+                    'menu_id_index',
+                    ['menu_id']
+                ), ['menu_id'])
                 ->addIndex($installer->getIdxName(
-                    'parent_id_index', ['parent_id']), ['parent_id']
-                )
+                    'parent_id_index',
+                    ['parent_id']
+                ), ['parent_id'])
                 ->addForeignKey(
                     $installer->getFkName($tableName2, 'menu_id', $tableName1, 'entity_id'),
                     'menu_id',
@@ -122,7 +126,7 @@ class UpgradeSchema implements \Magento\Framework\Setup\UpgradeSchemaInterface
                 ->addColumn('priority', Table::TYPE_TEXT, 10, ['nullable' => true, 'default' => null])
                 ->addColumn('frequency', Table::TYPE_TEXT, 10, ['nullable' => true, 'default' => null])
                 ->addColumn('include_image', Table::TYPE_TEXT, 10, ['nullable' => true, 'default' => null])
-                ->addColumn('last_update', Table::TYPE_TIMESTAMP, null, []);    
+                ->addColumn('last_update', Table::TYPE_TIMESTAMP, null, []);
 
             // Create the table
             $installer->getConnection()->createTable($table3);

@@ -15,11 +15,22 @@
  */
 -->
 
-<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<listing
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd"
+>
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">mm_menu_index.naxero_menumanager_menu_index_data_source</item>
-            <item name="deps" xsi:type="string">mm_menu_index.naxero_menumanager_menu_index_data_source</item>
+            <item
+                name="provider"
+                xsi:type="string">mm_menu_index.naxero_menumanager_menu_index_data_source
+            </item>
+            <item
+                name="deps"
+                xsi:type="string"
+            >
+                mm_menu_index.naxero_menumanager_menu_index_data_source
+            </item>
         </item>
         <item name="spinner" xsi:type="string">grid_records_columns</item>
         <item name="buttons" xsi:type="array">
@@ -33,8 +44,18 @@
     </argument>
     <dataSource name="nameOfDataSource">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
-            <argument name="name" xsi:type="string">naxero_menumanager_menu_index_data_source</argument>
+            <argument
+                name="class"
+                xsi:type="string"
+            >
+                Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider
+            </argument>
+            <argument
+                name="name"
+                xsi:type="string"
+            >
+                naxero_menumanager_menu_index_data_source
+            </argument>
             <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
@@ -45,25 +66,55 @@
         </argument>
         <argument name="data" xsi:type="array">
             <item name="js_config" xsi:type="array">
-                <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+                <item
+                    name="component"
+                    xsi:type="string"
+                >
+                    Magento_Ui/js/grid/provider
+                </item>
             </item>
         </argument>
     </dataSource>
     <container name="listing_top">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
-                <item name="template" xsi:type="string">ui/grid/toolbar</item>
-                <item name="stickyTmpl" xsi:type="string">ui/grid/sticky/toolbar</item>
+                <item
+                    name="template"
+                    xsi:type="string"
+                >
+                    ui/grid/toolbar
+                </item>
+                <item
+                    name="stickyTmpl"
+                    xsi:type="string"
+                >
+                    ui/grid/sticky/toolbar
+                </item>
             </item>
         </argument>
         <paging name="listing_paging">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
-                        <item name="provider" xsi:type="string">mm_menu_index.naxero_menumanager_menu_index_data_source.listing_top.bookmarks</item>
-                        <item name="namespace" xsi:type="string">current.paging</item>
+                        <item 
+                            name="provider"
+                            xsi:type="string"
+                        >
+                            mm_menu_index.naxero_menumanager_menu_index_data_source.listing_top.bookmarks
+                        </item>
+                        <item
+                            name="namespace"
+                            xsi:type="string"
+                        >
+                            current.paging
+                        </item>
                     </item>
-                    <item name="selectProvider" xsi:type="string">mm_menu_index.naxero_menumanager_menu_index_data_source.grid_records_columns.ids</item>
+                    <item
+                        name="selectProvider"
+                        xsi:type="string"
+                    >
+                        mm_menu_index.naxero_menumanager_menu_index_data_source.grid_records_columns.ids
+                    </item>
                 </item>
             </argument>
         </paging>
@@ -83,7 +134,13 @@
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">textRange</item>
                     <item name="sorting" xsi:type="string">asc</item>
-                    <item name="label" xsi:type="string" translate="true">ID</item>
+                    <item
+                        name="label"
+                        xsi:type="string"
+                        translate="true"
+                    >
+                        ID
+                    </item>
                 </item>
             </argument>
         </column>
@@ -94,10 +151,21 @@
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
                         <item name="validation" xsi:type="array">
-                            <item name="required-entry" xsi:type="boolean">true</item>
+                            <item
+                                name="required-entry"
+                                xsi:type="boolean"
+                            >
+                                true
+                            </item>
                         </item>
                     </item>
-                    <item name="label" xsi:type="string" translate="true">Title</item>
+                    <item
+                        name="label"
+                        xsi:type="string"
+                        translate="true"
+                    >
+                        Title
+                    </item>
                 </item>
             </argument>
         </column>
@@ -109,10 +177,21 @@
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
                         <item name="validation" xsi:type="array">
-                            <item name="required-entry" xsi:type="boolean">true</item>
+                            <item
+                                name="required-entry"
+                                xsi:type="boolean"
+                            >
+                                true
+                            </item>
                         </item>
                     </item>
-                    <item name="label" xsi:type="string" translate="true">Orientation</item>
+                    <item
+                        name="label"
+                        xsi:type="string"
+                        translate="true"
+                    >
+                        Orientation
+                    </item>
                 </item>
             </argument>
         </column>
@@ -124,33 +203,63 @@
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
                         <item name="validation" xsi:type="array">
-                            <item name="required-entry" xsi:type="boolean">true</item>
+                            <item
+                                name="required-entry"
+                                xsi:type="boolean"
+                            >
+                                true
+                            </item>
                         </item>
                     </item>
-                    <item name="label" xsi:type="string" translate="true">Override</item>
+                    <item
+                        name="label"
+                        xsi:type="string"
+                        translate="true"
+                    >
+                        Override
+                    </item>
                 </item>
             </argument>
         </column>
 
         <column name="active">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Magento\Config\Model\Config\Source\Yesno</item>
+                <item
+                    name="options"
+                    xsi:type="object"
+                >
+                    Magento\Config\Model\Config\Source\Yesno
+                </item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="label" translate="true" xsi:type="string">Active</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
                     <item name="dataType" xsi:type="string">select</item>
                     <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">select</item>
+                        <item
+                            name="editorType"
+                            xsi:type="string"
+                        >
+                            select
+                        </item>
                     </item>
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="Naxero\MenuManager\Ui\Component\Menu\Listing\Column\Action">
+        <actionsColumn
+            name="actions"
+            class="Naxero\MenuManager\Ui\Component\Menu\Listing\Column\Action"
+        >
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="sortOrder" xsi:type="number">999</item>
-                    <item name="label" xsi:type="string" translate="true">Action</item>
+                    <item
+                        name="label"
+                        xsi:type="string"
+                        translate="true"
+                    >
+                        Action
+                    </item>
                     <item name="indexField" xsi:type="string">id</item>
                 </item>
             </argument>

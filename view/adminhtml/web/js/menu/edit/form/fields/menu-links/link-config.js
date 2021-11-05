@@ -18,12 +18,12 @@ define([
             // Form tabs
             $('#mm-config-tabs-links-' + entityId).tabs({
                 active: 'config_tab_content_1_' + entityId,
-                destination: '#mm-config-tabs-content-' + entityId, 
-                shadowTabs: []        
+                destination: '#mm-config-tabs-content-' + entityId,
+                shadowTabs: []
             });
 
             // Icon upload
-            $('#icon_upload_' + entityId).on('change', function(e) { 
+            $('#icon_upload_' + entityId).on('change', function (e) {
                 // Prepare variables
                 var fd = new FormData();
                 var files = $(e.currentTarget)[0].files[0];
@@ -34,16 +34,16 @@ define([
 
                 // AJAX request
                 $.ajax({
-                    url: self.getUploadUrl(fileId, menuId, entityId),  
+                    url: self.getUploadUrl(fileId, menuId, entityId),
                     type: 'POST',
                     mimeTypes: 'multipart/form-data',
                     data: fd,
                     processData: false,
                     contentType: false,
-                    beforeSend: function() {
+                    beforeSend: function () {
                         $('body').trigger('processStart');
                     },
-                    success: function(data) {
+                    success: function (data) {
                         self.handledResponse(data, entityId);
                         $('body').trigger('processStop');
                     },
@@ -74,8 +74,7 @@ define([
             if (data.success) {
                 // Upload success
                 MMTools.addIconPreview(entityId, data.file_url);
-            }
-            else {
+            } else {
                 // Upload error
                 $('#mm-link-config-messages-' + entityId)
                 .append(data.msg);

@@ -21,23 +21,11 @@ namespace Naxero\MenuManager\Model\ResourceModel;
 class LinkEntity extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     /**
-     * Construct
-     *
-     * @param \Magento\Framework\Model\ResourceModel\Db\Context $context
-     * @param string|null $resourcePrefix
-     */
-    public function __construct(
-        \Magento\Framework\Model\ResourceModel\Db\Context $context,
-        $resourcePrefix = null
-    ) {
-        parent::__construct($context, $resourcePrefix);
-    }
-
-    /**
      * Initialize resource model.
      *
      * @return void
      */
+    // phpcs:ignore
     public function _construct()
     {
         $this->_init('naxero_menumanager_links', 'entity_id');
